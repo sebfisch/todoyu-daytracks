@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locallang>
+	<labels lang="en">
+		<label index="section.general">General</label>
+		<label index="section.panelwidgets">Panel widgets</label>
+		<label index="right.PanelWidgetDaytracks">See daytracks widget</label>
+	</labels>
+	<labels lang="de">
+		<label index="section.general">Generell</label>
+		<label index="section.panelwidgets">Panel widgets</label>
+		<label index="right.PanelWidgetDaytracks">Stundenblatt widget (anzeigen)</label>
+	</labels>
+</locallang>

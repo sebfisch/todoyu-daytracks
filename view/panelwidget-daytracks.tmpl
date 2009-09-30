@@ -1,0 +1,26 @@
+<ul class="contextmenudaytrackspwidget">
+{foreach $tasks key task daytracks}
+	<li id="daytracks-track-{$task.id}" class="{cycle values="odd,even"} status-{taskStatusKey $task.status} bcStatus{$task.status}" title="{taskStatusLabel $task.status}">
+		<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0);" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id})" title=""><!-- button --></a>
+		<a id="daytracks-track-{$task.id}-info" class="info" title="{Label panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber})" href="javascript:void(0);" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.goToTask({$task.id_project},{$task.id});">
+			<span class="time" id="daytracks-track-{$task.id}-time">{HourMinSec $task.time}</span>
+			<span class="tasknumber"># {$task.id_project}.{$task.tasknumber}</span>
+			<span class="task">{$task.title}</span>
+			<span class="customer-project">{$task.customer} - {$task.project}</span>
+		</a>
+	</li>
+{/foreach}
+</ul>
+
+<div id="daytracks-daytotal" class="daytotal">
+	<span class="title">{Label panelwidget-daytracks.totalToday}:</span>
+	<span id="daytracks-daytotal-time">{HourMinSec $total}</span>
+	<span class="totalTasks">({$.foreach.daytracks.total} {Label panelwidget-daytracks.totalTasks})</span>
+</div>
+
+<div class="history">
+	<button onClick="Todoyu.Ext.daytracks.showHistory();" class="button">
+		<span class="hasIcon olderHoursButton">{Label panelwidget-daytracks.showHistory}</span>
+		<span class="rgt"><!-- right --></span>
+	</button>
+</div>

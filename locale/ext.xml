@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locallang>
+	<labels lang="en">
+		<label index="title">Daytracks</label>
+		<label index="workloadhistory.title">Workload history</label>
+		<label index="workloadhistory.total">Total tracked time</label>
+		<label index="workloadhistory.toggledetails.open">Show details</label>
+		<label index="workloadhistory.toggledetails.close">Close details</label>
+		<label index="totalToday">Total today</label>
+	</labels>
+	<labels lang="de">
+		<label index="title">Tagesarbeit</label>
+		<label index="workloadhistory.title">Stundenübersicht</label>
+		<label index="workloadhistory.total">Total</label>
+		<label index="workloadhistory.toggledetails.open">Zeige Details</label>
+		<label index="workloadhistory.toggledetails.close">Schliesse Details</label>
+		<label index="totalToday">Heute gesamt</label>
+	</labels>
+</locallang>

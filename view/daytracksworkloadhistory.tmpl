@@ -1,0 +1,42 @@
+<div class="workload-history-selector">
+	<div class="selectors overflow bordercolor">
+		<form action="#">
+{foreach $selectors selectorID optionsArr}
+			<select class="select {$selectorID}" id="workload-history-selector-{$selectorID}" onchange="Todoyu.Ext.daytracks.updateHistory();">
+				{foreach $optionsArr key entry}
+					<option value="{$key}" {if $entry.selected == true}selected="selected"{/if}>{$entry.value}</option>
+				{/foreach}
+			</select>
+{/foreach}
+		</form>
+		<span class="toggleDetails">
+			<a href="#" class="icon {if $values.details == true}close{else}open{/if}" onclick="Todoyu.Ext.daytracks.toggleDetails(); return false" title="{if $values.details == true}{Label $labels.toggleDetails.close}{else}{Label $labels.toggleDetails.open}{/if}">
+				<span class="hidden"></span>
+			</a>
+			<a href="#" onclick="Todoyu.Ext.daytracks.toggleDetails(); return false" title="{if $values.details == true}{Label $labels.toggleDetails.close}{else}{Label $labels.toggleDetails.open}{/if}">
+				{if $values.details == true}{Label $labels.toggleDetails.close}{else}{Label $labels.toggleDetails.open}{/if}
+			</a>
+		</span>
+	</div>
+	<div id="trackings" class="bordercolor">
+		<div class="daytrack total bordercolor">
+			<strong>{Label $labels.total}: <span>{hour_format $tracks.total}</span></strong>
+		</div>
+{foreach $tracks.entries index daytrack}
+		<div class="daytrack bordercolor {if $values.details==true}toggled{else}{odd_even $index}{/if}">
+			{dateFormat $daytrack.date D2M2Y4}:
+			<span>{hour_format $daytrack.trackedtime}</span>
+		</div>
+	{if $values.details == true}
+		<div class="details">
+	{foreach $daytrack.details subindex detailsArr}
+		<div class="daytrackdetail bordercolor {odd_even $subindex}">
+			{$detailsArr.title}
+			<span>{hour_format $detailsArr.trackedtime}</span>
+		</div>
+	{/foreach}
+		</div>
+	{/if}
+{/foreach}
+	</div>
+</div>
