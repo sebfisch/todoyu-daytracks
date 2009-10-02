@@ -38,12 +38,12 @@ class TodoyuDaytracksManager {
 	public static function getPanelWidgetContextMenuItems($idTask, array $items) {
 		$ownItems	= $GLOBALS['CONFIG']['EXT']['daytracks']['ContextMenu']['PanelWidget'];
 		$items		= array_merge_recursive($items, $ownItems);
-		
+
 		return $items;
 	}
 
 
-	
+
 	/**
 	 * Get information about all tasks which have been tracked today
 	 * The following information is provided in the array keys:
@@ -123,6 +123,7 @@ class TodoyuDaytracksManager {
 				$fields	= '	t.id,
 							t.title,
 							t.status,
+							t.tasknumber,
 							p.id as id_project,
 							p.title as project,
 							c.shortname as customer';

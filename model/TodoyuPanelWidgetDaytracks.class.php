@@ -77,9 +77,12 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 			$tracks[] = $current;
 		}
 
-		$data	= array('tasks'		=> $tracks,
-						'current'	=> TodoyuTimetracking::getTaskID(),
-						'total'		=> TodoyuTimetracking::getTrackedTaskTimeOfDay(0, NOW, userid()));
+
+		$data	= array(
+			'tasks'		=> $tracks,
+			'current'	=> TodoyuTimetracking::getTaskID(),
+			'total'		=> TodoyuTimetracking::getTodayTrackedTime()
+		);
 
 		return render($tmpl, $data);
 	}
