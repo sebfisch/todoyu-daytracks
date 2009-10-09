@@ -127,7 +127,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 */
 	onTimetrackingToggle: function(idTask, start) {
 		this._task = 0;
-		
+
 		this.refresh();
 	},
 
@@ -140,7 +140,6 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 *	@param	Integer	time
 	 */
 	onTimetrackingClockUpdate: function(idTask, time) {
-		console.log('click: ' + idTask + ', time: ' + time);
 		this._el_task	= $('daytracks-track-' + idTask + '-time');
 
 		if( this._task !== idTask ) {
