@@ -1,8 +1,7 @@
-/* =====================
-	panelwidget
-======================== */
+/* ------------------------
+	panelwidget icon
+	----------------------- */
 
-/* icon */
 #panelwidget-daytracks h1 .title {
 	background: transparent url(../img/icons.png) no-repeat 5px 4px;
 }
@@ -15,7 +14,10 @@
 
 * html #panelwidget-daytracks  ul li {height:32px;}
 
-/* status - bordercolors global */
+/* ---------------------------------------------
+	panelwidget status - bordercolors global
+   -------------------------------------------- */
+
 #panelwidget-daytracks ul li {
 	border-left-width:5px ;
 	border-left-style:solid;
@@ -33,9 +35,8 @@
 
 #panelwidget-daytracks  ul li .info .tasknumber {
 	width:50px;
-	clear:none;	
+	clear:none;
 }
-
 
 #panelwidget-daytracks  ul li .info .task {
 	display: block;
