@@ -28,16 +28,18 @@
 
 if( ! defined('TODOYU') ) die('NO ACCESS');
 
-	// declare ext ID, path
+
+
+	// Declare ext ID, path
 define('EXTID_DAYTRACKS', 107);
 define('PATH_EXT_DAYTRACKS', PATH_EXT . '/daytracks');
 
-	// request configurations
-require_once( PATH_EXT_DAYTRACKS . '/config/extension.php' );
-//require_once( PATH_EXT_PROJECT . '/config/filters.php' );
-
-	// register localization files
+	// Register module locales
 TodoyuLocale::register('daytracks', PATH_EXT_DAYTRACKS . '/locale/ext.xml');
 TodoyuLocale::register('panelwidget-daytracks', PATH_EXT_DAYTRACKS . '/locale/panelwidget-daytracks.xml');
+
+	// Request configurations
+require_once( PATH_EXT_DAYTRACKS . '/config/extension.php' );
+//require_once( PATH_EXT_PROJECT . '/config/filters.php' );
 
 ?>
