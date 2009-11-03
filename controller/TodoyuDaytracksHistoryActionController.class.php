@@ -20,18 +20,25 @@
 ***************************************************************/
 
 /**
- * Action controller for daytracks preferences
+ * Action controller for daytracks history
  *
  * @package 	Todoyu
  * @subpackage	Daytracks
  */
-class TodoyuDaytracksPreferenceActionController extends TodoyuActionController {
+class TodoyuDaytracksHistoryActionController extends TodoyuActionController {
 
-	public function pwidgetAction(array $params) {
-		$idWidget	= $params['item'];
-		$value		= $params['value'];
+	/**
+	 * Update tracks history popup
+	 *
+	 * @param	Array	$params
+	 * @return	String
+	 */
+	public function historyAction(array $params) {
+		$year	= intval($params['year']);
+		$month	= intval($params['month']);
+		$details= intval($params['details']) === 1;
 
-		TodoyuPanelWidgetManager::saveCollapsedStatus(EXTID_DAYTRACKS, $idWidget, $value);
+		return TodoyuDaytracksHistoryRenderer::renderHistory($year, $month, $details);
 	}
 
 }

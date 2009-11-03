@@ -25,7 +25,6 @@
  * @package		Todoyu
  * @subpackage	Daytracks
  */
-
 class TodoyuDaytracksManager {
 
 	/**

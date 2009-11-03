@@ -1,0 +1,74 @@
+/* ---------------------
+	popup
+------------------------ */
+
+#daytracks-history .selectors {
+	border-width: 1px;
+	border-style: solid;
+	padding: 7px 10px;
+}
+
+	#daytracks-history .selectors form {
+		float:left;
+	}
+
+	#daytracks-history .selectors select {
+	}
+
+	#daytracks-history .selectors .toggleDetails {
+		float:left;
+		margin-left:5px;
+	}
+
+	#daytracks-history .selectors .toggleDetails a {
+		padding: 0;
+	}
+
+	#daytracks-history .selectors .toggleDetails a.open {
+		background: transparent url(../img/icons.png) no-repeat 0 -60px;
+	}
+
+	#daytracks-history .selectors .toggleDetails a.close {
+		background: transparent url(../img/icons.png) no-repeat 0 -30px;
+	}
+
+#daytracks-history-trackings {
+	margin: 10px 0;
+	padding-bottom:5px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+	#daytracks-history-trackings .details div,
+	#daytracks-history-trackings .daytrack {
+		padding: 5px;
+		border-width: 0 0 1px 0;
+		border-style: dotted;
+	}
+
+	#daytracks-history-trackings .total {
+		border-style: solid;
+	}
+
+	#daytracks-history-trackings .toggled {
+		margin-top:5px;
+		border-width: 1px 0;
+		border-style: solid;
+	}
+
+
+	#daytracks-history-trackings .daytrackdetail span.task {
+		width:300px;
+		display:inline-block;
+		text-align:left;
+	}
+	
+	#daytracks-history-trackings .daytrackdetail span.time {
+		width:10px;
+		display:inline-block;
+		text-align:right;		
+	}
+
+	#daytracks-history-trackings .details {
+		padding: 0 0 0 5px;
+	}

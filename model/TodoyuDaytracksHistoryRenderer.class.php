@@ -20,20 +20,41 @@
 ***************************************************************/
 
 /**
- * Action controller for daytracks preferences
+ * Workload history renderer
  *
  * @package 	Todoyu
  * @subpackage	Daytracks
  */
-class TodoyuDaytracksPreferenceActionController extends TodoyuActionController {
+class TodoyuDaytracksHistoryRenderer {
 
-	public function pwidgetAction(array $params) {
-		$idWidget	= $params['item'];
-		$value		= $params['value'];
+	/**
+	 * Render the history in the popup
+	 *
+	 * @param	Integer		$year
+	 * @param	Integer		$month
+	 * @param	Bool		$details
+	 * @return	String
+	 */
+	public static function renderHistory($year = 0, $month = 0, $details = false) {
+		$year	= intval($year);
+		$month	= intval($month);
 
-		TodoyuPanelWidgetManager::saveCollapsedStatus(EXTID_DAYTRACKS, $idWidget, $value);
+			// use current date if not set
+		$year	= $year === 0 ? date('Y') : $year ;
+		$month	= $month === 0 ? date('n') : $month ;
+
+		$tmpl	= 'ext/daytracks/view/history.tmpl';
+		$data	=	array(
+			'id'		=> 'daytracks-history',
+			'curYear'	=> $year,
+			'curMonth'	=> $month,
+			'details'	=> $details,
+			'tracking'	=> TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details), //$timetracks->getLoadedTrackedTime(),
+			'ranges'	=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions()
+		);
+
+		return render($tmpl, $data);
 	}
 
 }
-
 ?>

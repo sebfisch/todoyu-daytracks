@@ -26,64 +26,6 @@ Todoyu.Ext.daytracks = {
 
 	PanelWidget: {},
 
-	Headlet: {},
+	Headlet: {}
 
-	showDetails: 0,
-
-
-
-	/**
-	 *	Show history
-	 */
-	showHistory: function() {
-		var contentUrl = Todoyu.getUrl('daytracks', 'workloadhistory');
-		contentUrl = contentUrl + '&cmd=render';
-
-		var requestOptions	= {
-			'parameters': {
-//				'name':		'',
-//				'value':	'',
-			}
-		};
-
-		Todoyu.Popup.openWindow('popup-daytracks-workload-history', '[LLL:daytracks.workloadhistory.title]', 420, 490, 810, 200, contentUrl, requestOptions);
-	},
-
-
-
-	/**
-	 *	Update history
-	 */
-	updateHistory: function()	{
-		var month = $('workload-history-selector-month').getValue();
-		var year = 	$('workload-history-selector-year').getValue();
-
-		var url = Todoyu.getUrl('daytracks', 'workloadhistory');
-
-		var options = {
-			'parameters': {
-				'cmd':		'render',
-				'month':	month,
-				'year':		year,
-				'details':	this.showDetails
-			}
-		};
-
-		Todoyu.Popup.updateContent(url, options);
-	},
-
-
-
-	/**
-	 *	Toggle details
-	 */
-	toggleDetails: function()	{
-		if(this.showDetails == true)	{
-			this.showDetails = 0;
-		} else {
-			this.showDetails = 1;
-		}
-
-		this.updateHistory();
-	}
 };

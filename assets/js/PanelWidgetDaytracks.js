@@ -155,7 +155,14 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 			this._el_task.update( Todoyu.Time.timeFormatSeconds(this._tasktime + time) );
 			this._el_total.update( Todoyu.Time.timeFormatSeconds(this._totaltime + time) );
 		}
-	}
+	},
 
+
+	/**
+	 *	Show history
+	 */
+	showHistory: function() {
+		this.ext.History.show();
+	}
 
 };
