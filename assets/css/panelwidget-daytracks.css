@@ -1,5 +1,5 @@
 /* ------------------------
-	panelwidget icon
+	Panelwidget icon
 	----------------------- */
 
 #panelwidget-daytracks h1 .title {
@@ -14,8 +14,10 @@
 
 * html #panelwidget-daytracks  ul li {height:32px;}
 
+
+
 /* ---------------------------------------------
-	panelwidget status - bordercolors global
+	Panelwidget status - bordercolors global
    -------------------------------------------- */
 
 #panelwidget-daytracks ul li {
