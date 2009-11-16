@@ -89,7 +89,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 		var url		= Todoyu.getUrl('daytracks', 'panelwidget');
 		var options	= {
 			'parameters': {
-				'cmd': 'contextmenu',
+				'action': 'contextmenu',
 				'task': idTask
 			}
 		};

@@ -34,7 +34,7 @@ Todoyu.Ext.daytracks.History = {
 		var url		= Todoyu.getUrl('daytracks', 'history');
 		var options	= {
 			'parameters': {
-				'cmd': 'history'
+				'action': 'history'
 			}
 		};
 		var idPopup	= 'popup-daytracks-history';
@@ -53,7 +53,7 @@ Todoyu.Ext.daytracks.History = {
 		var url		= Todoyu.getUrl('daytracks', 'history');
 		var options = {
 			'parameters': {
-				'cmd':		'history',
+				'action':		'history',
 				'year':		date.year,
 				'month':	date.month,
 				'details':	this.showDetails ? 1 : 0
