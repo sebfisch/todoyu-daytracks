@@ -5,9 +5,5 @@
 		<label index="section.panelwidgets">Panel widgets</label>
 		<label index="right.PanelWidgetDaytracks">See daytracks widget</label>
 	</labels>
-	<labels lang="de">
-		<label index="section.general">Generell</label>
-		<label index="section.panelwidgets">Panel widgets</label>
-		<label index="right.PanelWidgetDaytracks">Stundenblatt widget (anzeigen)</label>
-	</labels>
+	<labels lang="de"></labels>
 </locallang>

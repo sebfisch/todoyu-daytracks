@@ -8,12 +8,5 @@
 		<label index="history.toggledetails.close">Close details</label>
 		<label index="totalToday">Total today</label>
 	</labels>
-	<labels lang="de">
-		<label index="title">Tagesarbeit</label>
-		<label index="history.title">Stundenübersicht</label>
-		<label index="history.total">Total</label>
-		<label index="history.toggledetails.open">Zeige Details</label>
-		<label index="history.toggledetails.close">Schliesse Details</label>
-		<label index="totalToday">Heute gesamt</label>
-	</labels>
+	<labels lang="de"></labels>
 </locallang>

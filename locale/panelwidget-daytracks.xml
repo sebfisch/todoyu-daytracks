@@ -8,12 +8,5 @@
 		<label index="showHistory">Show timetracking history</label>
 		<label index="goToTask">Go to task</label>
 	</labels>
-	<labels lang="de">
-		<label index="title">Stundenblatt heute</label>
-		<label index="pwidget.title">Stundenblatt heute</label>
-		<label index="totalToday">Heute gesamt</label>
-		<label index="totalTasks">Tasks</label>
-		<label index="showHistory">Stundenübersicht</label>
-		<label index="goToTask">Zum Task springen</label>
-	</labels>
+	<labels lang="de"></labels>
 </locallang>
