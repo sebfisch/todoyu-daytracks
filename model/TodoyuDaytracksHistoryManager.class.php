@@ -76,7 +76,7 @@ class TodoyuDaytracksHistoryManager {
 			$year	= date('Y', $current);
 			$month	= date('n', $current);
 
-			$options[$year][$month]	= Label('core.month.' . strtolower(date('F', $current)));
+			$options[$year][$month]	= Label('date.month.' . strtolower(date('F', $current)));
 
 			if( $month === 12 ) {
 				$month	= 1;
