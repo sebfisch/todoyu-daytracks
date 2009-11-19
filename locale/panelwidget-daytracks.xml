@@ -4,7 +4,6 @@
 		<label index="title">Todays worktime</label>
 		<label index="pwidget.title">Todays worktime</label>
 		<label index="totalToday">Total today</label>
-		<label index="totalTasks">Tasks</label>
 		<label index="showHistory">Show timetracking history</label>
 		<label index="goToTask">Go to task</label>
 	</labels>
