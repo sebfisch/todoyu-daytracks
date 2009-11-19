@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en">
+		<label index="ext.title">Daytracking Info</label>
 		<label index="title">Daytracks</label>
 		<label index="history.title">Workload history</label>
 		<label index="history.total">Total tracked time</label>
