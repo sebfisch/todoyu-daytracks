@@ -4,6 +4,7 @@
 		<label index="section.general">General</label>
 		<label index="section.panelwidgets">Panel widgets</label>
 		<label index="right.PanelWidgetDaytracks">See daytracks widget</label>
+<!--  ......................................... added after 20091122 -->
 	</labels>
 	<labels lang="de"></labels>
 </locallang>

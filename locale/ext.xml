@@ -8,6 +8,7 @@
 		<label index="history.toggledetails.open">Show details</label>
 		<label index="history.toggledetails.close">Close details</label>
 		<label index="totalToday">Total today</label>
+<!--  ......................................... added after 20091122 -->
 	</labels>
 	<labels lang="de"></labels>
 </locallang>

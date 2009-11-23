@@ -6,6 +6,7 @@
 		<label index="totalToday">Total today</label>
 		<label index="showHistory">Show timetracking history</label>
 		<label index="goToTask">Go to task</label>
+<!--  ......................................... added after 20091122 -->
 	</labels>
 	<labels lang="de"></labels>
 </locallang>
