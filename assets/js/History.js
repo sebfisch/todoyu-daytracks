@@ -34,7 +34,7 @@ Todoyu.Ext.daytracks.History = {
 		var url		= Todoyu.getUrl('daytracks', 'history');
 		var options	= {
 			'parameters': {
-				'action': 'history'
+				'action':	'history'
 			}
 		};
 		var idPopup	= 'popup-daytracks-history';

@@ -98,7 +98,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 		var url		= Todoyu.getUrl('daytracks', 'panelwidget');
 		var options	= {
 			'parameters': {
-				'action': 'update'
+				'action':	'update'
 			}
 		};
 

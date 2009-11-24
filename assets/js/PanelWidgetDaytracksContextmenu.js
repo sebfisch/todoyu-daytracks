@@ -66,7 +66,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 		var url		= Todoyu.getUrl('daytracks', 'panelwidgetcontextmenu');
 		var options	= {
 			'parameters': {
-				'task': idTask
+				'task':	idTask
 			},
 			'asynchronous': false
 		};
@@ -89,8 +89,8 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 		var url		= Todoyu.getUrl('daytracks', 'panelwidget');
 		var options	= {
 			'parameters': {
-				'action': 'contextmenu',
-				'task': idTask
+				'action':	'contextmenu',
+				'task':		idTask
 			}
 		};
 
