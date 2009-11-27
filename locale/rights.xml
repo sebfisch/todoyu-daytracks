@@ -2,9 +2,12 @@
 <locallang>
 	<labels lang="en">
 		<label index="section.general">General</label>
-		<label index="section.panelwidgets">Panel widgets</label>
-		<label index="right.PanelWidgetDaytracks">See daytracks widget</label>
-<!--  ......................................... added after 20091122 -->
+		<label index="section.panelwidgets">Panel Widgets</label>
+		<label index="right.PanelWidgetDaytracks">See Daytracks Widget</label>
 	</labels>
-	<labels lang="de"></labels>
+	<labels lang="de">
+		<label index="section.general">Generell</label>
+		<label index="section.panelwidgets">Steuerelemente</label>
+		<label index="right.PanelWidgetDaytracks">See Daytracks Widget</label>
+	</labels>	
 </locallang>

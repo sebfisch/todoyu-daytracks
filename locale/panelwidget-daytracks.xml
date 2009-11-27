@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en">
-		<label index="title">Todays worktime</label>
-		<label index="pwidget.title">Todays worktime</label>
-		<label index="totalToday">Total today</label>
-		<label index="showHistory">Show timetracking history</label>
+		<label index="title">Todays Working Time</label>
+		<label index="pwidget.title">Todays Working Time</label>
+		<label index="totalToday">Total Today</label>
+		<label index="showHistory">Show Timetracking History</label>
 		<label index="goToTask">Go to task</label>
-<!--  ......................................... added after 20091122 -->
 	</labels>
-	<labels lang="de"></labels>
+	<labels lang="de">
+		<label index="title">Arbeitszeit heute</label>
+		<label index="pwidget.title">Arbeitszeit heute</label>
+		<label index="totalToday">Total heute</label>
+		<label index="showHistory">Zeige Arbeitszeit Historie</label>
+		<label index="goToTask">Gehe zu Aufgabe</label>
+	</labels>	
 </locallang>
