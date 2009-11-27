@@ -23,7 +23,7 @@
  *	Context menu for hours sheet panel widget. Use the same items, change behaviour.
  */
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
+
 
 
 $CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'] = array(

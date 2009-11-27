@@ -26,7 +26,7 @@
  * @subpackage	DayTracks
  */
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
+
 
 
 

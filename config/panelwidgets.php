@@ -23,7 +23,7 @@
  * Daytracks panel widgets' configuration
  */
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
+
 
 
 	// add panel widgets to areas

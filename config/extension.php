@@ -25,7 +25,7 @@
  */
 
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
+
 
 
 TodoyuContextMenuManager::registerFunction('DaytracksPanelwidget', 'TodoyuDaytracksManager::getPanelWidgetContextMenuItems');
