@@ -70,24 +70,25 @@ class TodoyuDaytracksHistoryManager {
 		$range	= self::getTrackingRanges($idUser);
 		$options= array();
 
-		$current= $range['min'];
-
-		while( $current <= $range['max'] ) {
+		$current = $range['max'];
+		$min	 = mktime(0, 0, 0, date('n', $range['min']), 1, date('Y', $range['min']));
+		
+		while( $min <= $current) {
 			$year	= date('Y', $current);
 			$month	= date('n', $current);
 
 			$options[$year][$month]	= Label('date.month.' . strtolower(date('F', $current)));
 
-			if( $month === 12 ) {
-				$month	= 1;
-				$year	+= 1;
+			if( $month === 1 ) {
+				$month	= 12;
+				$year--;
 			} else {
-				$month++;
+				$month--;
 			}
 
 			$current = mktime(0, 0, 0, $month, 1, $year);
 		}
-
+		
 		return $options;
 	}
 
@@ -129,7 +130,7 @@ class TodoyuDaytracksHistoryManager {
 		if( $details ) {
 			foreach($tracksByDay as $timestamp => $dayTracks) {
 				foreach($dayTracks['tracks'] as $index => $track) {
-					$tracksByDay[$timestamp]['tracks'][$index]['task'] = TodoyuTaskManager::getTaskArray($track['id_task']);
+					$tracksByDay[$timestamp]['tracks'][$index]['task'] = TodoyuTaskManager::getTaskData($track['id_task']);
 				}
 			}
 		}
