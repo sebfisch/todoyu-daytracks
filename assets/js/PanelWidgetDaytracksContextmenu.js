@@ -24,9 +24,12 @@
 */
 Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
-	ext: Todoyu.Ext.daytracks,
-	
-	widget: Todoyu.Ext.daytracks.PanelWidget.Daytracks,
+	/**
+	 *	Ext shortcut
+	 */
+	ext:	Todoyu.Ext.daytracks,
+
+	widget:	Todoyu.Ext.daytracks.PanelWidget.Daytracks,
 
 
 
@@ -36,6 +39,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 	init: function() {
 		this.attach();
 	},
+
 
 
 	/**

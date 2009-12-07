@@ -24,23 +24,31 @@
 */
 Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
+	/**
+	 *	Ext shortcut
+	 */
 	ext:		Todoyu.Ext.daytracks,
 
-	_task: 0,
+	_task:		0,
 
-	_tasktime: 0,
+	_tasktime:	0,
 
-	_totaltime: 0,
+	_totaltime:	0,
 
-	_el_task: null,
+	_el_task:	null,
 
-	_el_total: null,
+	_el_total:	null,
 
 
+
+/**
+ * Init daytrack panelWidget
+ */
 	init: function() {
 		this.registerTimetracking();
 		this.ContextMenu.init();
 	},
+
 
 
 	/**
@@ -55,6 +63,9 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 	/**
 	 *	Show task in(side its project) in project area
+	 * 
+	 *	@param	Integer	idTask
+	 *	@param	Integer	idProject
 	 */
 	showInProject: function(idTask, idProject) {
 
@@ -77,10 +88,15 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 		}
 	},
 
+
+	/**
+	 * Check whether task element exists within current view
+	 * 
+	 *	@return	Boolean
+	 */
 	isTaskInCurrentView: function(idTask) {
 		return Todoyu.exists('task-' + idTask);
 	},
-
 
 
 
@@ -88,6 +104,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 *	Update task status
 	 */
 	updateTaskStatus: Todoyu.Ext.project.Task.updateStatus,
+
 
 
 	/**
@@ -122,8 +139,8 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	/**
 	 *	Timetracking toggle-handler
 	 *
-	 *	@param	Integer	idTask
-	 *	@param	unknown	start
+	 *	@param	Integer		idTask
+	 *	@param	Boolean		start
 	 */
 	onTimetrackingToggle: function(idTask, start) {
 		this._task = 0;
@@ -158,8 +175,9 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	},
 
 
+
 	/**
-	 *	Show history
+	 *	Evoke showing of timetracking history
 	 */
 	showHistory: function() {
 		this.ext.History.show();
