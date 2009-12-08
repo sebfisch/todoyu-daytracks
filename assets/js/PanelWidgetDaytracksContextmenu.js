@@ -62,6 +62,9 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
 	/**
 	 *	Show context menu
+	 * 
+	 *	@param	Object	event
+	 * 	@return	Boolean
 	 */
 	show: function(event) {
 		var li 		= Event.findElement(event, 'li');
@@ -72,7 +75,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 			'parameters': {
 				'task':	idTask
 			},
-			'asynchronous': false
+			'asynchronous':	false
 		};
 
 			// Load context menu asynchronous to make sure the menu is loaded
@@ -84,8 +87,15 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
 		return false;
 	},
-	
-	
+
+
+
+	/**
+	 * Load context menu
+	 * 
+	 *	@param	Object	event
+	 * 	@return	Boolean
+	 */	
 	load: function(event) {
 		var idTask	= event.findElement('li').id.split('-').last();
 
