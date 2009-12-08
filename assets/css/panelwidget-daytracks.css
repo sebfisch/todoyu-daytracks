@@ -3,13 +3,13 @@
 	----------------------- */
 
 #panelwidget-daytracks h1 .title {
-	background: transparent url(../img/icons.png) no-repeat 5px 4px;
+	background:transparent url(../img/icons.png) no-repeat 5px 4px;
 }
 
 #panelwidget-daytracks  ul li {
 	min-height:32px;
 	padding:0;
-	background: url(../../../../core/assets/img/content/hr_hor.png) repeat-x 0 bottom;
+	background:url(../../../../core/assets/img/content/hr_hor.png) repeat-x 0 bottom;
 }
 
 * html #panelwidget-daytracks  ul li {height:32px;}
@@ -26,12 +26,12 @@
 }
 
 #panelwidget-daytracks  ul li a.info {
-	display: block;
-	padding: 2px 25px 2px 2px; /* icon space */
+	display:block;
+	padding:2px 25px 2px 2px; /* icon space */
 }
 
 #panelwidget-daytracks  ul li .info .time {
-	letter-spacing: 1px;
+	letter-spacing:1px;
 	margin-right:10px;
 }
 
@@ -41,36 +41,36 @@
 }
 
 #panelwidget-daytracks  ul li .info .task {
-	display: block;
+	display:block;
 }
 #panelwidget-daytracks  ul li .info .customer-project {
-	display: block;
+	display:block;
 }
 
 #panelwidget-daytracks ul li a.icon {
-	display: block;
-	float: right;
-	clear: none;
-	width: 22px !important;
-	height: 22px;
+	display:block;
+	float:right;
+	clear:none;
+	width:22px !important;
+	height:22px;
 	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0px -26px
 }
 
 	#panelwidget-daytracks  ul li a.running {
-		background-position: 0px 4px !important;
+		background-position:0px 4px !important;
 	}
 
 #panelwidget-daytracks .daytotal {
-	padding: 2px 8px 2px 5px;
+	padding:2px 8px 2px 5px;
 }
 
 	#panelwidget-daytracks .daytotal * {
-		font-weight: bold;
-		font-size: 10px;
+		font-weight:bold;
+		font-size:10px;
 	}
 
 #panelwidget-daytracks .history {
-	padding: 2px 8px 2px 5px;
+	padding:2px 8px 2px 5px;
 }
 
 #panelwidget-daytracks button.trackHistory .icon {
