@@ -60,15 +60,6 @@
 		background-position:0px 4px !important;
 	}
 
-#panelwidget-daytracks .daytotal {
-	padding:2px 8px 2px 5px;
-}
-
-	#panelwidget-daytracks .daytotal * {
-		font-weight:bold;
-		font-size:10px;
-	}
-
 #panelwidget-daytracks .history {
 	padding:2px 8px 2px 5px;
 }
