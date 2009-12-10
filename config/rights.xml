@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rights labels="ext/daytracks/locale/rights.xml">
-	<section key="general">
+<rights>
+	
+	<section name="general">
+		<right name="use" />
 	</section>
-	<section key="panelwidgets">
-		<allow right="PanelWidgetDaytracks" comment="can see quicktaskwizard" />
+	
+	<section name="panelwidgets">
+		<right name="panelwidget:daytracks" />
 	</section>
+	
 </rights>
