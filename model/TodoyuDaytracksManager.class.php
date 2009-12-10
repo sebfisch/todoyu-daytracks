@@ -73,13 +73,13 @@ class TodoyuDaytracksManager {
 					ext_project_project p,
 					ext_user_customer c';
 		$where	= '	t.id			= tr.id_task AND
-					tr.date_update BETWEEN ' . $range['start'] . ' AND ' . $range['end'] . ' AND
+					tr.date_create BETWEEN ' . $range['start'] . ' AND ' . $range['end'] . ' AND
 					tr.id_user		= ' . userid() . ' AND
 					t.id_project	= p.id AND
 					p.id_customer	= c.id';
 		$group	= 't.id';
 		$order	= 'tr.date_create';
-
+		
 		return Todoyu::db()->getArray($fields, $tables, $where, $group, $order);
 	}
 
