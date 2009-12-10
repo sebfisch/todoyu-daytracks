@@ -43,10 +43,10 @@ class TodoyuDaytracksHistoryManager {
 	 */
 	public static function getTrackingRanges($idUser = 0) {
 		$idUser	= userid($idUser);
-		$fields	= '	MIN(' . Todoyu::db()->backtick('date_create') . ') as ' . Todoyu::db()->backtick('min') . ',
-					MAX(' . Todoyu::db()->backtick('date_create') . ') as ' . Todoyu::db()->backtick('max');
+		$fields	= '	MIN(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('min') . ',
+					MAX(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('max');
 		$table	= self::TABLE;
-		$where	= 'id_user = ' . $idUser;
+		$where	= 'id_user_create = ' . $idUser;
 
 		$result	= Todoyu::db()->getRecordByQuery($fields, $table, $where);
 
@@ -72,7 +72,7 @@ class TodoyuDaytracksHistoryManager {
 
 		$current = $range['max'];
 		$min	 = mktime(0, 0, 0, date('n', $range['min']), 1, date('Y', $range['min']));
-		
+
 		while( $min <= $current) {
 			$year	= date('Y', $current);
 			$month	= date('n', $current);
@@ -88,7 +88,7 @@ class TodoyuDaytracksHistoryManager {
 
 			$current = mktime(0, 0, 0, $month, 1, $year);
 		}
-		
+
 		return $options;
 	}
 
@@ -119,7 +119,7 @@ class TodoyuDaytracksHistoryManager {
 		$tracksByDay= array();
 
 		foreach($tracks as $track) {
-			$timestamp	= TodoyuTime::getStartOfDay($track['date_create']);
+			$timestamp	= TodoyuTime::getStartOfDay($track['date_track']);
 
 			$tracksByDay[$timestamp]['tracks'][] 	= $track;
 			$tracksByDay[$timestamp]['total'] 		+= $track['workload_tracked'];
