@@ -27,7 +27,25 @@
  */
 class TodoyuDaytracksPreferenceActionController extends TodoyuActionController {
 
+	/**
+	 * Init. Check rights
+	 *
+	 * @param	Array		$params
+	 */
+	public function init(array $params) {
+		restrict('daytracks', 'use');
+	}
+
+
+
+	/**
+	 * Save panelwidget extended status
+	 *
+	 * @param	Array		$params
+	 */
 	public function pwidgetAction(array $params) {
+		restrict('daytracks', 'panelwidget:daytracks');
+
 		$idWidget	= $params['item'];
 		$value		= $params['value'];
 

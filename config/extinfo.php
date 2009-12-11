@@ -32,8 +32,6 @@ $CONFIG['EXT']['daytracks']['info'] = array(
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'Snowflake Productions, Zürich'
 	),
-	'dependencies' 		=> '',
-	'conflicts'			=> '',
 	'state' 			=> 'beta',
 	'version' => '0.1.0',
 	'constraints' => array(
@@ -42,10 +40,7 @@ $CONFIG['EXT']['daytracks']['info'] = array(
 		),
 		'conflicts' => array(
 
-		),
-		'suggests' => array(
-
-		),
+		)
 	)
 );
 

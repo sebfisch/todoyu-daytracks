@@ -27,6 +27,23 @@
  */
 class TodoyuDaytracksPanelwidgetActionController extends TodoyuActionController {
 
+	/**
+	 * Init. Check rights for panelwidget
+	 *
+	 * @param	Array		$params
+	 */
+	public function init(array $params) {
+		restrict('daytracks', 'panelwidget:daytracks');
+	}
+
+
+
+	/**
+	 * Update the panelwidget content
+	 *
+	 * @param	Array		$params
+	 * @return	String
+	 */
 	public function updateAction(array $params) {
 		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('Daytracks');
 
@@ -34,6 +51,12 @@ class TodoyuDaytracksPanelwidgetActionController extends TodoyuActionController 
 	}
 
 
+
+	/**
+	 * Get contextmenu for daytracks panelwidget
+	 *
+	 * @param	Array		$params
+	 */
 	public function contextmenuAction(array $params) {
 		TodoyuHeader::sendHeaderJSON();
 
@@ -41,7 +64,7 @@ class TodoyuDaytracksPanelwidgetActionController extends TodoyuActionController 
 
 		$contextMenu= new TodoyuContextMenu('DaytracksPanelwidget', $idTask);
 
-		return $contextMenu->getJSON();
+		$contextMenu->printJSON();
 	}
 
 }
