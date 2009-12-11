@@ -68,15 +68,18 @@ class TodoyuDaytracksManager {
 					p.title as project,
 					c.shortname as customer,
 					tr.workload_tracked as `time`';
+
 		$tables	= '	ext_project_task t,
 					ext_timetracking_track tr,
 					ext_project_project p,
 					ext_user_customer c';
+
 		$where	= '	t.id			= tr.id_task AND
 					tr.date_track BETWEEN ' . $range['start'] . ' AND ' . $range['end'] . ' AND
 					tr.id_user_create	= ' . userid() . ' AND
 					t.id_project		= p.id AND
 					p.id_customer		= c.id';
+
 		$group	= 't.id';
 		$order	= 'tr.date_track';
 
