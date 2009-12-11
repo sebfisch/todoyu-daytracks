@@ -115,6 +115,17 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 
 
 	/**
+	 * Check if panelwidget is allowed
+	 *
+	 * @return	Bool
+	 */
+	public static function isAllowed() {
+		return allowed('daytracks', 'panelwidget:daytracks');
+	}
+
+
+
+	/**
 	 * Store panel widget prefs
 	 *
 	 */

@@ -2,12 +2,15 @@
 <locallang>
 	<labels lang="en">
 		<label index="section.general">General</label>
+		<label index="right.use">Use daytracks</label>
 		<label index="section.panelwidgets">Panel Widgets</label>
-		<label index="right.PanelWidgetDaytracks">See Daytracks Widget</label>
+		<label index="right.panelwidget:daytracks">See Daytracks Widget</label>
+		<label index="section.panelwidget:daytracks">Panel Widget Daytrack</label>
+		<label index="right.showHistory">See work history</label>
 	</labels>
 	<labels lang="de">
 		<label index="section.general">Generell</label>
 		<label index="section.panelwidgets">Steuerelemente</label>
-		<label index="right.PanelWidgetDaytracks">See Daytracks Widget</label>
+		<label index="right.panelwidget:daytracks">See Daytracks Widget</label>
 	</labels>	
 </locallang>

@@ -5,8 +5,12 @@
 		<right name="use" />
 	</section>
 	
-	<section name="panelwidgets">
+	<section name="panelwidgets" require="use">
 		<right name="panelwidget:daytracks" />
+	</section>
+	
+	<section name="panelwidget:daytracks" require="use,panelwidget:daytracks">
+		<right name="showHistory" />
 	</section>
 	
 </rights>
