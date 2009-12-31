@@ -25,12 +25,12 @@
 
 	<div id="{$id}-trackings" class="bordercolor">
 		<div class="daytrack total bordercolor">
-			<strong>{Label daytracks.history.total}: <span>{hour_format $tracking.total}</span></strong>
+			<strong>{Label daytracks.history.total}: <span>{Workload $tracking.total}</span></strong>
 		</div>
 {foreach $tracking.dayTracks timestamp daytracks}
 		<div class="daytrack bordercolor {if $details}toggled{else}{cycle values="odd,even"}{/if}">
 			{dateFormat $timestamp D2M2Y4}:
-			<span>{hour_format $daytracks.total}</span>
+			<span>{Workload $daytracks.total}</span>
 		</div>
 	{if $details}
 		<div class="details">
@@ -40,7 +40,7 @@
 					<a href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.History.goToTask({$track.task.id})">{$track.task.title} ({$track.task.id_project}.{$track.task.tasknumber})</a>
 				</span>
 				<span class="time">
-					{hour_format $track.workload_tracked}
+					{Workload $track.workload_tracked}
 				</span>
 			</div>
 	{/foreach}
