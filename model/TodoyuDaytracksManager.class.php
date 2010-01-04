@@ -52,7 +52,7 @@ class TodoyuDaytracksManager {
 	 * 	[status]		Task status key (integer)
 	 * 	[id_project]	Project ID
 	 * 	[project]		Project title
-	 * 	[customer]		Customer shortname
+	 * 	[company]		Company shortname
 	 * 	[time]			Tracked time today
 	 *
 	 * @return	Array
@@ -66,19 +66,19 @@ class TodoyuDaytracksManager {
 					t.tasknumber,
 					p.id as id_project,
 					p.title as project,
-					c.shortname as customer,
+					c.shortname as company,
 					tr.workload_tracked as `time`';
 
 		$tables	= '	ext_project_task t,
 					ext_timetracking_track tr,
 					ext_project_project p,
-					ext_user_customer c';
+					ext_user_company c';
 
 		$where	= '	t.id			= tr.id_task AND
 					tr.date_track BETWEEN ' . $range['start'] . ' AND ' . $range['end'] . ' AND
 					tr.id_user_create	= ' . userid() . ' AND
 					t.id_project		= p.id AND
-					p.id_customer		= c.id';
+					p.id_company		= c.id';
 
 		$group	= 't.id';
 		$order	= 'tr.date_track';
@@ -128,13 +128,13 @@ class TodoyuDaytracksManager {
 							t.tasknumber,
 							p.id as id_project,
 							p.title as project,
-							c.shortname as customer';
+							c.shortname as company';
 				$tables	= '	ext_project_task t,
 							ext_project_project p,
-							ext_user_customer c';
+							ext_user_company c';
 				$where	= '	t.id			= ' . $idTask . ' AND
 							t.id_project	= p.id AND
-							p.id_customer	= c.id';
+							p.id_company	= c.id';
 
 				$data	= Todoyu::db()->getRecordByQuery($fields, $tables, $where);
 

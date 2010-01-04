@@ -6,7 +6,7 @@
 			<span class="time" id="daytracks-track-{$task.id}-time">{HourMinSec $task.time}</span>
 			<span class="tasknumber"># {$task.id_project}.{$task.tasknumber}</span>
 			<span class="task">{htmlencode $task.title|truncate:43}</span>
-			<span class="customer-project">{$task.customer} - {$task.project}</span>
+			<span class="company-project">{$task.company} - {$task.project}</span>
 		</a>
 	</li>
 {/foreach}
