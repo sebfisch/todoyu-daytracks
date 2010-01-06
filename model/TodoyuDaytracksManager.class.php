@@ -74,10 +74,10 @@ class TodoyuDaytracksManager {
 					ext_project_project p,
 					ext_user_company c';
 
-		$where	= '	t.id			= tr.id_task AND
+		$where	= '	t.id	= tr.id_task AND
 					tr.date_track BETWEEN ' . $range['start'] . ' AND ' . $range['end'] . ' AND
 					tr.id_user_create	= ' . userid() . ' AND
-					t.id_project		= p.id AND
+					t.id_project		= p.id	AND
 					p.id_company		= c.id';
 
 		$group	= 't.id';
