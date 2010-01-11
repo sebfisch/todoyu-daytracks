@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en">
-		<label index="section.general">General</label>
-		<label index="right.use">Use daytracks</label>
-		<label index="section.panelwidgets">Panel Widgets</label>
-		<label index="right.panelwidget:daytracks">See Daytracks Widget</label>
-		<label index="section.panelwidget:daytracks">Panel Widget Daytrack</label>
-		<label index="right.showHistory">See work history</label>
+		<label index="general">General</label>
+		<label index="general.use">Use daytracks</label>
+		<label index="panelwidgets">Panel Widgets</label>
+		<label index="panelwidgets.daytracks">See Daytracks Widget</label>
+		<label index="daytracks">Panel Widget Daytrack</label>
+		<label index="daytracks.showHistory">See work history</label>
 	</labels>
 	<labels lang="de">
-		<label index="section.general">Allgemeine Einstellungen</label>
-		<label index="right.use">Benutze Stundenblatt</label>
-		<label index="section.panelwidgets">Steuerelemente</label>
-		<label index="right.panelwidget:daytracks">Sieht Stundenblatt Widget</label>
-		<label index="section.panelwidget:daytracks">Stundenblatt Widget</label>
-		<label index="right.showHistory">Sieht Stundenblatt-Historie</label>
+		<label index="general">Allgemeine Einstellungen</label>
+		<label index="general.use">Benutze Stundenblatt</label>
+		<label index="panelwidgets">Steuerelemente</label>
+		<label index="panelwidgets.daytracks">Sieht Stundenblatt Widget</label>
+		<label index="daytracks">Stundenblatt Widget</label>
+		<label index="daytracks.showHistory">Sieht Stundenblatt-Historie</label>
 	</labels>
 </locallang>

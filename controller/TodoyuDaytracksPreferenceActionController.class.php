@@ -33,7 +33,7 @@ class TodoyuDaytracksPreferenceActionController extends TodoyuActionController {
 	 * @param	Array		$params
 	 */
 	public function init(array $params) {
-		restrict('daytracks', 'use');
+		restrict('daytracks', 'general:use');
 	}
 
 
@@ -44,7 +44,7 @@ class TodoyuDaytracksPreferenceActionController extends TodoyuActionController {
 	 * @param	Array		$params
 	 */
 	public function pwidgetAction(array $params) {
-		restrict('daytracks', 'panelwidget:daytracks');
+		restrict('daytracks', 'daytracks');
 
 		$idWidget	= $params['item'];
 		$value		= $params['value'];

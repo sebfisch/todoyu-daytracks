@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rights>
-	
+
 	<section name="general">
 		<right name="use" />
 	</section>
-	
-	<section name="panelwidgets" require="use">
-		<right name="panelwidget:daytracks" />
+
+	<section name="panelwidgets"  require="general:use">
+		<right name="daytracks" />
 	</section>
-	
-	<section name="panelwidget:daytracks" require="use,panelwidget:daytracks">
+
+	<section name="daytracks" require="general:use,panelwidgets:daytracks">
 		<right name="showHistory" />
 	</section>
-	
+
 </rights>

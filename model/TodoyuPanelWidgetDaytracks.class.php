@@ -120,7 +120,7 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 	 * @return	Bool
 	 */
 	public static function isAllowed() {
-		return allowed('daytracks', 'panelwidget:daytracks');
+		return allowed('daytracks', 'panelwidgets:daytracks');
 	}
 
 

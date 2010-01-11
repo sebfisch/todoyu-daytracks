@@ -34,7 +34,7 @@ class TodoyuDaytracksHistoryActionController extends TodoyuActionController {
 	 * @return	String
 	 */
 	public function historyAction(array $params) {
-		restrict('daytracks', 'showHistory');
+		restrict('daytracks', 'daytracks:showHistory');
 
 		$year	= intval($params['year']);
 		$month	= intval($params['month']);
