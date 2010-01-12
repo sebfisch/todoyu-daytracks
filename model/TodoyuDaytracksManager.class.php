@@ -57,7 +57,7 @@ class TodoyuDaytracksManager {
 	 *
 	 * @return	Array
 	 */
-	public function getTodayTrackedTasks() {
+	public static function getTodayTrackedTasks() {
 		$range	= TodoyuTime::getDayRange(NOW);
 
 		$fields	= '	t.id,
