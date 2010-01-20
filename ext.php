@@ -32,8 +32,8 @@ define('EXTID_DAYTRACKS', 107);
 define('PATH_EXT_DAYTRACKS', PATH_EXT . '/daytracks');
 
 	// Register module locales
-TodoyuLocale::register('daytracks', PATH_EXT_DAYTRACKS . '/locale/ext.xml');
-TodoyuLocale::register('panelwidget-daytracks', PATH_EXT_DAYTRACKS . '/locale/panelwidget-daytracks.xml');
+TodoyuLanguage::register('daytracks', PATH_EXT_DAYTRACKS . '/locale/ext.xml');
+TodoyuLanguage::register('panelwidget-daytracks', PATH_EXT_DAYTRACKS . '/locale/panelwidget-daytracks.xml');
 
 	// Request configurations
 require_once( PATH_EXT_DAYTRACKS . '/config/extension.php' );
