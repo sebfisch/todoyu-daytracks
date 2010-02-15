@@ -42,11 +42,11 @@ class TodoyuDaytracksHistoryManager {
 	 * @return	Array		[min,max]
 	 */
 	public static function getTrackingRanges($idUser = 0) {
-		$idUser	= userid($idUser);
+		$idUser	= personid($idUser);
 		$fields	= '	MIN(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('min') . ',
 					MAX(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('max');
 		$table	= self::TABLE;
-		$where	= 'id_user_create = ' . $idUser;
+		$where	= 'id_person_create = ' . $idUser;
 
 		$result	= Todoyu::db()->getRecordByQuery($fields, $table, $where);
 
@@ -107,7 +107,7 @@ class TodoyuDaytracksHistoryManager {
 	public static function getRangeTracks($year, $month, $details = false, $idUser = 0) {
 		$year		= intval($year);
 		$month		= intval($month);
-		$idUser		= userid($idUser);
+		$idUser		= personid($idUser);
 		$dateStart	= mktime(0, 0, 0, $month, 1, $year);
 		$dateEnd	= mktime(0, 0, 0, $month+1, 1, $year)-1;
 
