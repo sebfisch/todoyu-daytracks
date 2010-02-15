@@ -72,7 +72,7 @@ class TodoyuDaytracksManager {
 		$tables	= '	ext_project_task t,
 					ext_timetracking_track tr,
 					ext_project_project p,
-					ext_user_company c';
+					ext_contact_company c';
 
 		$where	= '	t.id	= tr.id_task AND
 					tr.date_track BETWEEN ' . $range['start'] . ' AND ' . $range['end'] . ' AND
@@ -131,7 +131,7 @@ class TodoyuDaytracksManager {
 							c.shortname as company';
 				$tables	= '	ext_project_task t,
 							ext_project_project p,
-							ext_user_company c';
+							ext_contact_company c';
 				$where	= '	t.id			= ' . $idTask . ' AND
 							t.id_project	= p.id AND
 							p.id_company	= c.id';
