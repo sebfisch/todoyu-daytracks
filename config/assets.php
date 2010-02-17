@@ -26,11 +26,8 @@
  * @subpackage	Daytracks
  */
 
-
-
-
 $CONFIG['EXT']['daytracks']['assets'] = array(
-		// default assets: loaded all over the installation always
+		// Default assets: loaded all over the installation always
 	'default' => array(
 		'js' => array(
 
@@ -41,7 +38,7 @@ $CONFIG['EXT']['daytracks']['assets'] = array(
 	),
 
 
-		// public assets: basis assets for this extension
+		// Public assets: basis assets for this extension
 	'public' => array(
 		'js' => array(
 			array(
@@ -65,7 +62,9 @@ $CONFIG['EXT']['daytracks']['assets'] = array(
 		)
 	),
 
+	// Assets of panel widgets
 
+		// Daytracks
 	'panelwidget-daytracks' => array(
 		'js' => array(
 			array(
