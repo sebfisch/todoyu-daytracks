@@ -40,7 +40,7 @@ Todoyu.Ext.daytracks.History = {
 		var idPopup	= 'popup-daytracks-history';
 		var title	= '[LLL:daytracks.history.title]';
 
-		this.popup	= Todoyu.Popup.openWindow(this.popupID, title, 420, 490, url, options);
+		this.popup	= Todoyu.Popup.openWindow(this.popupID, title, 420, url, options);
 	},
 
 
