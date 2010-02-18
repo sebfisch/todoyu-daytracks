@@ -56,7 +56,7 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 		TodoyuPage::addExtAssets('daytracks', 'panelwidget-daytracks');
 
 			// Add onload init function
-		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.daytracks.PanelWidget.Daytracks.init.bind(Todoyu.Ext.daytracks.PanelWidget.Daytracks)');
+		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.daytracks.PanelWidget.Daytracks.init.bind(Todoyu.Ext.daytracks.PanelWidget.Daytracks)', 100);
 	}
 
 
