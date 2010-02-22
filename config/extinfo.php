@@ -25,18 +25,18 @@
 
 
 $CONFIG['EXT']['daytracks']['info'] = array(
-	'title'				=> 'Daytracks',
-	'description' 		=> 'Timetracks of current day overview',
-	'author' 			=> array(
+	'title'			=> 'Daytracks',
+	'description' 	=> 'Timetracks of current day overview',
+	'author' 		=> array(
 		'name'		=> 'Todoyu Core Team',
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'Snowflake Productions, Zürich'
 	),
-	'state' 			=> 'beta',
-	'version' => '0.1.0',
-	'constraints' => array(
-		'depends' => array(
-			'project'			=> '0.1.0',
+	'state' 		=> 'beta',
+	'version' 		=> '0.2.0',
+	'constraints' 	=> array(
+		'depends' 	=> array(
+			'project'	=> '0.2.0',
 		),
 		'conflicts' => array(
 
