@@ -20,13 +20,12 @@
 ***************************************************************/
 
 /**
- * Hours sheet which lists all task the user tracked today and
+ * Hours sheet which lists all task the person tracked today and
  * cumulate todays worktime
  *
  * @package		Todoyu
  * @subpackage	Timetracking
  */
-
 class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
 
 
@@ -123,15 +122,6 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 		return allowed('daytracks', 'panelwidgets:daytracks');
 	}
 
-
-
-	/**
-	 * Store panel widget prefs
-	 *
-	 */
-//	public function savePreference($idArea = 0, $prefVals = '') {
-//		TodoyuPreferenceManager::savePreference(EXTID_USER, 'panelwidget-staffselector', $prefVals, 0, true, $idArea, 0);
-//	}
 
 }
 

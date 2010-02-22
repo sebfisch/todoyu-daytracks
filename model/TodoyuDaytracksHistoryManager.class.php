@@ -38,15 +38,15 @@ class TodoyuDaytracksHistoryManager {
 	/**
 	 * Get the date of the first and the last tracking
 	 *
-	 * @param	Integer		$idUser
+	 * @param	Integer		$idPerson
 	 * @return	Array		[min,max]
 	 */
-	public static function getTrackingRanges($idUser = 0) {
-		$idUser	= personid($idUser);
+	public static function getTrackingRanges($idPerson = 0) {
+		$idPerson	= personid($idPerson);
 		$fields	= '	MIN(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('min') . ',
 					MAX(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('max');
 		$table	= self::TABLE;
-		$where	= 'id_person_create = ' . $idUser;
+		$where	= 'id_person_create = ' . $idPerson;
 
 		$result	= Todoyu::db()->getRecordByQuery($fields, $table, $where);
 
@@ -63,11 +63,11 @@ class TodoyuDaytracksHistoryManager {
 	 * The years are the keys, the month the subelements of each year
 	 * The range is starts at the first tracking, and ends at the last
 	 *
-	 * @param	Integer		$idUser
+	 * @param	Integer		$idPerson
 	 * @return	Array
 	 */
-	public static function getMonthSelectorOptions($idUser = 0) {
-		$range	= self::getTrackingRanges($idUser);
+	public static function getMonthSelectorOptions($idPerson = 0) {
+		$range	= self::getTrackingRanges($idPerson);
 		$options= array();
 
 		$current = $range['max'];
@@ -95,24 +95,24 @@ class TodoyuDaytracksHistoryManager {
 
 
 	/**
-	 * Get all tracks in a range for a user
+	 * Get all tracks in a range for a person
 	 * The tracks are grouped by day and already summed up in the total key
 	 *
 	 * @param	Integer		$year
 	 * @param	Integer		$month
 	 * @param	Bool		$details
-	 * @param	Integer		$idUser
+	 * @param	Integer		$idPerson
 	 * @return	Array
 	 */
-	public static function getRangeTracks($year, $month, $details = false, $idUser = 0) {
+	public static function getRangeTracks($year, $month, $details = false, $idPerson = 0) {
 		$year		= intval($year);
 		$month		= intval($month);
-		$idUser		= personid($idUser);
+		$idPerson	= personid($idPerson);
 		$dateStart	= mktime(0, 0, 0, $month, 1, $year);
 		$dateEnd	= mktime(0, 0, 0, $month+1, 1, $year)-1;
 
 
-		$tracks		= TodoyuTimetracking::getUserTracks($dateStart, $dateEnd, $idUser);
+		$tracks		= TodoyuTimetracking::getPersonTracks($dateStart, $dateEnd, $idPerson);
 
 		$workloads	= TodoyuArray::getColumn($tracks, 'workload_tracked');
 		$total		= array_sum($workloads);
