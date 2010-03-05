@@ -9,7 +9,7 @@
 		<right name="daytracks" />
 	</section>
 
-	<section name="daytracks" require="general:use,panelwidgets:daytracks">
+	<section name="daytracks" require="general:use">
 		<right name="showHistory" />
 	</section>
 
