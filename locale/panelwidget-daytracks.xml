@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en">
-		<label index="title">Todays Working Time</label>
-		<label index="pwidget.title">Todays Working Time</label>
-		<label index="totalToday">Total Today</label>
-		<label index="showHistory">Show Timetracking History</label>
-		<label index="goToTask">Go to task</label>
+		<label index="title">Time Tracked Today</label>
+		<label index="pwidget.title">Time Tracked Today</label>
+		<label index="totalToday">Total Tracked Time Today</label>
+		<label index="showHistory">Show Journal of your Tracked Hours</label>
+		<label index="goToTask">Switch to Task</label>
 	</labels>
 	<labels lang="de">
 		<label index="title">Arbeitszeit heute</label>
