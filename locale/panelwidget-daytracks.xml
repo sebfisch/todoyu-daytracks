@@ -4,8 +4,8 @@
 		<label index="title">Time Tracked Today</label>
 		<label index="pwidget.title">Time Tracked Today</label>
 		<label index="totalToday">Total Tracked Time Today</label>
-		<label index="showHistory">Show Journal of your Tracked Hours</label>
-		<label index="goToTask">Switch to Task</label>
+		<label index="showHistory">Show Journal Of Your Tracked Time</label>
+		<label index="goToTask">Switch To Task</label>
 	</labels>
 	<labels lang="de">
 		<label index="title">Arbeitszeit heute</label>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en">
-		<label index="ext.title">Journal of Tracked Time</label>
-		<label index="title">Journal of your Tracked Time</label>
+		<label index="ext.title">Journal Of Tracked Time</label>
+		<label index="title">Journal Of Your Tracked Time</label>
 		<label index="history.title">Time Tracking Journal</label>
 		<label index="history.total">Total Tracked Time</label>
 		<label index="history.toggledetails.open">Show Details</label>

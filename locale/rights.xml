@@ -5,8 +5,8 @@
 		<label index="general.use">Use Daytracks</label>
 		<label index="panelwidgets">Panel Widgets</label>
 		<label index="panelwidgets.daytracks">See Daytracks Widget</label>
-		<label index="daytracks">Panel Widget Daytracks</label>
-		<label index="daytracks.showHistory">See work history</label>
+		<label index="daytracks">Panel Widget "Time Tracked Today"</label>
+		<label index="daytracks.showHistory">See Journal Of Your Tracked Time</label>
 	</labels>
 	<labels lang="de">
 		<label index="general">Allgemeine Einstellungen</label>
