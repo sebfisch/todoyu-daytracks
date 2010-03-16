@@ -28,8 +28,7 @@
 class TodoyuDaytracksHistoryManager {
 
 	/**
-	 * Database table
-	 *
+	 * Default table for database requests
 	 */
 	const TABLE = 'ext_timetracking_track';
 
