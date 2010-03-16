@@ -43,7 +43,7 @@
 				<span class="task">
 					<a href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.History.goToTask({$track.task.id})">
 						<span class="tasknumber">{$track.task.id_project}.{$track.task.tasknumber}</span>
-						<span class="tasktitle">{$track.task.title}</span>
+						<span class="tasktitle">{htmlencode $track.task.title}</span>
 					</a>
 				</span>
 				<span class="time">
