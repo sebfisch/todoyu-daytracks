@@ -27,60 +27,36 @@
  */
 
 $CONFIG['EXT']['daytracks']['assets'] = array(
-		// Default assets: loaded all over the installation always
-	'default' => array(
-		'js' => array(
-
+	'js' => array(
+		array(
+			'file'		=> 'ext/daytracks/assets/js/Ext.js',
+			'position'	=> 100
 		),
-		'css' => array(
-
+		array(
+			'file'		=> 'ext/daytracks/assets/js/History.js',
+			'position'	=> 101
+		),
+		array(
+			'file'		=> 'ext/daytracks/assets/js/PanelWidgetDaytracks.js',
+			'position'	=> 110
+		),
+		array(
+			'file'		=> 'ext/daytracks/assets/js/PanelWidgetDaytracksContextmenu.js',
+			'position'	=> 111
 		)
 	),
-
-
-		// Public assets: basis assets for this extension
-	'public' => array(
-		'js' => array(
-			array(
-				'file'		=> 'ext/daytracks/assets/js/Ext.js',
-				'position'	=> 100
-			),
-			array(
-				'file'		=> 'ext/daytracks/assets/js/History.js',
-				'position'	=> 101
-			)
+	'css' => array(
+		array(
+			'file'		=> 'ext/daytracks/assets/css/ext.css',
+			'position'	=> 100
 		),
-		'css' => array(
-			array(
-				'file'		=> 'ext/daytracks/assets/css/ext.css',
-				'position'	=> 100
-			),
-			array(
-				'file'		=> 'ext/daytracks/assets/css/history.css',
-				'position'	=> 101
-			)
-		)
-	),
-
-	// Assets of panel widgets
-
-		// Daytracks
-	'panelwidget-daytracks' => array(
-		'js' => array(
-			array(
-				'file'		=> 'ext/daytracks/assets/js/PanelWidgetDaytracks.js',
-				'position'	=> 110
-			),
-			array(
-				'file'		=> 'ext/daytracks/assets/js/PanelWidgetDaytracksContextmenu.js',
-				'position'	=> 111
-			)
+		array(
+			'file'		=> 'ext/daytracks/assets/css/history.css',
+			'position'	=> 101
 		),
-		'css' => array(
-			array(
-				'file'		=> 'ext/daytracks/assets/css/panelwidget-daytracks.css',
-				'position'	=> 110
-			)
+		array(
+			'file'		=> 'ext/daytracks/assets/css/panelwidget-daytracks.css',
+			'position'	=> 110
 		)
 	)
 );
