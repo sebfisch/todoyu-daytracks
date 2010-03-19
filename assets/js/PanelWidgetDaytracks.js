@@ -46,6 +46,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
  */
 	init: function() {
 		this.registerTimetracking();
+		this.registerHooks();
 		this.ContextMenu.init();
 	},
 
@@ -57,6 +58,15 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	registerTimetracking: function() {
 		Todoyu.Ext.timetracking.registerToggleCallback(this.onTimetrackingToggle.bind(this));
 		Todoyu.Ext.timetracking.registerClockCallback(this.onTimetrackingClockUpdate.bind(this));
+	},
+	
+	
+	
+	/**
+	 * Register JS hooks of daytracks
+	 */
+	registerHooks: function() {
+		Todoyu.Hook.add('taskStatusUpdated', this.onTaskStatusUpdated.bind(this));		
 	},
 
 
@@ -101,13 +111,6 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 
 	/**
-	 *	Update task status
-	 */
-	updateTaskStatus: Todoyu.Ext.project.Task.updateStatus,
-
-
-
-	/**
 	 *	Refresh widget
 	 */
 	refresh: function() {
@@ -116,11 +119,23 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 		var options	= {
 			'parameters': {
 				'action':	'update'
-			}
+			},
+			'onComplete': this.onRefreshed.bind(this)
 		};
 
 			// Update daytracks list
 		Todoyu.Ui.update(target, url, options);
+	},
+	
+	
+	
+	/**
+	 * onRefreshed daytracks event handler
+	 *
+	 * @param	Object		response
+	 */
+	onRefreshed: function(response) {
+		this.ContextMenu.attach();
 	},
 
 
@@ -133,8 +148,32 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	toggleTimetracking: function(idTask) {
 		Todoyu.Ext.timetracking.toggle(idTask);
 	},
+	
+	
+	
+	/**
+	 * Update task status
+	 * 
+	 * @param	Integer		idTask
+	 * @param	String		Status
+	 */
+	updateTaskStatus: function(idTask, status) {
+		Todoyu.Ext.project.Task.updateStatus(idTask, status);
+	},
 
-
+	
+	
+	/**
+	 * Handler when task status is updated and hook is called
+	 * 
+	 * @param	Integer		idTask
+	 * @param	Integer		status
+	 */
+	onTaskStatusUpdated: function(idTask, status) {
+		this.refresh();
+	},
+	
+	
 
 	/**
 	 *	Timetracking toggle-handler

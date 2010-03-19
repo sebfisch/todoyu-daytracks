@@ -72,7 +72,11 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 			$tracks[] = $current;
 		}
 
-
+		foreach($tracks as $index => $track)	 {
+			$tracks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($track['type'], $track['status']);
+		}
+		
+		
 		$data	= array(
 			'tasks'		=> $tracks,
 			'current'	=> TodoyuTimetracking::getTaskID(),
