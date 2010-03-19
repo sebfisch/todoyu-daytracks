@@ -36,7 +36,7 @@ class TodoyuDaytracksManager {
 	 */
 	public static function getPanelWidgetContextMenuItems($idTask, array $items) {
 		$ownItems	= $GLOBALS['CONFIG']['EXT']['daytracks']['ContextMenu']['PanelWidget'];
-		
+
 		$items		= array_merge_recursive($items, $ownItems);
 
 		return $items;
@@ -83,7 +83,7 @@ class TodoyuDaytracksManager {
 					p.id_company		= c.id';
 
 		$group	= 't.id';
-		$order	= 'tr.date_track';
+		$order	= 'tr.date_create';
 
 		return Todoyu::db()->getArray($fields, $tables, $where, $group, $order);
 	}
