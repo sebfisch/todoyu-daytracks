@@ -3,7 +3,7 @@
 	<li id="daytracks-track-{$task.id}" class="{cycle values="odd,even"} listItem status-{taskStatusKey $task.status} bcStatus{$task.status}" title="{taskStatusLabel $task.status}">
 		
 		{if $task.isTrackable}
-			<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id})" title=""><!-- button --></a>
+			<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id})" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
 		{/if}
 		
 		<a id="daytracks-track-{$task.id}-info" class="info" title="{Label panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber})" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.goToTask({$task.id_project},{$task.id});">
