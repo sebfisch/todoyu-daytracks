@@ -23,10 +23,8 @@
  * Daytracks panel widgets' configuration
  */
 
-
-	// add panel widgets to areas
+	// Add panel widgets to areas
 TodoyuPanelWidgetManager::addDefaultPanelWidget('portal', 'TodoyuPanelWidgetDaytracks', 15);
 TodoyuPanelWidgetManager::addDefaultPanelWidget('project', 'TodoyuPanelWidgetDaytracks', 50);
-
 
 ?>

@@ -23,7 +23,6 @@
  * Various daytracks extension info data
  */
 
-
 $CONFIG['EXT']['daytracks']['info'] = array(
 	'title'			=> 'Journal of tracked hours',
 	'description' 	=> 'Journal of tracked hours',
@@ -43,6 +42,5 @@ $CONFIG['EXT']['daytracks']['info'] = array(
 		)
 	)
 );
-
 
 ?>
