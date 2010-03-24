@@ -35,7 +35,7 @@ class TodoyuDaytracksManager {
 	 * @return	Array
 	 */
 	public static function getPanelWidgetContextMenuItems($idTask, array $items) {
-		$ownItems	= $GLOBALS['CONFIG']['EXT']['daytracks']['ContextMenu']['PanelWidget'];
+		$ownItems	= Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'];
 
 		$items		= array_merge_recursive($items, $ownItems);
 

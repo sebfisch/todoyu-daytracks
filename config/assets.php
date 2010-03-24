@@ -26,7 +26,7 @@
  * @subpackage	Daytracks
  */
 
-$CONFIG['EXT']['daytracks']['assets'] = array(
+Todoyu::$CONFIG['EXT']['daytracks']['assets'] = array(
 	'js' => array(
 		array(
 			'file'		=> 'ext/daytracks/assets/js/Ext.js',

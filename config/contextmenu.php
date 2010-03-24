@@ -25,21 +25,21 @@
 
 
 
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'] = array(
-	'showinproject' => $CONFIG['EXT']['project']['ContextMenu']['Task']['showinproject'],
-	'status'		=> $CONFIG['EXT']['project']['ContextMenu']['Task']['status'],
-	'bookmark'		=> $CONFIG['EXT']['project']['ContextMenu']['Task']['bookmark']
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'] = array(
+	'showinproject' => Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['showinproject'],
+	'status'		=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['status'],
+	'bookmark'		=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['bookmark']
 );
 
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['showinproject']['jsAction'] 	= 'Todoyu.Ext.Daytracks.PanelWidget.Daytracks.showInProject(#ID#)';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['showinproject']['jsAction'] 	= 'Todoyu.Ext.Daytracks.PanelWidget.Daytracks.showInProject(#ID#)';
 
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['planning']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_PLANNING . ')';
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['open']['jsAction'] 		= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_OPEN . ')';
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['progress']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_PROGRESS . ')';
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['confirm']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_CONFIRM . ')';
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['done']['jsAction'] 		= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_DONE . ')';
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['accepted']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_ACCEPTED . ')';
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['rejected']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_REJECTED . ')';
-$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['cleared']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_CLEARED . ')';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['planning']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_PLANNING . ')';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['open']['jsAction'] 		= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_OPEN . ')';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['progress']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_PROGRESS . ')';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['confirm']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_CONFIRM . ')';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['done']['jsAction'] 		= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_DONE . ')';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['accepted']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_ACCEPTED . ')';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['rejected']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_REJECTED . ')';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['cleared']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_CLEARED . ')';
 
 ?>
