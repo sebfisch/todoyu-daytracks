@@ -30,7 +30,7 @@ Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'] = array(
 	'bookmark'		=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['bookmark']
 );
 
-Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['showinproject']['jsAction'] 	= 'Todoyu.Ext.Daytracks.PanelWidget.Daytracks.showInProject(#ID#)';
+Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['showinproject']['jsAction'] 	= 'Todoyu.Ext.project.goToTaskInProject(#ID#)';
 
 Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['planning']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_PLANNING . ')';
 Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['open']['jsAction'] 		= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_OPEN . ')';

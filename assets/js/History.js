@@ -79,12 +79,5 @@ Todoyu.Ext.daytracks.History = {
 	toggleDetails: function()	{
 		this.showDetails = !this.showDetails;
 		this.update();
-	},
-
-	goToTask: function(idTask) {
-		this.popup.close();
-
-		Todoyu.goTo('project', 'ext', {task:idTask,tab:'timetracking'}, 'task-' + idTask + '-timetracking');
 	}
-
 };

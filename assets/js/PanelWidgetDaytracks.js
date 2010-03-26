@@ -71,19 +71,6 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 
 	/**
-	 *	Show task in(side its project) in project area
-	 * 
-	 *	@param	Integer	idTask
-	 *	@param	Integer	idProject
-	 */
-	showInProject: function(idTask, idProject) {
-
-		Todoyu.Ext.project.goToTaskInProject(idTask, idProject);
-	},
-
-
-
-	/**
 	 *	Go to given task
 	 *
 	 *	@param	Integer	idProject

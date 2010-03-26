@@ -41,7 +41,7 @@
 		{foreach $daytracks.tracks index track}
 			<div class="daytrackdetail bordercolor {cycle values="odd,even"}">
 				<span class="task">
-					<a href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.History.goToTask({$track.task.id})">
+					<a href="javascript:void(0)" onclick="Todoyu.Ext.project.goToTaskInProject({$track.task.id})">
 						<span class="tasknumber">{$track.task.id_project}.{$track.task.tasknumber}</span>
 						<span class="tasktitle">{htmlencode $track.task.title}</span>
 					</a>

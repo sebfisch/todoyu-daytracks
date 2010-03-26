@@ -6,7 +6,7 @@
 			<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id})" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
 		{/if}
 		
-		<a id="daytracks-track-{$task.id}-info" class="info" title="{Label panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber})" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.goToTask({$task.id_project},{$task.id});">
+		<a id="daytracks-track-{$task.id}-info" class="info" title="{Label panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber})" href="javascript:void(0)" onclick="Todoyu.Ext.project.goToTaskInProject({$task.id_project},{$task.id});">
 			<span class="time" id="daytracks-track-{$task.id}-time">{HourMinSec $task.time}</span>
 			<span class="tasknumber"># {$task.id_project}.{$task.tasknumber}</span>
 			<span class="task">{htmlencode $task.title|truncate:43}</span>
