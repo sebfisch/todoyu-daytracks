@@ -58,7 +58,7 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 	/**
 	 * Render widget content
 	 *
-	 * @return unknown
+	 * @return	String
 	 */
 	public function renderContent() {
 		$tmpl	= 'ext/daytracks/view/panelwidget-daytracks.tmpl';
@@ -74,8 +74,8 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 		foreach($tracks as $index => $track)	 {
 			$tracks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($track['type'], $track['status']);
 		}
-		
-		
+
+
 		$data	= array(
 			'tasks'		=> $tracks,
 			'current'	=> TodoyuTimetracking::getTaskID(),
