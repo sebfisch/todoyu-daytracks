@@ -43,8 +43,6 @@ class TodoyuDaytracksPreferenceActionController extends TodoyuActionController {
 	 * @param	Array		$params
 	 */
 	public function pwidgetAction(array $params) {
-		restrict('daytracks', 'daytracks');
-
 		$idWidget	= $params['item'];
 		$value		= $params['value'];
 
