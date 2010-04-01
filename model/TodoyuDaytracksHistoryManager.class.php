@@ -98,7 +98,7 @@ class TodoyuDaytracksHistoryManager {
 	 *
 	 * @param	Integer		$year
 	 * @param	Integer		$month
-	 * @param	Bool		$details
+	 * @param	Boolean		$details
 	 * @param	Integer		$idPerson
 	 * @return	Array
 	 */

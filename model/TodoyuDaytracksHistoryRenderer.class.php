@@ -31,7 +31,7 @@ class TodoyuDaytracksHistoryRenderer {
 	 *
 	 * @param	Integer		$year
 	 * @param	Integer		$month
-	 * @param	Bool		$details
+	 * @param	Boolean		$details
 	 * @return	String
 	 */
 	public static function renderHistory($year = 0, $month = 0, $details = false) {
