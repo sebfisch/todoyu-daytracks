@@ -3,7 +3,7 @@
 ------------------------ */
 
 #daytracks-history .selectors {
-	border:0px solid #bababa;
+	border:0 solid #bababa;
 	padding:7px 10px;
 }
 
@@ -41,7 +41,7 @@
 #daytracks-history-trackings {
 	margin:10px 0;
 	padding-bottom:5px;
-	border:0px solid #bababa;
+	border:0 solid #bababa;
 }
 
 	#daytracks-history-trackings h1 {
