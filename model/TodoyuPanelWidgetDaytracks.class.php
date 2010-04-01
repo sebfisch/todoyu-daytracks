@@ -66,7 +66,6 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 		$tracks	= TodoyuDaytracksManager::getTodayTrackedTasks();
 
 		$current= TodoyuDaytracksManager::getCurrentTrackedUnsavedTask();
-
 		if( $current !== false ) {
 			$tracks[] = $current;
 		}

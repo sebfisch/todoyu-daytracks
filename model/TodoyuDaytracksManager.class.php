@@ -127,6 +127,7 @@ class TodoyuDaytracksManager {
 							t.title,
 							t.status,
 							t.tasknumber,
+							t.type,
 							p.id as id_project,
 							p.title as project,
 							c.shortname as company';
