@@ -40,9 +40,9 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 
 
-/**
- * Init daytrack panelWidget
- */
+	/**
+	 * Init daytrack panelWidget
+	 */
 	init: function() {
 		this.registerTimetracking();
 		this.registerHooks();
@@ -65,7 +65,8 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * Register JS hooks of daytracks
 	 */
 	registerHooks: function() {
-		Todoyu.Hook.add('taskStatusUpdated', this.onTaskStatusUpdated.bind(this));		
+		Todoyu.Hook.add('taskStatusUpdated', this.onTaskStatusUpdated.bind(this));	
+		Todoyu.Hook.add('QuickTaskSaved', this.onQuickTaskAdded.bind(this));	
 	},
 
 
@@ -197,6 +198,11 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 			this._el_task.update( Todoyu.Time.timeFormatSeconds(this._tasktime + time) );
 			this._el_total.update( Todoyu.Time.timeFormatSeconds(this._totaltime + time) );
 		}
+	},
+	
+	
+	onQuickTaskAdded: function(idTask, idProject, response) {
+		this.refresh();
 	},
 
 

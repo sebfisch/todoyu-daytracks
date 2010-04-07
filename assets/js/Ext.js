@@ -25,6 +25,10 @@ Todoyu.Ext.daytracks = {
 
 	PanelWidget: {},
 
-	Headlet: {}
+	Headlet: {},
+	
+	init: function() {
+		
+	}
 
 };
