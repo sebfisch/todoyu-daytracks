@@ -52,7 +52,7 @@
 	clear:none;
 	width:22px !important;
 	height:22px;
-	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0 -26px
+	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0 -26px;
 }
 
 	#panelwidget-daytracks  ul li a.running {
@@ -64,5 +64,5 @@
 }
 
 #panelwidget-daytracks button.trackHistory .icon {
-	background:url(../img/icons.png) no-repeat 0 -87px;
+	background:url(../img/icons.png) no-repeat 1px -86px;
 }
