@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
-	<labels lang="en">
+	<labels lang="en_GB">
 		<label index="general">General</label>
 		<label index="general.use">Use Daytracks</label>
 		<label index="panelwidgets">Panel Widgets</label>
@@ -8,7 +8,7 @@
 		<label index="daytracks">Panel Widget "Time Tracked Today"</label>
 		<label index="daytracks.showHistory">See Journal Of Your Tracked Time</label>
 	</labels>
-	<labels lang="de">
+	<labels lang="de_DE">
 		<label index="general">Allgemeine Einstellungen</label>
 		<label index="general.use">Stundenblatt benutzen</label>
 		<label index="panelwidgets">Steuerelemente</label>
@@ -16,7 +16,7 @@
 		<label index="daytracks">Stundenblatt Widget</label>
 		<label index="daytracks.showHistory">Stundenblatt-Historie sehen</label>
 	</labels>
-	<labels lang="pt">
+	<labels lang="pt_BR">
 		<label index="general">Geral</label>
 		<label index="general.use">Utilizar Gestão de Horas</label>
 		<label index="panelwidgets">Painel Widgets</label>

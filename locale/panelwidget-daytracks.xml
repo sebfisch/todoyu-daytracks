@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
-	<labels lang="en">
+	<labels lang="en_GB">
 		<label index="title">Time Tracked Today</label>
 		<label index="pwidget.title">Time Tracked Today</label>
 		<label index="totalToday">Total Tracked Time Today</label>
 		<label index="showHistory">Show Journal Of Your Tracked Time</label>
 		<label index="goToTask">Switch To Task</label>
 	</labels>
-	<labels lang="de">
+	<labels lang="de_DE">
 		<label index="title">Arbeitszeit heute</label>
 		<label index="pwidget.title">Arbeitszeit heute</label>
 		<label index="totalToday">Total heute</label>
 		<label index="showHistory">Zeige Arbeitszeit-Historie</label>
 		<label index="goToTask">Gehe zu Aufgabe</label>
 	</labels>
-	<labels lang="pt">
+	<labels lang="pt_BR">
 		<label index="title">Horas Trabalhadas de Hoje</label>
 		<label index="pwidget.title">Horas Trabalhadas de Hoje</label>
 		<label index="totalToday">Total de Horas Trabalhadas de Hoje</label>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
-	<labels lang="en">
+	<labels lang="en_GB">
 		<label index="ext.title">Journal Of Tracked Time</label>
 		<label index="title">Journal Of Your Tracked Time</label>
 		<label index="history.title">Time Tracking Journal</label>
@@ -9,7 +9,7 @@
 		<label index="history.toggledetails.close">Close Details</label>
 		<label index="totalToday">Total Tracked Time Today</label>
 	</labels>
-	<labels lang="de">
+	<labels lang="de_DE">
 		<label index="ext.title">Arbeitszeit-Info</label>
 		<label index="title">Tagesarbeiten</label>
 		<label index="history.title">Arbeitszeit-Historie</label>
@@ -18,7 +18,7 @@
 		<label index="history.toggledetails.close">Schliesse Details</label>
 		<label index="totalToday">Total heute erfasste Zeit</label>
 	</labels>
-	<labels lang="pt">
+	<labels lang="pt_BR">
 		<label index="ext.title">Diário de Horas Trabalhadas</label>
 		<label index="title">Diário das Suas Horas Trabalhadas</label>
 		<label index="history.title">Diário de Horas Trabalhadas</label>
