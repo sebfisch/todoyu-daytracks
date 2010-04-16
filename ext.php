@@ -25,7 +25,6 @@
  * @subpackage	DayTracks
  */
 
-
 	// Declare ext ID, path
 define('EXTID_DAYTRACKS', 107);
 define('PATH_EXT_DAYTRACKS', PATH_EXT . '/daytracks');
@@ -35,7 +34,7 @@ TodoyuLanguage::register('daytracks', PATH_EXT_DAYTRACKS . '/locale/ext.xml');
 TodoyuLanguage::register('panelwidget-daytracks', PATH_EXT_DAYTRACKS . '/locale/panelwidget-daytracks.xml');
 
 	// Request configurations
+	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search
 require_once( PATH_EXT_DAYTRACKS . '/config/extension.php' );
-//require_once( PATH_EXT_PROJECT . '/config/filters.php' );
 
 ?>
