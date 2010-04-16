@@ -24,6 +24,6 @@
  */
 
 	// Add contextmenu function
-TodoyuContextMenuManager::registerFunction('DaytracksPanelwidget', 'TodoyuDaytracksManager::getPanelWidgetContextMenuItems');
+TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuDaytracksManager::getPanelWidgetContextMenuItems');
 
 ?>
