@@ -28,8 +28,10 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 	 */
 	ext:	Todoyu.Ext.daytracks,
 
+	/**
+	 * Backreference to widget
+	 */
 	widget:	Todoyu.Ext.daytracks.PanelWidget.Daytracks,
-
 
 
 	/**
@@ -45,7 +47,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 	 *	Attach context menu
 	 */
 	attach: function() {
-		Todoyu.ContextMenu.attachMenuToClass('contextmenudaytrackspwidget', this.load.bind(this));
+		Todoyu.ContextMenu.attach('DaytracksPanelwidget', '.contextmenudaytrackspwidget', this.getID.bind(this));
 	},
 
 
@@ -54,44 +56,12 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 	 *	Detach context menu
 	 */
 	detach: function() {
-		Todoyu.ContextMenu.detachAllMenus('contextmenudaytrackspwidget');
+		Todoyu.ContextMenu.detach('.contextmenudaytrackspwidget');
 	},
 
 
-
-	/**
-	 * Load context menu
-	 *
-	 *	@param	Object	event
-	 * 	@return	Boolean
-	 */
-	load: function(event) {
-		var idTask	= event.findElement('li').id.split('-').last();
-
-			// Prepare request parameters
-		var url		= Todoyu.getUrl('daytracks', 'panelwidget');
-		var options	= {
-			'parameters': {
-				'action':	'contextmenu',
-				'task':		idTask
-			}
-		};
-
-		Todoyu.ContextMenu.showMenu(url, options, event);
-
-		return false;
-	},
-
-
-
-	/**
-	 *	Attach context menu to given element
-	 *
-	 *	@param	String	element
-	 */
-	attachMenuToElement: function(element) {
-		Todoyu.ContextMenu.attachMenuToElement($(element), this.show.bind(this));
+	getID: function(element, event) {
+		return element.id.split('-').last();
 	}
-
 
 };

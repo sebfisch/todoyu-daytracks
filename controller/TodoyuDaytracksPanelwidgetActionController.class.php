@@ -49,23 +49,6 @@ class TodoyuDaytracksPanelwidgetActionController extends TodoyuActionController 
 		return $panelWidget->getContent();
 	}
 
-
-
-	/**
-	 * Get contextmenu for daytracks panelwidget
-	 *
-	 * @param	Array		$params
-	 */
-	public function contextmenuAction(array $params) {
-		TodoyuHeader::sendHeaderJSON();
-
-		$idTask		= intval($params['task']);
-
-		$contextMenu= new TodoyuContextMenu('DaytracksPanelwidget', $idTask);
-
-		$contextMenu->printJSON();
-	}
-
 }
 
 ?>
