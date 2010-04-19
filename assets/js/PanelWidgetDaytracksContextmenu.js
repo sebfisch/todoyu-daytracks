@@ -24,7 +24,7 @@
 Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
 	/**
-	 *	Ext shortcut
+	 * Ext shortcut
 	 */
 	ext:	Todoyu.Ext.daytracks,
 
@@ -35,7 +35,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
 
 	/**
-	 *	Register panel widget context menu
+	 * Register panel widget context menu
 	 */
 	init: function() {
 		this.attach();
@@ -44,7 +44,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
 
 	/**
-	 *	Attach context menu
+	 * Attach context menu
 	 */
 	attach: function() {
 		Todoyu.ContextMenu.attach('DaytracksPanelwidget', '.contextmenudaytrackspwidget', this.getID.bind(this));
@@ -53,7 +53,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
 
 	/**
-	 *	Detach context menu
+	 * Detach context menu
 	 */
 	detach: function() {
 		Todoyu.ContextMenu.detach('.contextmenudaytrackspwidget');

@@ -27,7 +27,6 @@
  */
 class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
 
-
 	/**
 	 * Constructor (initialize widget)
 	 *

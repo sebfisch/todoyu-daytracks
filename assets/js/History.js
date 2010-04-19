@@ -44,7 +44,7 @@ Todoyu.Ext.daytracks.History = {
 
 
 	/**
-	 *	Update history
+	 * Update history
 	 */
 	update: function() {
 		var date	= this.getSelectedDate();
@@ -74,7 +74,7 @@ Todoyu.Ext.daytracks.History = {
 
 
 	/**
-	 *	Toggle details
+	 * Toggle details
 	 */
 	toggleDetails: function()	{
 		this.showDetails = !this.showDetails;
