@@ -90,7 +90,7 @@ class TodoyuDaytracksManager {
 
 
 	/**
-	 * Check if a task has already been tracked today
+	 * Check whether a task has already been tracked today
 	 * (has a record in the database)
 	 *
 	 * @param	Integer		$idTask
