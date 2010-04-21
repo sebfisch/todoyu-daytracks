@@ -43,7 +43,7 @@ class TodoyuDaytracksHistoryRenderer {
 		$month	= $month === 0 ? date('n') : $month ;
 
 		$tmpl	= 'ext/daytracks/view/history.tmpl';
-		$data	=	array(
+		$data	= array(
 			'id'		=> 'daytracks-history',
 			'curYear'	=> $year,
 			'curMonth'	=> $month,
