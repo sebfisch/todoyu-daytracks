@@ -41,7 +41,7 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 			'daytracks',							// panel widget ID
 			'LLL:panelwidget-daytracks.title',		// widget title text
 			$config,								// widget config array
-			$params,								// widget params
+			$params,								// widget parameters
 			$idArea
 		);
 

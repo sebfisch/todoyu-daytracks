@@ -25,6 +25,8 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
 	/**
 	 * Ext shortcut
+	 *
+	 * @var	{Object}	ext
 	 */
 	ext:	Todoyu.Ext.daytracks,
 
