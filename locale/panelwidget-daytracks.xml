@@ -3,8 +3,8 @@
 	<labels lang="en_GB">
 		<label index="title">Time Tracked Today</label>
 		<label index="pwidget.title">Time Tracked Today</label>
-		<label index="totalToday">Total Tracked Time Today</label>
-		<label index="showHistory">Show Journal Of Your Tracked Time</label>
+		<label index="totalToday">Total tracked time today</label>
+		<label index="showHistory">Show journal of your tracked time</label>
 		<label index="goToTask">Switch To Task</label>
 	</labels>
 	<labels lang="de_DE">

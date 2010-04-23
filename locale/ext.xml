@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en_GB">
-		<label index="ext.title">Journal Of Tracked Time</label>
-		<label index="title">Journal Of Your Tracked Time</label>
+		<label index="ext.title">Journal of tracked time</label>
+		<label index="title">Journal of tracked time</label>
 		<label index="history.title">Time Tracking Journal</label>
 		<label index="history.total">Total Tracked Time</label>
 		<label index="history.toggledetails.open">Show Details</label>
 		<label index="history.toggledetails.close">Close Details</label>
-		<label index="totalToday">Total Tracked Time Today</label>
+		<label index="totalToday">Total tracked time today</label>
 	</labels>
 	<labels lang="de_DE">
 		<label index="ext.title">Arbeitszeit-Info</label>
