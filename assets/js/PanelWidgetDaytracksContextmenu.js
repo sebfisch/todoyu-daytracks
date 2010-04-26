@@ -62,8 +62,15 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 	},
 
 
+
+	/**
+	 * Get task ID for context menu request
+	 *
+	 * @param	{Element}	element
+	 * @param	{Event}		event
+	 */
 	getID: function(element, event) {
-		return element.id.split('-').last();
+		return event.findElement('li').id.split('-').last();
 	}
 
 };
