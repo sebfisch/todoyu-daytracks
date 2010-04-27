@@ -7,6 +7,7 @@
 		<label index="history.total">Total Tracked Time</label>
 		<label index="history.toggledetails.open">Show Details</label>
 		<label index="history.toggledetails.close">Close Details</label>
+		<label index="history.noTracks">No time tracking available for this period</label>
 		<label index="totalToday">Total tracked time today</label>
 	</labels>
 	<labels lang="de_DE">
@@ -16,6 +17,7 @@
 		<label index="history.total">Total erfasste Zeiten</label>
 		<label index="history.toggledetails.open">Zeige Details</label>
 		<label index="history.toggledetails.close">Schliesse Details</label>
+		<label index="history.noTracks">In diesem Zeitabschnitt wurde keine Zeit erfasst</label>
 		<label index="totalToday">Total heute erfasste Zeit</label>
 	</labels>
 	<labels lang="pt_BR">
@@ -25,6 +27,7 @@
 		<label index="history.total">Total de Horas Trabalhadas</label>
 		<label index="history.toggledetails.open">Ver Detalhes</label>
 		<label index="history.toggledetails.close">Fechar Detalhes</label>
+		<label index="history.noTracks">No Trabalhadas disponíveis para este período</label>
 		<label index="totalToday">Total de Horas de Hoje</label>
 	</labels>
 </locallang>
