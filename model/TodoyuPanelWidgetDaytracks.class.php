@@ -35,7 +35,7 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 	 */
 	public function __construct(array $config, array $params = array(), $idArea = 0) {
 
-		// construct PanelWidget (init basic configuration)
+		// Construct PanelWidget (init basic configuration)
 		parent::__construct(
 			'daytracks',							// ext key
 			'daytracks',							// panel widget ID

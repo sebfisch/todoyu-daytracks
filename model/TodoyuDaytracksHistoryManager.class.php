@@ -57,8 +57,8 @@ class TodoyuDaytracksHistoryManager {
 
 
 	/**
-	 * Get data array for the range selector in the history popup
-	 * The years are the keys, the month the subelements of each year
+	 * Get data array for the range selector in the history pop-up
+	 * The years are the keys, the month the sub elements of each year
 	 * The range is starts at the first tracking, and ends at the last
 	 *
 	 * @param	Integer		$idPerson
