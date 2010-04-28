@@ -48,7 +48,7 @@ class TodoyuDaytracksHistoryRenderer {
 			'curYear'	=> $year,
 			'curMonth'	=> $month,
 			'details'	=> $details,
-			'tracking'	=> TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details), //$timetracks->getLoadedTrackedTime(),
+			'tracking'	=> TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details),
 			'ranges'	=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions()
 		);
 

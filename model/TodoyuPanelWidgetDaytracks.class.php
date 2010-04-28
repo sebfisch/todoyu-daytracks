@@ -72,6 +72,7 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 			// Add 'isTrackable' flag to each tracking
 		foreach($tracks as $index => $track)	 {
 			$tracks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($track['type'], $track['status']);
+			$tracks[$index]['seeTask']		= TodoyuTaskRights::isSeeAllowed($track['id_task']); // TodoyuTimetracking::isTrackable($track['type'], $track['status']);
 		}
 
 
