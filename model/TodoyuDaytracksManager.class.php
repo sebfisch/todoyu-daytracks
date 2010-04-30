@@ -75,11 +75,11 @@ class TodoyuDaytracksManager {
 					ext_project_project p,
 					ext_contact_company c';
 
-		$where	= '	t.id	= tr.id_task AND
-					tr.date_track BETWEEN ' . $range['start'] . ' AND ' . $range['end'] . ' AND
-					tr.id_person_create	= ' . personid() . ' AND
-					t.id_project		= p.id	AND
-					p.id_company		= c.id';
+		$where	= '		t.id	= tr.id_task
+					AND	tr.date_track BETWEEN ' . $range['start'] . ' AND ' . $range['end'] .
+				  ' AND	tr.id_person_create	= ' . personid() .
+				  ' AND	t.id_project		= p.id
+				    AND	p.id_company		= c.id';
 
 		$group	= 't.id';
 		$order	= 'tr.date_create';
@@ -102,9 +102,9 @@ class TodoyuDaytracksManager {
 
 		$fields	= 'id';
 		$table	= TodoyuTimetracking::TABLE;
-		$where	= '	id_task	= ' . $idTask . ' AND
-					date_update BETWEEN ' . $range['start'] . ' AND ' . $range['end'] . ' AND
-					id_person_create	= ' . personid();
+		$where	= '		id_task	= ' . $idTask .
+				  ' AND	date_update BETWEEN ' . $range['start'] . ' AND ' . $range['end'] .
+				  ' AND	id_person_create	= ' . personid();
 
 		return Todoyu::db()->hasResult($fields, $table, $where);
 	}
@@ -134,9 +134,9 @@ class TodoyuDaytracksManager {
 				$tables	= '	ext_project_task t,
 							ext_project_project p,
 							ext_contact_company c';
-				$where	= '	t.id			= ' . $idTask . ' AND
-							t.id_project	= p.id AND
-							p.id_company	= c.id';
+				$where	= '		t.id			= ' . $idTask .
+						  ' AND	t.id_project	= p.id
+						    AND	p.id_company	= c.id';
 
 				$data	= Todoyu::db()->getRecordByQuery($fields, $tables, $where);
 
