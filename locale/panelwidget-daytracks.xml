@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en_GB">
-		<label index="title">Time Tracked Today</label>
+		<label index="title">Timesheet</label>
 		<label index="pwidget.title">Time Tracked Today</label>
 		<label index="totalToday">Total tracked time today</label>
-		<label index="showHistory">Show journal of your tracked time</label>
+		<label index="showHistory">Show Timesheets</label>
 		<label index="goToTask">Switch To Task</label>
 	</labels>
 	<labels lang="de_DE">

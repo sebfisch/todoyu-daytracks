@@ -2,11 +2,11 @@
 <locallang>
 	<labels lang="en_GB">
 		<label index="general">General</label>
-		<label index="general.use">Use "Time Tracked Today"</label>
+		<label index="general.use">Use Timesheet</label>
 		<label index="panelwidgets">Panel Widgets</label>
-		<label index="panelwidgets.daytracks">See "Time Tracked Today" Widget</label>
-		<label index="daytracks">Panel Widget "Time Tracked Today"</label>
-		<label index="daytracks.showHistory">See journal of your tracked time</label>
+		<label index="panelwidgets.daytracks">See Timesheet Widget</label>
+		<label index="daytracks">Panel Widget Timesheet</label>
+		<label index="daytracks.showHistory">See Timesheet</label>
 	</labels>
 	<labels lang="de_DE">
 		<label index="general">Allgemeine Einstellungen</label>
