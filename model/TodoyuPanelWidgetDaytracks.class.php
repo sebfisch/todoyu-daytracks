@@ -62,22 +62,22 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 	public function renderContent() {
 		$tmpl	= 'ext/daytracks/view/panelwidget-daytracks.tmpl';
 
-		$tracks	= TodoyuDaytracksManager::getTodayTrackedTasks();
+		$tasks	= TodoyuDaytracksManager::getTodayTrackedTasks();
 
 		$current= TodoyuDaytracksManager::getCurrentTrackedUnsavedTask();
 		if( $current !== false ) {
-			$tracks[] = $current;
+			$tasks[] = $current;
 		}
 
 			// Add 'isTrackable' flag to each tracking
-		foreach($tracks as $index => $track)	 {
-			$tracks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($track['type'], $track['status']);
-			$tracks[$index]['seeTask']		= TodoyuTaskRights::isSeeAllowed($track['id_task']); // TodoyuTimetracking::isTrackable($track['type'], $track['status']);
+		foreach($tasks as $index => $task) {
+			$tasks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status']);
+			$tasks[$index]['seeTask']		= TodoyuTaskRights::isSeeAllowed($task['id']); // TodoyuTimetracking::isTrackable($track['type'], $track['status']);
 		}
 
 
 		$data	= array(
-			'tasks'		=> $tracks,
+			'tasks'		=> $tasks,
 			'current'	=> TodoyuTimetracking::getTaskID(),
 			'total'		=> TodoyuTimetracking::getTodayTrackedTime()
 		);
