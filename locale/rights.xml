@@ -24,4 +24,12 @@
 		<label index="daytracks">Painel Widget "Horas Trabalhadas de Hoje"</label>
 		<label index="daytracks.showHistory">Exibir o Histórico de Horas Trabalhadas</label>
 	</labels>
+	<labels lang="ru_RU">
+		<label index="general">Общие</label>
+		<label index="general.use">Использовать табель</label>
+		<label index="panelwidgets">Элементы панели</label>
+		<label index="panelwidgets.daytracks">Показать элемент табеля</label>
+		<label index="daytracks">Табель</label>
+		<label index="daytracks.showHistory">Показать табель</label>
+	</labels>
 </locallang>

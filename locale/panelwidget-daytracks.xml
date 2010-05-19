@@ -21,4 +21,11 @@
 		<label index="showHistory">Exibir Histórico de Horas Trabalhadas</label>
 		<label index="goToTask">Ir para Tarefas</label>
 	</labels>
+	<labels lang="ru_RU">
+		<label index="title">Табель</label>
+		<label index="pwidget.title">Время, потраченое сегодня</label>
+		<label index="totalToday">Всего потрачено сегодня</label>
+		<label index="showHistory">Показать табель</label>
+		<label index="goToTask">Переключиться на задачу</label>
+	</labels>
 </locallang>

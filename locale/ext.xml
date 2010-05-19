@@ -30,4 +30,14 @@
 		<label index="history.noTracks">No Trabalhadas disponíveis para este período</label>
 		<label index="totalToday">Total de Horas de Hoje</label>
 	</labels>
+	<labels lang="ru_RU">
+		<label index="ext.title">Журнал времени</label>
+		<label index="title">Журнал времени</label>
+		<label index="history.title">Журнал времени</label>
+		<label index="history.total">Всего потрачено времени</label>
+		<label index="history.toggledetails.open">Показать информацию</label>
+		<label index="history.toggledetails.close">Спрятать информацию</label>
+		<label index="history.noTracks">нет информации за данный период</label>
+		<label index="totalToday">Всё время, потраченое сегодня</label>
+	</labels>
 </locallang>
