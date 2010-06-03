@@ -28,4 +28,11 @@
 		<label index="showHistory">Показать табель</label>
 		<label index="goToTask">Переключиться на задачу</label>
 	</labels>
+	<labels lang="nl_NL">
+		<label index="title">Overzicht gewerkte uren</label>
+		<label index="pwidget.title">Gewerkte uren vandaag</label>
+		<label index="totalToday">Totaal geregistreerde uren vandaag</label>
+		<label index="showHistory">Urenoverzichten weergeven</label>
+		<label index="goToTask">Naar taak</label>
+	</labels>
 </locallang>

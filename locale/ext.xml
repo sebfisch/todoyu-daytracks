@@ -40,4 +40,14 @@
 		<label index="history.noTracks">нет информации за данный период</label>
 		<label index="totalToday">Всё время, потраченое сегодня</label>
 	</labels>
+	<labels lang="nl_NL">
+		<label index="ext.title">Dagboek van geregistreerde uren</label>
+		<label index="title">Dagboek van geregistreerde uren</label>
+		<label index="history.title">Urenregistratiedagboek</label>
+		<label index="history.total">Totaal geregistreerde uren</label>
+		<label index="history.toggledetails.open">Details tonen</label>
+		<label index="history.toggledetails.close">Details sluiten</label>
+		<label index="history.noTracks">Geen urenregistratie beschikbaar voor deze periode</label>
+		<label index="totalToday">Totaal geregistreerde uren vandaag</label>
+	</labels>
 </locallang>
