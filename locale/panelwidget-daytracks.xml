@@ -35,4 +35,11 @@
 		<label index="showHistory">Urenoverzichten weergeven</label>
 		<label index="goToTask">Naar taak</label>
 	</labels>
+	<labels lang="cs_CZ">
+		<label index="title">Výkaz práce</label>
+		<label index="pwidget.title">Dnešní zaznamenaný čas</label>
+		<label index="totalToday">Dnešní zaznamenaný čas</label>
+		<label index="showHistory">Zobrazit výkazy práce</label>
+		<label index="goToTask">Přejít na úkol</label>
+	</labels>
 </locallang>
