@@ -42,4 +42,11 @@
 		<label index="showHistory">Zobrazit výkazy práce</label>
 		<label index="goToTask">Přejít na úkol</label>
 	</labels>
+	<labels lang="ja_JP">
+		<label index="title">タイムシート</label>
+		<label index="pwidget.title">本日の作業時間</label>
+		<label index="totalToday">本日の作業時間の合計</label>
+		<label index="showHistory">タイムシートの表示</label>
+		<label index="goToTask">タスクの切り替え</label>
+	</labels>
 </locallang>

@@ -60,4 +60,14 @@
 		<label index="history.noTracks">Žáden čas nebyl zaznamenán pro zvolené časové období</label>
 		<label index="totalToday">Celkový zaznamenaný čas dnes</label>
 	</labels>
+	<labels lang="ja_JP">
+		<label index="ext.title">作業時間の記録</label>
+		<label index="title">作業時間の記録</label>
+		<label index="history.title">記録した作業時間</label>
+		<label index="history.total">作業時間の合計</label>
+		<label index="history.toggledetails.open">詳細を表示</label>
+		<label index="history.toggledetails.close">詳細を閉じる</label>
+		<label index="history.noTracks">この期間の有効な作業時間はありません</label>
+		<label index="totalToday">本日の作業時間の合計</label>
+	</labels>
 </locallang>
