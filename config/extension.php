@@ -23,7 +23,7 @@
 
  */
 
-	// Add contextmenu function
+	// Add context menu function
 TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuDaytracksManager::getPanelWidgetContextMenuItems');
 
 ?>
