@@ -40,6 +40,14 @@
 		<label index="daytracks">Panel widget výkaz práce</label>
 		<label index="daytracks.showHistory">Zobrazit výkaz práce</label>
 	</labels>
+	<labels lang="sr_RS">
+		<label index="general">Општа подешавања</label>
+		<label index="general.use">Користи распоред сати</label>
+		<label index="panelwidgets">Елементи панела</label>
+		<label index="panelwidgets.daytracks">Користи елементе распореда сати</label>
+		<label index="daytracks">Елемент распореда сати</label>
+		<label index="daytracks.showHistory">Види историју распореда сати</label>
+	</labels>
 	<labels lang="ja_JP">
 		<label index="general">一般</label>
 		<label index="general.use">タイムシートの使用</label>

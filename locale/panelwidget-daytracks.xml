@@ -42,6 +42,13 @@
 		<label index="showHistory">Zobrazit výkazy práce</label>
 		<label index="goToTask">Přejít na úkol</label>
 	</labels>
+	<labels lang="sr_RS">
+		<label index="title">Радно време данас</label>
+		<label index="pwidget.title">Радно време данас</label>
+		<label index="totalToday">Укупно данас</label>
+		<label index="showHistory">Покажи историју радног времена</label>
+		<label index="goToTask">До задатака</label>
+	</labels>
 	<labels lang="ja_JP">
 		<label index="title">タイムシート</label>
 		<label index="pwidget.title">本日の作業時間</label>
