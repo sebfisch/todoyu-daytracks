@@ -71,7 +71,7 @@ class TodoyuDaytracksHistoryManager {
 		$current = $range['max'];
 		$min	 = mktime(0, 0, 0, date('n', $range['min']), 1, date('Y', $range['min']));
 
-		while( $min <= $current) {
+		while( $min <= $current ) {
 			$year	= date('Y', $current);
 			$month	= date('n', $current);
 
