@@ -1,26 +1,26 @@
 /****************************************************************************
-* todoyu is published under the BSD License:
-* http://www.opensource.org/licenses/bsd-license.php
-*
-* Copyright (c) 2010, snowflake productions GmbH, Switzerland
-* All rights reserved.
-*
-* This script is part of the todoyu project.
-* The todoyu project is free software; you can redistribute it and/or modify
-* it under the terms of the BSD License.
-*
-* This script is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the BSD License
-* for more details.
-*
-* This copyright notice MUST APPEAR in all copies of the script.
-*****************************************************************************/
+ * todoyu is published under the BSD License:
+ * http://www.opensource.org/licenses/bsd-license.php
+ *
+ * Copyright (c) 2010, snowflake productions GmbH, Switzerland
+ * All rights reserved.
+ *
+ * This script is part of the todoyu project.
+ * The todoyu project is free software; you can redistribute it and/or modify
+ * it under the terms of the BSD License.
+ *
+ * This script is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the BSD License
+ * for more details.
+ *
+ * This copyright notice MUST APPEAR in all copies of the script.
+ *****************************************************************************/
 
 /**
  * Panel widget: daytracks
  *
-*/
+ */
 Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 	/**
@@ -67,8 +67,8 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * Register JS hooks of daytracks
 	 */
 	registerHooks: function() {
-		Todoyu.Hook.add('taskStatusUpdated', this.onTaskStatusUpdated.bind(this));	
-		Todoyu.Hook.add('QuickTaskSaved', this.onQuickTaskAdded.bind(this));	
+		Todoyu.Hook.add('taskStatusUpdated', this.onTaskStatusUpdated.bind(this));
+		Todoyu.Hook.add('QuickTaskSaved', this.onQuickTaskAdded.bind(this));
 	},
 
 
@@ -90,7 +90,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 	/**
 	 * Check whether task element exists within current view
-	 * 
+	 *
 	 * @return	{Boolean}
 	 */
 	isTaskInCurrentView: function(idTask) {
@@ -103,16 +103,16 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * Refresh widget
 	 */
 	refresh: function() {
-		var target	= 'panelwidget-daytracks-content';
-		var url		= Todoyu.getUrl('daytracks', 'panelwidget');
-		var options	= {
+		var target = 'panelwidget-daytracks-content';
+		var url = Todoyu.getUrl('daytracks', 'panelwidget');
+		var options = {
 			'parameters': {
 				'action':	'update'
 			},
 			'onComplete': this.onRefreshed.bind(this)
 		};
 
-			// Update dayTracks list
+		// Update dayTracks list
 		Todoyu.Ui.update(target, url, options);
 	},
 
@@ -142,7 +142,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 	/**
 	 * Update task status
-	 * 
+	 *
 	 * @param	{Number}		idTask
 	 * @param	{String}		Status
 	 */
@@ -150,11 +150,11 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 		Todoyu.Ext.project.Task.updateStatus(idTask, status);
 	},
 
-	
-	
+
+
 	/**
 	 * Handler when task status is updated and hook is called
-	 * 
+	 *
 	 * @param	{Number}		idTask
 	 * @param	{Number}		status
 	 */
@@ -185,20 +185,20 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * @param	{Number}	time
 	 */
 	onTimetrackingClockUpdate: function(idTask, time) {
-		this._el_task	= $('daytracks-track-' + idTask + '-time');
+		this._el_task = $('daytracks-track-' + idTask + '-time');
 
 		if( this._task !== idTask ) {
-			if (this._el_task) {
-				this._el_total	= $('daytracks-daytotal-time');
-				this._task 		= idTask;
-				this._tasktime 	= Todoyu.Time.parseTimeToSeconds(this._el_task.innerHTML);
+			if( this._el_task ) {
+				this._el_total = $('daytracks-daytotal-time');
+				this._task = idTask;
+				this._tasktime = Todoyu.Time.parseTimeToSeconds(this._el_task.innerHTML);
 				this._totaltime = Todoyu.Time.parseTimeToSeconds(this._el_total.innerHTML) - time;
 			}
 		}
 
-		if (this._el_task && this._el_total) {
-			this._el_task.update( Todoyu.Time.timeFormatSeconds(this._tasktime + time) );
-			this._el_total.update( Todoyu.Time.timeFormatSeconds(this._totaltime + time) );
+		if( this._el_task && this._el_total ) {
+			this._el_task.update(Todoyu.Time.timeFormatSeconds(this._tasktime + time));
+			this._el_total.update(Todoyu.Time.timeFormatSeconds(this._totaltime + time));
 		}
 	},
 
