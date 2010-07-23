@@ -60,7 +60,7 @@
 		<label index="history.noTracks">Žáden čas nebyl zaznamenán pro zvolené časové období</label>
 		<label index="totalToday">Celkový zaznamenaný čas dnes</label>
 	</labels>
-	<labels lang="de_DE">
+	<labels lang="sr_RS">
 		<label index="ext.title">Информација радног времена</label>
 		<label index="title">Дневни распоред рада</label>
 		<label index="history.title">Историја радног времена</label>
