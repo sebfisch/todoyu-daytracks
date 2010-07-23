@@ -29,7 +29,7 @@
 	button.daytrackscollapse .icon {
 	  background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
 	}
-	
+
 	#daytracks-history .selectors .toggleDetails a.open {
 		background:transparent url(../img/icons.png) no-repeat 0 -60px;
 	}
@@ -79,11 +79,11 @@
 	#daytracks-history-trackings .daytrackdetail span.task span.tasknumber {
 		width:90px;
 	}
-	
+
 	#daytracks-history-trackings .daytrackdetail span.time {
 		width:10px;
 		display:inline-block;
-		text-align:right;		
+		text-align:right;
 	}
 
 	#daytracks-history-trackings .details {

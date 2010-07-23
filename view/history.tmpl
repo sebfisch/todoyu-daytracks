@@ -1,6 +1,6 @@
 <div id="{$id}">
 	<div class="selectors overflow bordercolor">
-	
+
 		{* ------------------- Select month ------------------- *}
 		<form id="{$id}-form">
 			<select class="selector" id="{$id}-selector" onchange="Todoyu.Ext.daytracks.History.update()">
@@ -8,7 +8,7 @@
 					<optgroup label="{$year}">
 						{foreach $months number name}
 							<option value="{$year}-{$number}" {if $curYear==$year && $curMonth==$number}selected="selected"{/if}>{$name} {$year}</option>
-						{/}						
+						{/}
 					</optgroup>
 				{/foreach}
 			</select>
@@ -29,7 +29,7 @@
 		<h1 class="totaltime">
 			{Label daytracks.history.total}: {Workload $tracking.total}
 		</h1>
-		
+
 {foreach $tracking.dayTracks timestamp daytracks}
 		<div class="daytrack bordercolor {if $details}toggled{else}{cycle values="odd,even"}{/if}">
 			{dateFormat $timestamp D2M2Y4}:

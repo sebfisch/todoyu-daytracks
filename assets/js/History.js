@@ -20,11 +20,11 @@
 Todoyu.Ext.daytracks.History = {
 
 	popup: null,
-	
+
 	popupID: 'daytracksHistory',
 
 	showDetails: false,
-	
+
 	getPopup: function() {
 		return Todoyu.Popup.getPopup(this.popupID);
 	},
