@@ -80,4 +80,5 @@ Todoyu.Ext.daytracks.History = {
 		this.showDetails = !this.showDetails;
 		this.update();
 	}
+
 };
