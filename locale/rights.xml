@@ -32,6 +32,14 @@
 		<label index="daytracks">Табель</label>
 		<label index="daytracks.showHistory">Показать табель</label>
 	</labels>
+	<labels lang="fr_FR">
+		<label index="general">Général</label>
+		<label index="general.use">Utiliser les feuilles de temps</label>
+		<label index="panelwidgets">Panneau de widgets</label>
+		<label index="panelwidgets.daytracks">Voir le widget de feuille de temps</label>
+		<label index="daytracks">Widget de feuille de temps</label>
+		<label index="daytracks.showHistory">Voir les feuilles de temps</label>
+	</labels>
 	<labels lang="cs_CZ">
 		<label index="general">Obecné</label>
 		<label index="general.use">Používat výkazy práce</label>

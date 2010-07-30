@@ -40,6 +40,16 @@
 		<label index="history.noTracks">нет информации за данный период</label>
 		<label index="totalToday">Всё время, потраченое сегодня</label>
 	</labels>
+	<labels lang="fr_FR">
+		<label index="ext.title">Journal de suivi du temps</label>
+		<label index="title">Journal de suivi du temps</label>
+		<label index="history.title">Journal de suivi du temps</label>
+		<label index="history.total">Temps total suivi</label>
+		<label index="history.toggledetails.open">Afficher les détails</label>
+		<label index="history.toggledetails.close">Masquer les détails</label>
+		<label index="history.noTracks">Aucun temps suivi n'est disponible pour cette période</label>
+		<label index="totalToday">Temps total suivi pour aujourd'hui</label>
+	</labels>
 	<labels lang="nl_NL">
 		<label index="ext.title">Dagboek van geregistreerde uren</label>
 		<label index="title">Dagboek van geregistreerde uren</label>
