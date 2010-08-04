@@ -67,8 +67,8 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * Register JS hooks of daytracks
 	 */
 	registerHooks: function() {
-		Todoyu.Hook.add('taskStatusUpdated', this.onTaskStatusUpdated.bind(this));
-		Todoyu.Hook.add('QuickTaskSaved', this.onQuickTaskAdded.bind(this));
+		Todoyu.Hook.add('project.task.statusUpdated', this.onTaskStatusUpdated.bind(this));
+		Todoyu.Hook.add('project.quickTask.saved', this.onQuickTaskAdded.bind(this));
 	},
 
 
