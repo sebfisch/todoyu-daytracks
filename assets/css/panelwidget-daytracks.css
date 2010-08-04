@@ -1,7 +1,6 @@
 /* ------------------------
 	Panelwidget icon
 	----------------------- */
-
 #panelwidget-daytracks h1 .title {
 	background:transparent url(../img/icons.png) no-repeat 5px 4px;
 }
@@ -16,9 +15,8 @@
 
 
 /* ---------------------------------------------
-	Panelwidget status - bordercolors global
+	Panelwidget status - border colors global
    -------------------------------------------- */
-
 #panelwidget-daytracks ul li {
 	border-left-width:5px ;
 	border-left-style:solid;

@@ -1,3 +1,10 @@
+/* ----------------------------------------------
+	Extension icon: stand-alone and in heading
+   ---------------------------------------------- */
+span.extIconDaytracks {
+	background:url('../img/exticon.png') no-repeat 0 0px;
+}
+
 h1.extIconDaytracks .title {
 	background:url('../img/exticon.png') no-repeat 0 5px;
 }
