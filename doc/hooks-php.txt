@@ -11,7 +11,8 @@ Daytracks Extension - PHP Hooks
 
 2. Event Data Modification
 --------------------------
-	none yet.
+	tracksHistory
+	Evoked before rendering the time tracks journal.
 
 
 

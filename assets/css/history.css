@@ -1,5 +1,5 @@
 /* ---------------------
-	PopUp
+	Selectors
 ------------------------ */
 #daytracks-history .selectors {
 	border:0 solid #bababa;
@@ -14,13 +14,6 @@
 		padding:0;
 	}
 
-	button.daytracksexpand .icon {
-	  background:transparent url(../img/icons.png) no-repeat 0 -60px !important;
-	}
-	button.daytrackscollapse .icon {
-	  background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
-	}
-
 	#daytracks-history .selectors .toggleDetails a.open {
 		background:transparent url(../img/icons.png) no-repeat 0 -60px;
 	}
@@ -29,6 +22,41 @@
 		background:transparent url(../img/icons.png) no-repeat 0 -30px;
 	}
 
+
+
+/* ---------------------
+	Button icons
+------------------------ */
+button.daytracksexpand .icon {
+  background:transparent url(../img/icons.png) no-repeat 0 -60px !important;
+}
+button.daytrackscollapse .icon {
+  background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
+}
+
+
+/* ----------------------
+	Month info box
+   ---------------------- */
+.monthInfo {
+	padding:4px 0 6px 0;
+	margin:0 0 8px 0;
+	border-bottom:1px solid #9a9c93;
+}
+	.monthInfo dt {
+		float:left;
+		width:110px;
+	}
+	.monthInfo dd {
+		float:left;
+		width:110px;
+	}
+
+
+
+/* ---------------------
+	Tracks
+------------------------ */
 #daytracks-history-trackings {
 	margin:10px 0;
 	padding-bottom:5px;
@@ -51,6 +79,10 @@
 		border-width:0 0 1px 0;
 		border-style:dotted;
 		border-color:#bababa;
+	}
+
+	#daytracks-history-trackings .daytrack.even{
+		background-color:#f1f1f1;
 	}
 
 	#daytracks-history-trackings .total {

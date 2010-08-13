@@ -27,7 +27,7 @@
 class TodoyuDaytracksHistoryRenderer {
 
 	/**
-	 * Render the history in the popup
+	 * Render the history in the popUp
 	 *
 	 * @param	Integer		$year
 	 * @param	Integer		$month
@@ -35,22 +35,31 @@ class TodoyuDaytracksHistoryRenderer {
 	 * @return	String
 	 */
 	public static function renderHistory($year = 0, $month = 0, $details = false) {
-		$year	= intval($year);
-		$month	= intval($month);
+		$year		= intval($year);
+		$month		= intval($month);
 
 			// Use current date if none set
 		$year	= ( $year === 0 ) ? date('Y') : $year ;
 		$month	= ( $month === 0 ) ? date('n') : $month ;
 
+		$timestamp	= mktime(0, 0, 0, $month, 1, $year);
+		$tracks	= TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details);
+
 		$tmpl	= 'ext/daytracks/view/history.tmpl';
 		$data	= array(
-			'id'			=> 'daytracks-history',
-			'currentYear'	=> $year,
-			'currentMonth'	=> $month,
-			'showDetails'	=> $details,
-			'tracking'		=> TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details),
-			'ranges'		=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions()
+			'id'				=> 'daytracks-history',
+			'currentYear'		=> $year,
+			'currentMonth'		=> $month,
+			'labelCurrentPeriod'=> TodoyuTime::format($timestamp, 'MlongY4'),
+			'showDetails'		=> $details,
+			'tracking'			=> $tracks,
+			'ranges'			=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions(),
+			'monthInfos'		=> array(
+				label('daytracks.history.total') => TodoyuTime::sec2hour($tracks['total']),
+			)
 		);
+
+		TodoyuHookManager::callHookDataModifier('daytracks', 'tracksHistory', $data);
 
 		return render($tmpl, $data);
 	}
