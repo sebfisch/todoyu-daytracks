@@ -6,15 +6,7 @@
 	padding:7px 10px;
 }
 
-	#daytracks-history .selectors form {
-		float:left;
-	}
-
-	#daytracks-history .selectors select {
-	}
-
 	#daytracks-history .selectors .toggleDetails {
-		float:left;
 		margin-left:5px;
 	}
 

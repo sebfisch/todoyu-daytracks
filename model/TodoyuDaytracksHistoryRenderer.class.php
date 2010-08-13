@@ -38,18 +38,18 @@ class TodoyuDaytracksHistoryRenderer {
 		$year	= intval($year);
 		$month	= intval($month);
 
-			// use current date if not set
-		$year	= $year === 0 ? date('Y') : $year ;
-		$month	= $month === 0 ? date('n') : $month ;
+			// Use current date if none set
+		$year	= ( $year === 0 ) ? date('Y') : $year ;
+		$month	= ( $month === 0 ) ? date('n') : $month ;
 
 		$tmpl	= 'ext/daytracks/view/history.tmpl';
 		$data	= array(
-			'id'		=> 'daytracks-history',
-			'curYear'	=> $year,
-			'curMonth'	=> $month,
-			'details'	=> $details,
-			'tracking'	=> TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details),
-			'ranges'	=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions()
+			'id'			=> 'daytracks-history',
+			'currentYear'	=> $year,
+			'currentMonth'	=> $month,
+			'showDetails'	=> $details,
+			'tracking'		=> TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details),
+			'ranges'		=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions()
 		);
 
 		return render($tmpl, $data);

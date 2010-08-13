@@ -34,6 +34,29 @@ class TodoyuDaytracksHistoryManager {
 
 
 	/**
+	 * Check whether given person has time tracks in given month of given year
+	 *
+	 * @param	Integer		$idPerson
+	 * @param	Integer		$month
+	 * @param	Integer		$year
+	 * @return	Boolean
+	 */
+	public static function personHasTracksInMonth($idPerson, $month, $year) {
+		$idPerson	= intval($idPerson);
+		$month		= intval($month);
+		$year		= intval($year);
+
+		$monthStart	= mktime(0, 0, 0, $month, 1, $year);
+		$monthEnd	= mktime(0, 0, 0, $month + 1, 0, $year);
+
+		$tracks = TodoyuTimetracking::getPersonTracks($monthStart, $monthEnd, $idPerson);
+
+		return ( count($tracks) > 0 );
+	}
+
+
+
+	/**
 	 * Get the date of the first and the last tracking
 	 *
 	 * @param	Integer		$idPerson
@@ -75,8 +98,12 @@ class TodoyuDaytracksHistoryManager {
 			$year	= date('Y', $current);
 			$month	= date('n', $current);
 
-			$options[$year][$month]	= Label('date.month.' . strtolower(date('F', $current)));
+			$options[$year][$month]	= array(
+				'label'		=> Label('date.month.' . strtolower(date('F', $current))),
+				'hasTracks'	=> self::personHasTracksInMonth($idPerson, $month, $year)
+			);
 
+				// Advance to next month / year
 			if( $month === 1 ) {
 				$month	= 12;
 				$year--;

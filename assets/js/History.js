@@ -19,16 +19,27 @@
 
 Todoyu.Ext.daytracks.History = {
 
-	popup: null,
+	popup:			null,
 
-	popupID: 'daytracksHistory',
+	popupID:		'daytracks-history',
 
-	showDetails: false,
+	showDetails:	false,
 
+
+	/**
+	 * Get popUp
+	 *
+	 * @teturn	Object
+	 */
 	getPopup: function() {
 		return Todoyu.Popup.getPopup(this.popupID);
 	},
 
+
+
+	/**
+	 * Display daytracks history popUp
+	 */
 	show: function() {
 		var url		= Todoyu.getUrl('daytracks', 'history');
 		var options	= {
@@ -39,23 +50,24 @@ Todoyu.Ext.daytracks.History = {
 		var idPopup	= 'popup-daytracks-history';
 		var title	= '[LLL:daytracks.history.title]';
 
-		this.popup	= Todoyu.Popup.openWindow(this.popupID, title, 420, url, options);
+		this.popup	= Todoyu.Popup.openWindow(this.popupID, title, 500, url, options);
 	},
 
 
+
 	/**
-	 * Update history
+	 * Update shown history
 	 */
 	update: function() {
-		var date	= this.getSelectedDate();
+		var range	= $F('daytracks-history-selector').split('-');
 
 		var url		= Todoyu.getUrl('daytracks', 'history');
 		var options = {
 			'parameters': {
 				'action':	'history',
-				'year':		date.year,
-				'month':	date.month,
-				'details':	this.showDetails ? 1 : 0
+				'year':		range[0],
+				'month':	range[1],
+				'details':	( this.showDetails ) ? 1 : 0
 			}
 		};
 
@@ -63,21 +75,12 @@ Todoyu.Ext.daytracks.History = {
 	},
 
 
-	getSelectedDate: function() {
-		var range	= $F('daytracks-history-selector').split('-');
-
-		return {
-			'year': range[0],
-			'month': range[1]
-		};
-	},
-
 
 	/**
-	 * Toggle details
+	 * Toggle display of details of historic timetracks 
 	 */
 	toggleDetails: function()	{
-		this.showDetails = !this.showDetails;
+		this.showDetails = ! this.showDetails;
 		this.update();
 	}
 

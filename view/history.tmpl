@@ -1,42 +1,40 @@
 <div id="{$id}">
-	<div class="selectors overflow bordercolor">
-
+	<div class="selectors overflow bordercolor"
 		{* ------------------- Select month ------------------- *}
-		<form id="{$id}-form">
-			<select class="selector" id="{$id}-selector" onchange="Todoyu.Ext.daytracks.History.update()">
+		<form id="{$id}-form" class="floatLeft">
+			<select class="select selector" id="{$id}-selector" onchange="Todoyu.Ext.daytracks.History.update()">
 				{foreach $ranges year months}
 					<optgroup label="{$year}">
-						{foreach $months number name}
-							<option value="{$year}-{$number}" {if $curYear==$year && $curMonth==$number}selected="selected"{/if}>{$name} {$year}</option>
-						{/}
+						{foreach $months number monthData}
+							{if $monthData.hasTracks}
+							<option class="{cycle values="odd,even"}" "value="{$year}-{$number}" {if $currentYear==$year && $currentMonth==$number}selected="selected"{/if}>{$monthData.label} {$year}</option>
+							{/if}
+						{/foreach}
 					</optgroup>
 				{/foreach}
 			</select>
 		</form>
-
 		{* ------------------- Toggle details ------------------- *}
-		<span class="toggleDetails">
-		{if $details}
+		<span class="toggleDetails floatLeft">
+		{if $showDetails}
 			{Button label="daytracks.history.toggledetails.close" title="{Label daytracks.history.toggledetails.close}" class="button daytrackscollapse" onclick="Todoyu.Ext.daytracks.History.toggleDetails()"}
 		{else}
 			{Button label="daytracks.history.toggledetails.open" title="{Label daytracks.history.toggledetails.open}" class="button daytracksexpand" onclick="Todoyu.Ext.daytracks.History.toggleDetails()"}
 		{/if}
 		</span>
 	</div>
-
 	{* ------------------- Timetracks list ------------------- *}
 	<div id="{$id}-trackings" class="bordercolor">
 		<h1 class="totaltime">
 			{Label daytracks.history.total}: {Workload $tracking.total}
 		</h1>
-
 {foreach $tracking.dayTracks timestamp daytracks}
-		<div class="daytrack bordercolor {if $details}toggled{else}{cycle values="odd,even"}{/if}">
+		<div class="daytrack bordercolor {if $showDetails}toggled{else}{cycle values="odd,even"}{/if}">
 			{dateFormat $timestamp D2M2Y4}:
 			<span>{Workload $daytracks.total}</span>
 		</div>
 	{* ------------------- Track details ------------------- *}
-	{if $details}
+	{if $showDetails}
 		<div class="details">
 		{foreach $daytracks.tracks index track}
 			<div class="daytrackdetail bordercolor {cycle values="odd,even"}">
@@ -53,7 +51,7 @@
 		{/foreach}
 		</div>
 	{/if}
-	{else}
+{else}
 		<p>{Label daytracks.history.noTracks}</p>
 {/foreach}
 	</div>
