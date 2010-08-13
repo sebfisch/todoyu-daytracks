@@ -46,6 +46,7 @@
 
 	#daytracks-history-trackings .details div,
 	#daytracks-history-trackings .daytrack {
+		text-align:left;
 		padding:5px;
 		border-width:0 0 1px 0;
 		border-style:dotted;

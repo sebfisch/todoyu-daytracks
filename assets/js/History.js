@@ -77,7 +77,7 @@ Todoyu.Ext.daytracks.History = {
 
 
 	/**
-	 * Toggle display of details of historic timetracks 
+	 * Toggle display of details of historic time tracks 
 	 */
 	toggleDetails: function()	{
 		this.showDetails = ! this.showDetails;

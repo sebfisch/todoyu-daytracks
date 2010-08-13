@@ -1,0 +1,15 @@
+<div class="details">
+	{foreach $daytracks.tracks index track}
+	<div class="daytrackdetail bordercolor {cycle values="odd,even"}">
+		<span class="task">
+			<a href="javascript:void(0)" {if $track.seeTask}onclick="Todoyu.Ext.project.goToTaskInProject({$track.task.id})"{/if}>
+				<span class="tasknumber">{$track.task.id_project}.{$track.task.tasknumber}</span>
+				<span class="tasktitle">{htmlencode $track.task.title}</span>
+			</a>
+		</span>
+		<span class="time">
+			{Workload $track.workload_tracked}
+		</span>
+	</div>
+	{/foreach}
+</div>

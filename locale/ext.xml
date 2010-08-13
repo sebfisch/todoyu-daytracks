@@ -5,8 +5,7 @@
 		<label index="title">Journal of tracked time</label>
 		<label index="history.title">Time Tracking Journal</label>
 		<label index="history.total">Total Tracked Time</label>
-		<label index="history.toggledetails.open">Show Details</label>
-		<label index="history.toggledetails.close">Close Details</label>
+		<label index="history.showdetails">Show Details</label>
 		<label index="history.noTracks">No time tracking available for this period</label>
 		<label index="totalToday">Total tracked time today</label>
 	</labels>
@@ -15,8 +14,7 @@
 		<label index="title">Tagesarbeiten</label>
 		<label index="history.title">Arbeitszeit-Historie</label>
 		<label index="history.total">Total erfasste Zeiten</label>
-		<label index="history.toggledetails.open">Zeige Details</label>
-		<label index="history.toggledetails.close">Schliesse Details</label>
+		<label index="history.showdetails">Zeige Details</label>
 		<label index="history.noTracks">In diesem Zeitabschnitt wurde keine Zeit erfasst</label>
 		<label index="totalToday">Total heute erfasste Zeit</label>
 	</labels>
@@ -35,8 +33,7 @@
 		<label index="title">Журнал времени</label>
 		<label index="history.title">Журнал времени</label>
 		<label index="history.total">Всего потрачено времени</label>
-		<label index="history.toggledetails.open">Показать информацию</label>
-		<label index="history.toggledetails.close">Спрятать информацию</label>
+		<label index="history.showdetails">Показать информацию</label>
 		<label index="history.noTracks">нет информации за данный период</label>
 		<label index="totalToday">Всё время, потраченое сегодня</label>
 	</labels>
@@ -55,8 +52,7 @@
 		<label index="title">Dagboek van geregistreerde uren</label>
 		<label index="history.title">Urenregistratiedagboek</label>
 		<label index="history.total">Totaal geregistreerde uren</label>
-		<label index="history.toggledetails.open">Details tonen</label>
-		<label index="history.toggledetails.close">Details sluiten</label>
+		<label index="history.showdetails">Details tonen</label>
 		<label index="history.noTracks">Geen urenregistratie beschikbaar voor deze periode</label>
 		<label index="totalToday">Totaal geregistreerde uren vandaag</label>
 	</labels>
@@ -75,8 +71,7 @@
 		<label index="title">Дневни распоред рада</label>
 		<label index="history.title">Историја радног времена</label>
 		<label index="history.total">Укупно проведено време</label>
-		<label index="history.toggledetails.open">Покажи детаље</label>
-		<label index="history.toggledetails.close">Затвори детаље</label>
+		<label index="history.showdetails">Покажи детаље</label>
 		<label index="history.noTracks">У овом временском периоду нема проведеног времена</label>
 		<label index="totalToday">Укупно проведено време данас</label>
 	</labels>
@@ -85,8 +80,7 @@
 		<label index="title">作業時間の記録</label>
 		<label index="history.title">記録した作業時間</label>
 		<label index="history.total">作業時間の合計</label>
-		<label index="history.toggledetails.open">詳細を表示</label>
-		<label index="history.toggledetails.close">詳細を閉じる</label>
+		<label index="history.showdetails">詳細を表示</label>
 		<label index="history.noTracks">この期間の有効な作業時間はありません</label>
 		<label index="totalToday">本日の作業時間の合計</label>
 	</labels>
