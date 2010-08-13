@@ -2,7 +2,10 @@
 	<div class="selectors overflow bordercolor"
 	{* ------------------- Month selector ------------------- *}
 		<form id="{$id}-form" class="floatLeft">
-			<div class="floatLeft">
+			<div class="floatLeft fontWeightBold">
+				<label for="{$id}-selector">{label date.month}</label>
+			</div>
+			<div style="margin:0 24px 0 4px" class="floatLeft">
 				<select class="select selector" id="{$id}-selector" onchange="Todoyu.Ext.daytracks.History.update()">
 					{foreach $ranges year months}
 						<optgroup label="{$year}">
@@ -23,17 +26,19 @@
 	</div>
 	{* ------------------- Month info ------------------------ *}
 	<div id="{$id}-trackings" class="bordercolor">
-		<h1 class="totaltime">{$labelCurrentPeriod}</h1>
-		<div class="monthInfo content overflow">
-			{foreach $monthInfos infoLabel infoValue}
-				<dt>{$infoLabel}</dt><dd>{$infoValue}</dd>
-			{/foreach}
-		</div>
-	{* -------------------- Tracks list ---------------------- *}
+		<h1 class="totaltime">{$labelCurrentPeriod} / {Workload $tracking.total} {Label date.time.hours}</h1>
+		{if $showDetails}
+			<div class="monthInfo content overflow">
+				{foreach $monthInfos infoItem}
+					<dt>{$infoItem.label}</dt><dd>{$infoItem.value}</dd>
+				{/foreach}
+			</div>
+		{/if}
+	{* -------------------- Tracks list ---------------------- *}			
 		{foreach $tracking.dayTracks timestamp daytracks}
 			<div class="daytrack bordercolor {if $showDetails}toggled{else}{cycle values="odd,even"}{/if}">
-				{dateFormat $timestamp D2M2Y4}:
-				<span>{Workload $daytracks.total}</span>
+				<span class="daytrackDate">{dateFormat $timestamp D2M2Y4}</span>
+				<span>{Workload $daytracks.total} {Label date.time.hours}</span>
 			</div>
 	{* ------------------- Track details ------------------- *}
 			{if $showDetails}{include file="history-track-details.tmpl"}{/if}

@@ -3,7 +3,6 @@
 ------------------------ */
 #daytracks-history .selectors {
 	border:0 solid #bababa;
-	padding:7px 10px;
 }
 
 	#daytracks-history .selectors .toggleDetails {
@@ -84,6 +83,10 @@ button.daytrackscollapse .icon {
 	#daytracks-history-trackings .daytrack.even{
 		background-color:#f1f1f1;
 	}
+
+		span.daytrackDate {
+			padding:0 110px 0 0;
+		}
 
 	#daytracks-history-trackings .total {
 		border-style:solid;
