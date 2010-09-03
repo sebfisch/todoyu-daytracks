@@ -37,7 +37,7 @@
 	{* -------------------- Tracks list ---------------------- *}
 		{foreach $tracking.dayTracks timestamp daytracks}
 			<div class="daytrack bordercolor {if $showDetails}toggled{else}{cycle values="odd,even"}{/if}">
-				<span class="daytrackDate">{dateFormat $timestamp D2M2Y4}</span>
+				<span class="daytrackDate">{dateFormat $timestamp DshortD2MlongY4}</span>
 				<span>{Workload $daytracks.total} {Label date.time.hours}</span>
 			</div>
 	{* ------------------- Track details ------------------- *}
