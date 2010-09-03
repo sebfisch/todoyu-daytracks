@@ -30,15 +30,15 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 */
 	ext:		Todoyu.Ext.daytracks,
 
-	_task:		0,
+	activeTask:		0,
 
-	_tasktime:	0,
+	timeTask:	0,
 
-	_totaltime:	0,
+	timeTotal:	0,
 
-	_el_task:	null,
+	spanTimeTask:	null,
 
-	_el_total:	null,
+	spanTimeTotal:	null,
 
 
 
@@ -171,7 +171,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * @param	{Boolean}		start
 	 */
 	onTimetrackingToggle: function(idTask, start) {
-		this._task = 0;
+		this.activeTask = 0;
 
 		this.refresh();
 	},
@@ -182,24 +182,23 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * Handle timetracking event: clock update
 	 *
 	 * @param	{Number}	idTask
-	 * @param	{Number}	time
+	 * @param	{Number}	trackedTotal
 	 */
-	onTimetrackingClockUpdate: function(idTask, time) {
-		this._el_task = $('daytracks-track-' + idTask + '-time');
+	onTimetrackingClockUpdate: function(idTask, trackedTotal, trackedToday, trackedCurrent) {
+		var taskTimeToday	= Todoyu.Time.timeFormatSeconds(trackedToday + trackedCurrent);
+			// Update current task time
+		$('daytracks-track-' + idTask + '-time').update(taskTimeToday);
 
-		if( this._task !== idTask ) {
-			if( this._el_task ) {
-				this._el_total = $('daytracks-daytotal-time');
-				this._task = idTask;
-				this._tasktime = Todoyu.Time.parseTimeToSeconds(this._el_task.innerHTML);
-				this._totaltime = Todoyu.Time.parseTimeToSeconds(this._el_total.innerHTML) - time;
-			}
-		}
+		var timeElements= $('panelwidget-daytracks-content').select('ul li a span.time');
+		var timeToday	= 0;
 
-		if( this._el_task && this._el_total ) {
-			this._el_task.update(Todoyu.Time.timeFormatSeconds(this._tasktime + time));
-			this._el_total.update(Todoyu.Time.timeFormatSeconds(this._totaltime + time));
-		}
+			// 
+		timeElements.each(function(element){
+			timeToday += Todoyu.Time.parseTimeToSeconds(element.innerHTML);
+		});
+
+		var totalTimeToday	= Todoyu.Time.timeFormatSeconds(timeToday);
+		$('daytracks-daytotal-time').update(totalTimeToday);
 	},
 
 
