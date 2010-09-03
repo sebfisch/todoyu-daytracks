@@ -1,6 +1,6 @@
 <ul class="contextmenudaytrackspwidget ulListDotted withMouseHover">
 	{foreach $tasks key task daytracks}
-		<li id="daytracks-track-{$task.id}" class="{cycle values="odd,even"} listItem status-{taskStatusKey $task.status} bcStatus{$task.status}" title="{taskStatusLabel $task.status}">
+		<li id="daytracks-track-{$task.id}" class="{cycle values="odd,even"} listItem status-{taskStatusKey $task.status bcStatus{$task.status}{if $task.id == $current} running{/if}" title="{taskStatusLabel $task.status}">
 
 			{if $task.isTrackable || $task.id == $current}
 				<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id})" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>

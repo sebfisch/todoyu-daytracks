@@ -40,6 +40,11 @@
 #panelwidget-daytracks  ul li .info .task {
 	display:block;
 }
+#panelwidget-daytracks  ul li.running .info .time,
+#panelwidget-daytracks  ul li.running .info .task,
+#panelwidget-daytracks  ul li.running .info .tasknumber {
+	font-weight: bold;
+}
 #panelwidget-daytracks  ul li .info .customer-project {
 	display:block;
 }
