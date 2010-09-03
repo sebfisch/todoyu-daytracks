@@ -51,7 +51,36 @@ class TodoyuDaytracksHistoryManager {
 
 		$tracks = TodoyuTimetracking::getPersonTracks($monthStart, $monthEnd, $idPerson);
 
+		TodoyuDebug::printLastQueryInFirebug();
+
 		return ( count($tracks) > 0 );
+	}
+
+
+
+	/**
+	 * Get year month combinations of months where the user has tracks
+	 * Result: [2010-01, 2010-02, 2010-04, ...]
+	 *
+	 * @param	Integer		$idPerson
+	 * @return	Array
+	 */
+	public static function getMonthsWithTracks($idPerson) {
+		$idPerson	= intval($idPerson);
+
+		$q = '	SELECT
+					DATE_FORMAT(FROM_UNIXTIME(date_track), \'%Y-%m\') as `date`
+				FROM
+					ext_timetracking_track
+				WHERE
+					id_person_create = ' . $idPerson . '
+				GROUP BY
+					`date`';
+
+		$res	= Todoyu::db()->query($q);
+		$rows	= Todoyu::db()->resourceToArray($res);
+
+		return TodoyuArray::getColumn($rows, 'date');
 	}
 
 
@@ -88,19 +117,22 @@ class TodoyuDaytracksHistoryManager {
 	 * @return	Array
 	 */
 	public static function getMonthSelectorOptions($idPerson = 0) {
-		$range	= self::getTrackingRanges($idPerson);
-		$options= array();
+		$idPerson	= personid($idPerson);
+		$range		= self::getTrackingRanges($idPerson);
+		$options	= array();
 
 		$current = $range['max'];
 		$min	 = mktime(0, 0, 0, date('n', $range['min']), 1, date('Y', $range['min']));
+		$trackMap= self::getMonthsWithTracks($idPerson);
 
 		while( $min <= $current ) {
 			$year	= date('Y', $current);
-			$month	= date('n', $current);
+			$month	= date('m', $current);
+
 
 			$options[$year][$month]	= array(
 				'label'		=> Label('date.month.' . strtolower(date('F', $current))),
-				'hasTracks'	=> self::personHasTracksInMonth($idPerson, $month, $year)
+				'hasTracks'	=> in_array($year.'-'.$month, $trackMap)
 			);
 
 				// Advance to next month / year
@@ -165,7 +197,7 @@ class TodoyuDaytracksHistoryManager {
 			'dateStart'	=> $dateStart,
 			'dateEnd'	=> $dateEnd,
 			'total'		=> $total,
-			'dayTracks'	=> $tracksByDay
+			'dayTracks'	=> array_reverse($tracksByDay, true)
 		);
 	}
 }

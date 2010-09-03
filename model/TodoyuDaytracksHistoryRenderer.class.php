@@ -38,11 +38,13 @@ class TodoyuDaytracksHistoryRenderer {
 		$year		= intval($year);
 		$month		= intval($month);
 
+
 			// Use current date if none set
-		$year	= ( $year === 0 ) ? date('Y') : $year ;
-		$month	= ( $month === 0 ) ? date('n') : $month ;
+		$year	= $year === 0 ? date('Y') : $year ;
+		$month	= $month === 0 ? date('n') : $month ;
 
 		$timestamp	= mktime(0, 0, 0, $month, 1, $year);
+
 		$tracks	= TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details);
 
 		$tmpl	= 'ext/daytracks/view/history.tmpl';
