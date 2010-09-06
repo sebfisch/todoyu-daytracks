@@ -1,4 +1,12 @@
 /* ---------------------
+	container
+------------------------ */
+#daytracks-history {
+	margin: 5px;
+	text-align: left;
+}
+
+/* ---------------------
 	Selectors
 ------------------------ */
 #daytracks-history .selectors {
@@ -12,7 +20,12 @@
 	#daytracks-history .selectors .toggleDetails a {
 		padding:0;
 	}
-
+	#daytracks-history .selectors .floatLeft label {
+		line-height: 18px;
+	}
+	#daytracks-history .selectors #showtracksdetails {
+		top: 2px;
+	}
 	#daytracks-history .selectors .toggleDetails a.open {
 		background:transparent url(../img/icons.png) no-repeat 0 -60px;
 	}
@@ -38,9 +51,10 @@ button.daytrackscollapse .icon {
 	Month info box
    ---------------------- */
 .monthInfo {
-	padding:4px 0 6px 0;
+	padding:5px;
 	margin:0 0 8px 0;
 	border-bottom:1px solid #9a9c93;
+	background-color:#fff;
 }
 	.monthInfo dt {
 		float:left;
@@ -64,13 +78,15 @@ button.daytrackscollapse .icon {
 
 	#daytracks-history-trackings h1 {
 		background-color:#e7e7e7;
-		border-bottom:1px dotted #bababa;
+		border:1px dotted #bababa;
+		border-left: none;
+		border-right: none;
 	}
 		#daytracks-history-trackings h1.totaltime {
-			padding:4px 0 6px 20px;
-			background:#e7e7e7 url(../img/icons.png) no-repeat 80px -104px;
+			padding:5px 0 5px 50px;
+			font-weight: bold;
+			background:#e7e7e7 url(../img/icons.png) no-repeat 5px -104px;
 		}
-
 	#daytracks-history-trackings .details div,
 	#daytracks-history-trackings .daytrack {
 		text-align:left;
@@ -78,14 +94,25 @@ button.daytrackscollapse .icon {
 		border-width:0 0 1px 0;
 		border-style:dotted;
 		border-color:#bababa;
+		background-color:#fff;
+	}
+	#daytracks-history-trackings .details a:hover div {
+		background-color:#f2f2d2;
 	}
 
-	#daytracks-history-trackings .daytrack.even{
-		background-color:#f1f1f1;
+	#daytracks-history-trackings .daytrack.toggled {
+		background-color:#e2e2e2;
+		text-transform:uppercase;
+		letter-spacing:1px;
 	}
 
 		span.daytrackDate {
-			padding:0 110px 0 0;
+			display: inline-block;
+			width: 150px;
+			padding:0 10px 0 0;
+		}
+		.toggled span.daytrackDate {
+			width: auto;
 		}
 
 	#daytracks-history-trackings .total {
@@ -95,24 +122,21 @@ button.daytrackscollapse .icon {
 	#daytracks-history-trackings .toggled {
 		margin-top:5px;
 		border-width:1px 0;
-		border-style:solid;
+		border-style:dotted;
 	}
 
 	#daytracks-history-trackings .daytrackdetail span.task {
-		width:300px;
+		width:400px;
 		display:inline-block;
 		text-align:left;
 	}
 	#daytracks-history-trackings .daytrackdetail span.task span.tasknumber {
-		width:90px;
+		width:110px;
+		display: inline-block;
 	}
 
 	#daytracks-history-trackings .daytrackdetail span.time {
 		width:10px;
 		display:inline-block;
 		text-align:right;
-	}
-
-	#daytracks-history-trackings .details {
-		padding:0 0 0 5px;
 	}
