@@ -10,7 +10,6 @@
 	Selectors
 ------------------------ */
 #daytracks-history .selectors {
-	border:0 solid #bababa;
 }
 
 	#daytracks-history .selectors .toggleDetails {
@@ -53,7 +52,7 @@ button.daytrackscollapse .icon {
 .monthInfo {
 	padding:5px;
 	margin:0 0 8px 0;
-	border-bottom:1px solid #9a9c93;
+	border-bottom:1px dotted #bababa;
 	background-color:#fff;
 }
 	.monthInfo dt {
@@ -126,13 +125,18 @@ button.daytrackscollapse .icon {
 	}
 
 	#daytracks-history-trackings .daytrackdetail span.task {
-		width:400px;
-		display:inline-block;
 		text-align:left;
 	}
 	#daytracks-history-trackings .daytrackdetail span.task span.tasknumber {
 		width:110px;
 		display: inline-block;
+		vertical-align: top;
+	}
+	#daytracks-history-trackings .daytrackdetail span.task span.tasktitle {
+		width: 280px;
+		padding-right: 10px;
+		display: inline-block;
+		vertical-align: top;
 	}
 
 	#daytracks-history-trackings .daytrackdetail span.time {
