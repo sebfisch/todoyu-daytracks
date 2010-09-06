@@ -7,7 +7,6 @@
 
 #panelwidget-daytracks  ul li {
 	min-height:32px;
-	padding-left:5px;
 }
 
 * html #panelwidget-daytracks  ul li {height:32px;}
@@ -17,14 +16,16 @@
 /* ---------------------------------------------
 	Panelwidget status - border colors global
    -------------------------------------------- */
-#panelwidget-daytracks ul li {
-	border-left-width:5px ;
-	border-left-style:solid;
+#panelwidget-daytracks ul li span.taskItem {
+	display: block;
+	border-left-width:5px;
+	border-left-style: solid;
 }
+
 
 #panelwidget-daytracks  ul li a.info {
 	display:block;
-	padding:2px 25px 2px 2px; /* icon space */
+	padding:5px 25px 5px 5px; /* icon space */
 }
 
 #panelwidget-daytracks  ul li .info .time {
