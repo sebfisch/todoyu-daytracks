@@ -31,15 +31,18 @@
 #panelwidget-daytracks  ul li .info .time {
 	letter-spacing:1px;
 	margin-right:10px;
+	color:#666;padding-bottom: 3px;
 }
 
 #panelwidget-daytracks  ul li .info .tasknumber {
 	width:50px;
 	clear:none;
+	color:#666;
 }
 
 #panelwidget-daytracks  ul li .info .task {
 	display:block;
+	padding-top: 3px;
 }
 #panelwidget-daytracks  ul li.running .info .time,
 #panelwidget-daytracks  ul li.running .info .task,
