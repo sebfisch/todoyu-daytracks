@@ -187,12 +187,14 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	onTimetrackingClockUpdate: function(idTask, trackedTotal, trackedToday, trackedCurrent) {
 		var taskTimeToday	= Todoyu.Time.timeFormatSeconds(trackedToday + trackedCurrent);
 			// Update current task time
-		$('daytracks-track-' + idTask + '-time').update(taskTimeToday);
+		if( $('daytracks-track-' + idTask + '-time') ) {
+			$('daytracks-track-' + idTask + '-time').update(taskTimeToday);
+		}		
 
 		var timeElements= $('panelwidget-daytracks-content').select('ul li a span.time');
 		var timeToday	= 0;
 
-			// 
+			// Sum up all task trackings
 		timeElements.each(function(element){
 			timeToday += Todoyu.Time.parseTimeToSeconds(element.innerHTML);
 		});
