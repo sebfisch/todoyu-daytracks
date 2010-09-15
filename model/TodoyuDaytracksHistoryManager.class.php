@@ -51,8 +51,6 @@ class TodoyuDaytracksHistoryManager {
 
 		$tracks = TodoyuTimetracking::getPersonTracks($monthStart, $monthEnd, $idPerson);
 
-		TodoyuDebug::printLastQueryInFirebug();
-
 		return ( count($tracks) > 0 );
 	}
 
