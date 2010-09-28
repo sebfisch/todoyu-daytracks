@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Журнал времени</label>
+	<label index="title">Журнал времени</label>
+	<label index="history.title">Журнал времени</label>
+	<label index="history.total">Всего потрачено времени</label>
+	<label index="history.showdetails">Показать информацию</label>
+	<label index="history.noTracks">нет информации за данный период</label>
+	<label index="totalToday">Всё время, потраченое сегодня</label>
+</labels>

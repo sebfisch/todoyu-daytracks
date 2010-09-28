@@ -30,8 +30,8 @@ define('EXTID_DAYTRACKS', 107);
 define('PATH_EXT_DAYTRACKS', PATH_EXT . '/daytracks');
 
 	// Register module locales
-TodoyuLanguage::register('daytracks', PATH_EXT_DAYTRACKS . '/locale/ext.xml');
-TodoyuLanguage::register('panelwidget-daytracks', PATH_EXT_DAYTRACKS . '/locale/panelwidget-daytracks.xml');
+TodoyuLabelManager::register('daytracks', 'daytracks', 'ext.xml');
+TodoyuLabelManager::register('panelwidget-daytracks', 'daytracks', 'panelwidget-daytracks.xml');
 
 	// Request configurations
 	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="title">Time Sheet</label>
+	<label index="pwidget.title">Time Tracked Today</label>
+	<label index="totalToday">Total tracked time today</label>
+	<label index="showHistory">Show Time Sheets</label>
+	<label index="goToTask">Switch To Task</label>
+</labels>

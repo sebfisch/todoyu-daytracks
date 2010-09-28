@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general">Општа подешавања</label>
+	<label index="general.use">Употреби распоред сати</label>
+	<label index="panelwidgets">Елементи панела</label>
+	<label index="panelwidgets.daytracks">Употреби елементе распореда сати</label>
+	<label index="daytracks">Елемент распореда сати</label>
+	<label index="daytracks.showHistory">Види историју распореда сати</label>
+</labels>

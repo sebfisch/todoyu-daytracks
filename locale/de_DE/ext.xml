@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Arbeitszeit-Info</label>
+	<label index="title">Tagesarbeiten</label>
+	<label index="history.title">Arbeitszeit-Historie</label>
+	<label index="history.total">Total erfasste Zeit</label>
+	<label index="history.showdetails">Zeige Details</label>
+	<label index="history.noTracks">In diesem Zeitabschnitt wurde keine Zeit erfasst</label>
+	<label index="totalToday">Total heute erfasste Zeit</label>
+	<label index="daysinmonth">Tage im Monat</label>
+</labels>

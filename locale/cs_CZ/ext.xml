@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Časový dennik</label>
+	<label index="title">Denník zaznamenaného času</label>
+	<label index="history.title">Časový denník</label>
+	<label index="history.total">Celkový zaznamenaný čas</label>
+	<label index="history.toggledetails.open">Detaily</label>
+	<label index="history.toggledetails.close">Zavřít detaily</label>
+	<label index="history.noTracks">Žáden čas nebyl zaznamenán pro zvolené časové období</label>
+	<label index="totalToday">Celkový zaznamenaný čas dnes</label>
+</labels>

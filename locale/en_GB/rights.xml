@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general">General</label>
+	<label index="general.use">Use Time Sheet</label>
+	<label index="panelwidgets">Panel Widgets</label>
+	<label index="panelwidgets.daytracks">See time sheet widget</label>
+	<label index="daytracks">Panel widget time sheet</label>
+	<label index="daytracks.showHistory">See Time Sheet</label>
+</labels>

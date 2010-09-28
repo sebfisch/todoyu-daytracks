@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general">Obecné</label>
+	<label index="general.use">Používat výkazy práce</label>
+	<label index="panelwidgets">Panel Widgets</label>
+	<label index="panelwidgets.daytracks">Viz. widget výkaz práce</label>
+	<label index="daytracks">Panel widget výkaz práce</label>
+	<label index="daytracks.showHistory">Zobrazit výkaz práce</label>
+</labels>
