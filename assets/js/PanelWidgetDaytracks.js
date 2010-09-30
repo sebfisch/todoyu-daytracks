@@ -30,8 +30,6 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 */
 	ext:		Todoyu.Ext.daytracks,
 
-	activeTask:		0,
-
 	timeTask:	0,
 
 	timeTotal:	0,
@@ -57,8 +55,8 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * Register to timetracking callbacks
 	 */
 	registerTimetracking: function() {
-		Todoyu.Ext.timetracking.registerToggleCallback(this.onTimetrackingToggle.bind(this));
-		Todoyu.Ext.timetracking.registerClockCallback(this.onTimetrackingClockUpdate.bind(this));
+		Todoyu.Ext.timetracking.addToggle('daytracks', this.onTrackingToggle.bind(this), this.onTrackingToggleUpdate.bind(this));
+		Todoyu.Ext.timetracking.addTick(this.onTrackingClockUpdate.bind(this));
 	},
 
 
@@ -170,10 +168,24 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * @param	{Number}		idTask
 	 * @param	{Boolean}		start
 	 */
-	onTimetrackingToggle: function(idTask, start) {
-		this.activeTask = 0;
+	onTrackingToggle: function(idTask, start) {
+		return false;
+	},
 
-		this.refresh();
+
+	onTrackingToggleUpdate: function(idTask, data, response) {
+		this.setContent(data);
+	},
+
+
+	/**
+	 * Update content
+	 *
+	 * @param	{String}	html
+	 */
+	setContent: function(html) {
+		$('panelwidget-daytracks-content').update(html);
+		this.ContextMenu.attach();
 	},
 
 
@@ -184,12 +196,12 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * @param	{Number}	idTask
 	 * @param	{Number}	trackedTotal
 	 */
-	onTimetrackingClockUpdate: function(idTask, trackedTotal, trackedToday, trackedCurrent) {
+	onTrackingClockUpdate: function(idTask, trackedTotal, trackedToday, trackedCurrent) {
 		var taskTimeToday	= Todoyu.Time.timeFormatSeconds(trackedToday + trackedCurrent);
 			// Update current task time
 		if( $('daytracks-track-' + idTask + '-time') ) {
 			$('daytracks-track-' + idTask + '-time').update(taskTimeToday);
-		}		
+		}
 
 		var timeElements= $('panelwidget-daytracks-content').select('ul li a span.time');
 		var timeToday	= 0;
