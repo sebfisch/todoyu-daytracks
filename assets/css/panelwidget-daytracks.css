@@ -31,13 +31,25 @@
 #panelwidget-daytracks  ul li .info .time {
 	letter-spacing:1px;
 	margin-right:10px;
-	color:#666;padding-bottom: 3px;
+	color:#999;
+	padding-bottom: 3px;
 }
 
 #panelwidget-daytracks  ul li .info .tasknumber {
 	width:50px;
 	clear:none;
-	color:#666;
+	color:#999;
+}
+
+#panelwidget-daytracks  ul li .info .company-project {
+	display:inline-block;
+	overflow:hidden;
+	width:100%;
+}
+#panelwidget-daytracks  ul li .info .company-project span {
+	color:#999;
+	width:500px;
+	display:inline-block;
 }
 
 #panelwidget-daytracks  ul li .info .task {
