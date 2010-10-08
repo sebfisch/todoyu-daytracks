@@ -5,7 +5,7 @@
 				<span class="taskItem bcStatus{$task.status}">
 
 				{if $task.isTrackable || $task.id == $current}
-					<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id})" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
+					<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id});this.onclick=''" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
 				{/if}
 
 				<a id="daytracks-track-{$task.id}-info" class="info" title="{Label panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber})" href="javascript:void(0)" {if $task.seeTask}onclick="Todoyu.Ext.project.goToTaskInProject({$task.id}, {$task.id_project})"{/if}>
