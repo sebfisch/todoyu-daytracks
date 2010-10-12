@@ -2,8 +2,8 @@
 	container
 ------------------------ */
 #daytracks-history {
-	margin: 5px;
-	text-align: left;
+	margin:5px;
+	text-align:left;
 }
 
 /* ---------------------
@@ -20,10 +20,10 @@
 		padding:0;
 	}
 	#daytracks-history .selectors .floatLeft label {
-		line-height: 18px;
+		line-height:18px;
 	}
 	#daytracks-history .selectors #showtracksdetails {
-		top: 2px;
+		top:2px;
 	}
 	#daytracks-history .selectors .toggleDetails a.open {
 		background:transparent url(../img/icons.png) no-repeat 0 -60px;
@@ -78,12 +78,12 @@ button.daytrackscollapse .icon {
 	#daytracks-history-trackings h1 {
 		background-color:#e7e7e7;
 		border:1px dotted #bababa;
-		border-left: none;
-		border-right: none;
+		border-left:none;
+		border-right:none;
 	}
 		#daytracks-history-trackings h1.totaltime {
 			padding:5px 0 5px 50px;
-			font-weight: bold;
+			font-weight:bold;
 			background:#e7e7e7 url(../img/icons.png) no-repeat 5px -104px;
 		}
 	#daytracks-history-trackings .details div,
@@ -106,12 +106,12 @@ button.daytrackscollapse .icon {
 	}
 
 		span.daytrackDate {
-			display: inline-block;
-			width: 150px;
+			display:inline-block;
+			width:150px;
 			padding:0 10px 0 0;
 		}
 		.toggled span.daytrackDate {
-			width: auto;
+			width:auto;
 		}
 
 	#daytracks-history-trackings .total {
@@ -129,14 +129,14 @@ button.daytrackscollapse .icon {
 	}
 	#daytracks-history-trackings .daytrackdetail span.task span.tasknumber {
 		width:110px;
-		display: inline-block;
-		vertical-align: top;
+		display:inline-block;
+		vertical-align:top;
 	}
 	#daytracks-history-trackings .daytrackdetail span.task span.tasktitle {
-		width: 280px;
-		padding-right: 10px;
-		display: inline-block;
-		vertical-align: top;
+		width:280px;
+		padding-right:10px;
+		display:inline-block;
+		vertical-align:top;
 	}
 
 	#daytracks-history-trackings .daytrackdetail span.time {
