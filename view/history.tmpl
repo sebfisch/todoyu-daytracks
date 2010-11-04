@@ -11,7 +11,7 @@
 						<optgroup label="{$year}">
 							{foreach $months number monthData}
 								{if $monthData.hasTracks}
-								<option class="{cycle values="odd,even"}" "value="{$year}-{$number}" {if $currentYear==$year && $currentMonth==$number}selected="selected"{/if}>{$monthData.label} {$year}</option>
+								<option class="{cycle values="odd,even"}" value="{$year}-{$number}" {if $currentYear==$year && $currentMonth==$number}selected="selected"{/if}>{$monthData.label} {$year}</option>
 								{/if}
 							{/foreach}
 						</optgroup>
