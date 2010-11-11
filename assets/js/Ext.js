@@ -18,9 +18,15 @@
 *****************************************************************************/
 
 /**
- * Ext: daytracks
+ * @module	Daytracks
  */
 
+/**
+ * Daytracks main object
+ *
+ * @class		daytracks
+ * @namespace	Todoyu.Ext
+ */
 Todoyu.Ext.daytracks = {
 
 	PanelWidget: {},
