@@ -18,24 +18,7 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-/**
- * Extension main file for daytracks extension
- *
- * @package		Todoyu
- * @subpackage	DayTracks
- */
-
-	// Declare ext ID, path
-define('EXTID_DAYTRACKS', 107);
-define('PATH_EXT_DAYTRACKS', PATH_EXT . '/daytracks');
-
-	// Register module locales
-TodoyuLabelManager::register('daytracks', 'daytracks', 'ext.xml');
-TodoyuLabelManager::register('panelwidget-daytracks', 'daytracks', 'panelwidget-daytracks.xml');
-
-	// Request configurations
-	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search
-require_once( PATH_EXT_DAYTRACKS . '/config/extension.php' );
-require_once( PATH_EXT_DAYTRACKS . '/config/hooks.php' );
+// Add context menu function
+TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuDaytracksManager::getPanelWidgetContextMenuItems');
 
 ?>

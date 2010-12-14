@@ -18,7 +18,6 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-	// Add timetracking update callbacks
-TodoyuTimetrackingCallbackManager::add('daytracks', 'TodoyuDaytracksManager::callbackTrackingToggle');
+
 
 ?>
