@@ -142,7 +142,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * Update task status
 	 *
 	 * @param	{Number}		idTask
-	 * @param	{String}		Status
+	 * @param	{String}		status
 	 */
 	updateTaskStatus: function(idTask, status) {
 		Todoyu.Ext.project.Task.updateStatus(idTask, status);

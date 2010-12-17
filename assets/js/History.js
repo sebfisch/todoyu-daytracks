@@ -29,7 +29,7 @@ Todoyu.Ext.daytracks.History = {
 	/**
 	 * Get popUp
 	 *
-	 * @teturn	Object
+	 * @return	Object
 	 */
 	getPopup: function() {
 		return Todoyu.Popup.getPopup(this.popupID);
