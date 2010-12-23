@@ -50,7 +50,9 @@
 	display:inline-block;
 }
 
-#panelwidget-daytracks  ul li .info .task {}
+#panelwidget-daytracks  ul li .info .task {
+	display:block;
+}
 
 #panelwidget-daytracks  ul li.running .info .time,
 #panelwidget-daytracks  ul li.running .info .task,
