@@ -79,7 +79,7 @@ class TodoyuDaytracksManager {
 					AND	tr.date_track BETWEEN ' . $range['start'] . ' AND ' . $range['end'] .
 				  ' AND	tr.id_person_create	= ' . personid() .
 				  ' AND	t.id_project		= p.id
-				    AND	p.id_company		= c.id';
+					AND	p.id_company		= c.id';
 
 		$group	= 't.id';
 		$order	= 'tr.date_create';
@@ -136,7 +136,7 @@ class TodoyuDaytracksManager {
 							ext_contact_company c';
 				$where	= '		t.id			= ' . $idTask .
 						  ' AND	t.id_project	= p.id
-						    AND	p.id_company	= c.id';
+							AND	p.id_company	= c.id';
 
 				$data	= Todoyu::db()->getRecordByQuery($fields, $tables, $where);
 
