@@ -18,7 +18,9 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-// Add context menu function
+/* ----------------------------
+	Context Menu Callbacks
+   ---------------------------- */
 TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuDaytracksManager::getPanelWidgetContextMenuItems');
 
 ?>
