@@ -31,7 +31,7 @@ Todoyu::$CONFIG['EXT']['daytracks']['info'] = array(
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
 	'state' 		=> 'stable',
-	'version' 		=> '1.0.4',
+	'version' 		=> '1.1.0',
 	'constraints' 	=> array(
 		'depends' 	=> array(
 			'project'		=> '1.0.4',
