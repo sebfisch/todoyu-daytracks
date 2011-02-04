@@ -19,16 +19,30 @@
 
 Todoyu.Ext.daytracks.History = {
 
+	/**
+	 * @property	popup
+	 * @type		Object
+	 */
 	popup:			null,
 
+	/**
+	 * @property	popupID
+	 * @type		String
+	 */
 	popupID:		'daytracks-history',
 
+	/**
+	 * @property	showDetails
+	 * @type		Boolean
+	 */
 	showDetails:	false,
+
 
 
 	/**
 	 * Get popUp
 	 *
+	 * @method	getPopup
 	 * @return	Object
 	 */
 	getPopup: function() {
@@ -39,6 +53,8 @@ Todoyu.Ext.daytracks.History = {
 
 	/**
 	 * Display daytracks history popUp
+	 *
+	 * @method	show
 	 */
 	show: function() {
 		var url		= Todoyu.getUrl('daytracks', 'history');
@@ -57,6 +73,8 @@ Todoyu.Ext.daytracks.History = {
 
 	/**
 	 * Update shown history
+	 *
+	 * @method	update
 	 */
 	update: function() {
 		var range	= $F('daytracks-history-selector').split('-');
@@ -77,7 +95,9 @@ Todoyu.Ext.daytracks.History = {
 
 
 	/**
-	 * Toggle display of details of historic time tracks 
+	 * Toggle display of details of historic time tracks
+	 *
+	 * @method	toggleDetails
 	 */
 	toggleDetails: function() {
 		this.showDetails = ! this.showDetails;

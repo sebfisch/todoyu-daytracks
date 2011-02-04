@@ -29,10 +29,25 @@
  */
 Todoyu.Ext.daytracks = {
 
+	/**
+	 * @property	PanelWidget
+	 * @type		Object
+	 */
 	PanelWidget: {},
 
+	/**
+	 * @property	Headlet
+	 * @type		Object
+	 */
 	Headlet: {},
 
+
+
+	/**
+	 * Daytracks initialization (none yet)
+	 *
+	 * @method	init
+	 */
 	init: function() {
 
 	}
