@@ -11,6 +11,9 @@
 
 	<section name="daytracks" require="general:use">
 		<right name="showHistory" />
+		<right name="timeExport" />
+		<right name="timeExportAllPerson" require="daytracks:timeExport" />
+		<right name="timeExportAllEmployer" require="daytracks:timeExportAllPerson" />
 	</section>
 
 </rights>

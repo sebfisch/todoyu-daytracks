@@ -42,6 +42,10 @@ Todoyu::$CONFIG['EXT']['daytracks']['assets'] = array(
 		array(
 			'file'		=> 'ext/daytracks/assets/js/PanelWidgetDaytracksContextmenu.js',
 			'position'	=> 111
+		),
+		array(
+			'file'		=> 'ext/daytracks/assets/js/Export.js',
+			'position'	=> 112
 		)
 	),
 	'css' => array(

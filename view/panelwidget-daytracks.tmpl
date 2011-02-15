@@ -25,8 +25,15 @@
 	</div>
 
 	{restrict 'daytracks' 'daytracks:showHistory'}
-	<div class="history">
-		{Button label="panelwidget-daytracks.showHistory" class="trackHistory" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.showHistory()"}
-	</div>
+		<div class="history">
+			{Button label="panelwidget-daytracks.showHistory" class="trackHistory" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.showHistory()"}
+		</div>
+	{/restrict}
+
+	{restrict 'daytracks' 'daytracks:timeExport'}
+		<div class="timeexport">
+			{Button label="" class="timeExport" onclick="Todoyu.Ext.daytracks.Export.openExportPopup()" title="LLL:daytracks.export.popup.title"}
+		</div>
+	{/restrict}
+
 </div>
-{/restrict}
