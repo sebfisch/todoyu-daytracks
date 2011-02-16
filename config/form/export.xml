@@ -16,7 +16,7 @@
 						<acName>person</acName>
 						<acLabel>TodoyuPersonManager::getLabel</acLabel>
 						<options>
-							<onSelected>Todoyu.Ext.daytracks.Export.MultiAc.onPersonSelected</onSelected>
+							<onSelectCustom>Todoyu.Ext.daytracks.Export.MultiAc.onPersonSelected</onSelectCustom>
 						</options>
 					</config>
 				</field>
@@ -30,7 +30,7 @@
 						<acName>company</acName>
 						<acLabel>TodoyuCompanyManager::getLabel</acLabel>
 						<options>
-							<onSelected>Todoyu.Ext.daytracks.Export.MultiAc.onEmployerSelected</onSelected>
+							<onSelectCustom>Todoyu.Ext.daytracks.Export.MultiAc.onEmployerSelected</onSelectCustom>
 						</options>
 					</config>
 				</field>
@@ -55,7 +55,7 @@
 						<acName>project</acName>
 						<acLabel>TodoyuProjectManager::getLabel</acLabel>
 						<options>
-							<onSelected>Todoyu.Ext.daytracks.Export.MultiAc.onProjectSelected</onSelected>
+							<onSelectCustom>Todoyu.Ext.daytracks.Export.MultiAc.onProjectSelected</onSelectCustom>
 						</options>
 					</config>
 				</field>
@@ -69,7 +69,7 @@
 						<acName>company</acName>
 						<acLabel>TodoyuCompanyManager::getLabel</acLabel>
 						<options>
-							<onSelected>Todoyu.Ext.daytracks.Export.MultiAc.onCompanySelected</onSelected>
+							<onSelectCustom>Todoyu.Ext.daytracks.Export.MultiAc.onCompanySelected</onSelectCustom>
 						</options>
 					</config>
 				</field>

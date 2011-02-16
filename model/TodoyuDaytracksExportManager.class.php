@@ -69,6 +69,8 @@ class TodoyuDaytracksExportManager {
 		$company	= TodoyuArray::intExplode(',', $exportData['company']);
 
 		$reports	= self::getTrackingReport($employee, $employer, $project, $company, $exportData['date_start'], $exportData['date_end']);
+
+		$reports	= self::prepareDataForExport($reports);
 		
 		$export		= new TodoyuExportCSV($reports);
 
@@ -173,6 +175,34 @@ class TodoyuDaytracksExportManager {
 		);
 
 		return TodoyuArray::reform($companies, $reform, true);
+	}
+
+
+
+	/**
+	 * @static
+	 * @param array $dataArray
+	 * @return void
+	 */
+	protected static function prepareDataForExport(array $dataArray) {
+		$parsedArray	= array();
+		
+		foreach( $dataArray as $index => $report ) {
+
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:task.taskno')]							= $report['tasknumber'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:task.attr.title')]						= $report['task'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.date_track')]			= $report['date_tracked'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.workload_tracked')]	= $report['workload_tracked'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.workload_chargeable')]	= $report['workload_chargeable'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:contact.company')]						= $report['company'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.project')]						= $report['project'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:contact.person')]						= $report['name'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.comment')]				= $report['comment'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.records.worktype')]				= $report['worktype'];
+
+		}
+
+		return $parsedArray;
 	}
 }
 ?>

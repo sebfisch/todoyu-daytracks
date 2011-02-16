@@ -103,8 +103,6 @@ Todoyu.Ext.daytracks.Export = {
 	 */
 	MultiAc: {
 
-
-
 		/**
 		 * Handles the person selection
 		 *

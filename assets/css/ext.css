@@ -8,3 +8,15 @@ span.extIconDaytracks {
 h1.extIconDaytracks .title {
 	background:url('../img/exticon.png') no-repeat 0 5px;
 }
+
+/* -----------------------------
+	CSV - Export Popup
+   ----------------------------- */
+
+#time-export .itemlist li {
+	background: url("../../../../core/assets/img/icons.png") no-repeat scroll 10px -357px transparent;
+	border-bottom: 1px dashed #ccc;
+	cursor: pointer;
+	padding: 3px 3px 3px 30px;
+	text-align: left;
+}
