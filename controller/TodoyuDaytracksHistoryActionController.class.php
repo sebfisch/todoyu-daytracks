@@ -27,6 +27,16 @@
 class TodoyuDaytracksHistoryActionController extends TodoyuActionController {
 
 	/**
+	 * @param array $params
+	 * @return void
+	 */
+	public function init(array $params) {
+		restrict('daytracks', 'general:use');
+	}
+
+
+
+	/**
 	 * Update tracks history popup
 	 *
 	 * @param	Array	$params

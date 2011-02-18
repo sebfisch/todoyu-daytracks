@@ -59,6 +59,7 @@ class TodoyuDaytracksExportManager {
 	/**
 	 * Exports the CSV - file
 	 *
+	 * @todo add check for allowed projects / employers / companies
 	 * @static
 	 * @param	Array	$exportData
 	 */

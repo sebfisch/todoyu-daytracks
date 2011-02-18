@@ -25,13 +25,23 @@
 class TodoyuDaytracksExportActionController extends TodoyuActionController {
 
 	/**
+	 * @param array $params
+	 * @return void
+	 */
+	public function init(array $params) {
+		restrict('daytracks', 'general:use');
+		restrict('daytracks', 'daytracks:timeExport');
+	}
+
+
+	
+	/**
 	 * Renders the download pop-up
 	 *
 	 * @param	Array	$params
 	 * @return	String
 	 */
 	public function renderpopupAction(array $params) {
-		restrict('daytracks', 'daytracks:timeExport');
 		return TodoyuDaytracksExportRenderer::renderDaytracksExportForm($params);
 	}
 
@@ -43,8 +53,6 @@ class TodoyuDaytracksExportActionController extends TodoyuActionController {
 	 * @param	Array	$params
 	 */
 	public function downloadAction(array $params) {
-		restrict('daytracks', 'daytracks:timeExport');
-		
 		$form	= TodoyuDaytracksExportManager::getExportForm();
 		
 		$values	= TodoyuArray::assure($params['export']);
