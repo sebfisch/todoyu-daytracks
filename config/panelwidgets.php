@@ -23,7 +23,7 @@
  */
 
 	// Add panel widgets to areas
-TodoyuPanelWidgetManager::addDefaultPanelWidget('portal', 'TodoyuPanelWidgetDaytracks', 15);
-TodoyuPanelWidgetManager::addDefaultPanelWidget('project', 'TodoyuPanelWidgetDaytracks', 40);
+TodoyuPanelWidgetManager::addDefaultPanelWidget('portal', 'TodoyuDaytracksPanelWidgetDaytracks', 15);
+TodoyuPanelWidgetManager::addDefaultPanelWidget('project', 'TodoyuDaytracksPanelWidgetDaytracks', 40);
 
 ?>

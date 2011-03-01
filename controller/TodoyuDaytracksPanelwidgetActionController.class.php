@@ -44,7 +44,7 @@ class TodoyuDaytracksPanelwidgetActionController extends TodoyuActionController 
 	 * @return	String
 	 */
 	public function updateAction(array $params) {
-		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('Daytracks');
+		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('daytracks', 'Daytracks');
 
 		return $panelWidget->getContent();
 	}

@@ -23,9 +23,9 @@
  * cumulate todays worktime
  *
  * @package		Todoyu
- * @subpackage	Timetracking
+ * @subpackage	Daytracks
  */
-class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
+class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
 
 	/**
 	 * Constructor (initialize widget)
@@ -72,7 +72,7 @@ class TodoyuPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPane
 			// Add 'isTrackable' flag to each tracking
 		foreach($tasks as $index => $task) {
 			$tasks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status'], $task['id']);
-			$tasks[$index]['seeTask']		= TodoyuTaskRights::isSeeAllowed($task['id']); // TodoyuTimetracking::isTrackable($track['type'], $track['status']);
+			$tasks[$index]['seeTask']		= TodoyuProjectTaskRights::isSeeAllowed($task['id']); // TodoyuTimetracking::isTrackable($track['type'], $track['status']);
 		}
 
 

@@ -157,7 +157,7 @@ class TodoyuDaytracksManager {
 	 * @return	String		Content of panelwidget
 	 */
 	public static function callbackTrackingToggle($idTask, $info) {
-		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('Daytracks');
+		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('daytracks', 'Daytracks');
 
 		return $panelWidget->getContent();
 	}
