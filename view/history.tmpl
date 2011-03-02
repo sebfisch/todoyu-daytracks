@@ -20,13 +20,13 @@
 			</div>
 			<div class="floatLeft">
 				<input id="showtracksdetails" type="checkbox"{if $showDetails} checked="checked"{/if} onclick="Todoyu.Ext.daytracks.History.toggleDetails()" style="width:20px">
-				<label for="showtracksdetails">{Label daytracks.history.showdetails}</label>
+				<label for="showtracksdetails">{Label daytracks.ext.history.showdetails}</label>
 			</div>
 		</form>
 	</div>
 	{* ------------------- Month info ------------------------ *}
 	<div id="{$id}-trackings" class="bordercolor">
-		<h1 class="totaltime">{$labelCurrentPeriod} / {Workload $tracking.total} {Label date.time.hours}</h1>
+		<h1 class="totaltime">{$labelCurrentPeriod} / {Workload $tracking.total} {Label core.date.time.hours}</h1>
 		{if $showDetails}
 			<div class="monthInfo content overflow">
 				{foreach $monthInfos infoItem}
@@ -38,14 +38,14 @@
 		{foreach $tracking.dayTracks timestamp daytracks}
 			<div class="daytrack bordercolor {if $showDetails}toggled{else}{cycle values="odd,even"}{/if}">
 				<span class="daytrackDate">{dateFormat $timestamp DshortD2MlongY4}</span>
-				<span>{Workload $daytracks.total} {Label date.time.hours}</span>
+				<span>{Workload $daytracks.total} {Label core.date.time.hours}</span>
 			</div>
 	{* ------------------- Track details ------------------- *}
 			{if $showDetails}
 				{include file="history-track-details.tmpl"}
 			{/if}
 		{else}
-			<p>{Label daytracks.history.noTracks}</p>
+			<p>{Label daytracks.ext.history.noTracks}</p>
 		{/foreach}
 	</div>
 </div>

@@ -5,10 +5,10 @@
 				<span class="taskItem bcStatus{$task.status}">
 
 				{if $task.isTrackable || $task.id == $current}
-					<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id});this.onclick=''" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
+					<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id});this.onclick=''" title="{if $task.id == $current}{Label timetracking.ext.stop}{else}{Label timetracking.ext.start}{/if}"><!-- button --></a>
 				{/if}
 
-				<a id="daytracks-track-{$task.id}-info" class="info" title="{Label panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber})" href="javascript:void(0)" {if $task.seeTask}onclick="Todoyu.Ext.project.goToTaskInProject({$task.id}, {$task.id_project})"{/if}>
+				<a id="daytracks-track-{$task.id}-info" class="info" title="{Label daytracks.panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber})" href="javascript:void(0)" {if $task.seeTask}onclick="Todoyu.Ext.project.goToTaskInProject({$task.id}, {$task.id_project})"{/if}>
 					<span class="time" id="daytracks-track-{$task.id}-time">{HourMinSec $task.time}</span>
 					<span class="task">{$task.id_project}.{$task.tasknumber} - {htmlencode(truncate($task.title,41))}</span>
 					<span class="company-project"><span class="overflow">{htmlencode $task.company} - {htmlencode $task.project}</span></span>
@@ -19,20 +19,20 @@
 	</ul>
 
 	<div id="daytracks-daytotal" class="notification">
-		<span>{Label panelwidget-daytracks.totalToday}:</span>
+		<span>{Label daytracks.panelwidget-daytracks.totalToday}:</span>
 		<span id="daytracks-daytotal-time">{HourMinSec $total}</span>
-		<span class="totalTasks">({$.foreach.daytracks.total} {Label task.tasks})</span>
+		<span class="totalTasks">({$.foreach.daytracks.total} {Label project.task.tasks})</span>
 	</div>
 
 	{restrict 'daytracks' 'daytracks:showHistory'}
 		<div class="history">
-			{Button label="panelwidget-daytracks.showHistory" class="trackHistory" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.showHistory()"}
+			{Button label="daytracks.panelwidget-daytracks.showHistory" class="trackHistory" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.showHistory()"}
 		</div>
 	{/restrict}
 
 	{restrict 'daytracks' 'daytracks:timeExport'}
 		<div class="timeexport">
-			{Button label="LLL:daytracks.export.popup.title" class="timeExport" onclick="Todoyu.Ext.daytracks.Export.openExportPopup()" title="LLL:daytracks.export.popup.title"}
+			{Button label="LLL:daytracks.ext.export.popup.title" class="timeExport" onclick="Todoyu.Ext.daytracks.Export.openExportPopup()" title="LLL:daytracks.ext.ext.export.popup.title"}
 		</div>
 	{/restrict}
 

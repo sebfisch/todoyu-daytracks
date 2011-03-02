@@ -11,7 +11,7 @@
 			<elements>
 
 				<field type="textAC" name="employee">
-					<label>contact.person</label>
+					<label>contact.ext.person</label>
 					<config>
 						<acName>person</acName>
 						<acLabel>TodoyuContactPersonManager::getLabel</acLabel>
@@ -25,7 +25,7 @@
 				</field>
 
 				<field type="textAC" name="employerAC">
-					<label>contact.person.attr.company</label>
+					<label>contact.ext.person.attr.company</label>
 					<config>
 						<acName>company</acName>
 						<acLabel>TodoyuContactCompanyManager::getLabel</acLabel>
@@ -36,7 +36,7 @@
 				</field>
 
 				<field type="select" name="employerSelect">
-					<label>contact.person.attr.company</label>
+					<label>contact.ext.person.attr.company</label>
 					<source type="function">
 						<function>TodoyuDaytracksExportManager::getEmployersOptions</function>
 						<lazyInit/>
@@ -50,7 +50,7 @@
 				</field>
 
 				<field type="textAC" name="project">
-					<label>project.project</label>
+					<label>project.ext.ext.project</label>
 					<config>
 						<acName>project</acName>
 						<acLabel>TodoyuProjectProjectManager::getLabel</acLabel>
@@ -64,7 +64,7 @@
 				</field>
 
 				<field type="textAC" name="company">
-					<label>contact.company</label>
+					<label>contact.ext.company</label>
 					<config>
 						<acName>company</acName>
 						<acLabel>TodoyuContactCompanyManager::getLabel</acLabel>
@@ -85,7 +85,7 @@
 			<elements>
 
 				<field type="date" name="date_start">
-					<label>task.date_start</label>
+					<label>project.ext.ext.task.date_start</label>
 				</field>
 
 				<field type="date" name="date_end">
@@ -102,7 +102,7 @@
 
 				<field type="cancelButton" name="cancel">
 					<onclick>Todoyu.Ext.daytracks.Export.closePopup()</onclick>
-					<text>core.close</text>
+					<text>core.global.close</text>
 				</field>
 
 				<field type="saveButton" name="save">

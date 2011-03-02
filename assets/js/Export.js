@@ -20,14 +20,14 @@
 Todoyu.Ext.daytracks.Export = {
 
 	/**
-	 * 
+	 *
 	 */
 	popup: {},
 
 
 
 	/**
-	 * Opens the Export - Popup 
+	 * Opens the Export - Popup
 	 */
 	openExportPopup: function() {
 		var url = Todoyu.getUrl('daytracks', 'export');
@@ -37,7 +37,7 @@ Todoyu.Ext.daytracks.Export = {
 			}
 		};
 
-		this.popup = Todoyu.Popup.openWindow('time-export', '[LLL:daytracks.export.popup.title]', 460, url, parameters);
+		this.popup = Todoyu.Popup.openWindow('time-export', '[LLL:daytracks.ext.export.popup.title]', 460, url, parameters);
 
 		this.popup.show();
 	},
@@ -55,7 +55,7 @@ Todoyu.Ext.daytracks.Export = {
 
 	/**
 	 * sends download request.
-	 * 
+	 *
 	 * @param	{String}	form
 	 */
 	download: function(form) {
@@ -66,7 +66,7 @@ Todoyu.Ext.daytracks.Export = {
 
 			Todoyu.goTo('daytracks', 'export', formValues);
 		} else {
-			Todoyu.notifyError('[LLL:daytracks.export.popup.error.allFieldsEmpty]');
+			Todoyu.notifyError('[LLL:daytracks.ext.export.popup.error.allFieldsEmpty]');
 		}
 	},
 
@@ -127,7 +127,7 @@ Todoyu.Ext.daytracks.Export = {
 
 		/**
 		 * Handles the Project Selection
-		 * 
+		 *
 		 * @param	inputField
 		 * @param	idField
 		 * @param	selectedValue
@@ -149,7 +149,7 @@ Todoyu.Ext.daytracks.Export = {
 
 		/**
 		 * Handles the Company selection from the auto-completer
-		 * 
+		 *
 		 * @param	inputField
 		 * @param	idField
 		 * @param	selectedValue
@@ -171,7 +171,7 @@ Todoyu.Ext.daytracks.Export = {
 
 		/**
 		 * Handles the employer selection from the auto-completer
-		 * 
+		 *
 		 * @param	inputField
 		 * @param	idField
 		 * @param	selectedValue
@@ -226,7 +226,7 @@ Todoyu.Ext.daytracks.Export = {
 
 		/**
 		 * Returns the list of selected elements
-		 * 
+		 *
 		 * @param	container
 		 * @param	idField
 		 */
@@ -264,7 +264,7 @@ Todoyu.Ext.daytracks.Export = {
 
 		/**
 		 * Adds an item to the selection list
-		 * 
+		 *
 		 * @param	container
 		 * @param	baseName
 		 * @param	idElement
@@ -298,7 +298,7 @@ Todoyu.Ext.daytracks.Export = {
 
 		/**
 		 * Removes the selection-element from the selection-list
-		 * 
+		 *
 		 * @param	idField
 		 * @param	listItem
 		 */

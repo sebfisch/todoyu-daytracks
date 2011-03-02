@@ -39,7 +39,7 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget implements T
 		parent::__construct(
 			'daytracks',							// ext key
 			'daytracks',							// panel widget ID
-			'LLL:panelwidget-daytracks.title',		// widget title text
+			'LLL:daytracks.panelwidget-daytracks.title',		// widget title text
 			$config,								// widget config array
 			$params,								// widget parameters
 			$idArea

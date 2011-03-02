@@ -64,7 +64,7 @@ Todoyu.Ext.daytracks.History = {
 			}
 		};
 		var idPopup	= 'popup-daytracks-history';
-		var title	= '[LLL:daytracks.history.title]';
+		var title	= '[LLL:daytracks.ext.history.title]';
 
 		this.popup	= Todoyu.Popup.openWindow(this.popupID, title, 540, url, options);
 	},
