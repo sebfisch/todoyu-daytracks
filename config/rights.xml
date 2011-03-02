@@ -5,10 +5,6 @@
 		<right name="use" />
 	</section>
 
-	<section name="panelwidgets"  require="general:use">
-		<right name="daytracks" />
-	</section>
-
 	<section name="daytracks" require="general:use">
 		<right name="showHistory" />
 		<right name="timeExport" />

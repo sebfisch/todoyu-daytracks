@@ -1,6 +1,7 @@
 todoyu daytracks extension changelog
 
 currency 1.1.0 (requires core >= 2.1) - not released yet
+	* Feature: Removed panel-widget right
 	* Feature: Cleanup of Rights Management
 	* Feature: added export for time tracks
 
