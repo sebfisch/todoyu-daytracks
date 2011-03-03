@@ -22,10 +22,6 @@
 define('EXTID_DAYTRACKS', 107);
 define('PATH_EXT_DAYTRACKS', PATH_EXT . '/daytracks');
 
-	// Register module locales
-//TodoyuLabelManager::register('daytracks', 'daytracks', 'ext.xml');
-//TodoyuLabelManager::register('panelwidget-daytracks', 'daytracks', 'panelwidget-daytracks.xml');
-
 	// Add timetracking update callbacks
 TodoyuTimetrackingCallbackManager::add('daytracks', 'TodoyuDaytracksManager::callbackTrackingToggle');
 
