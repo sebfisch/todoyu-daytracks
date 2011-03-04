@@ -63,7 +63,7 @@ class TodoyuDaytracksHistoryRenderer {
 //					'position'	=> 10
 //				),
 				array(
-					'label'		=> label('daytracks.history.total'),
+					'label'		=> label('daytracks.ext.history.total'),
 					'value' 	=> TodoyuTime::sec2hour($tracks['total']) . ' ' . Label('core.date.time.hours'),
 					'position'	=> 20
 				)

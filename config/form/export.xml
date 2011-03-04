@@ -50,7 +50,7 @@
 				</field>
 
 				<field type="textAC" name="project">
-					<label>project.ext.ext.project</label>
+					<label>project.ext.project</label>
 					<config>
 						<acName>project</acName>
 						<acLabel>TodoyuProjectProjectManager::getLabel</acLabel>
@@ -85,11 +85,11 @@
 			<elements>
 
 				<field type="date" name="date_start">
-					<label>project.ext.ext.task.date_start</label>
+					<label>project.ext.task.date_start</label>
 				</field>
 
 				<field type="date" name="date_end">
-					<label>daytracks.export.popup.date_end</label>
+					<label>daytracks.ext.export.popup.date_end</label>
 				</field>
 
 			</elements>
