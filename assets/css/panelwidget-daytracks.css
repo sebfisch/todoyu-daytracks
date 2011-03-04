@@ -16,8 +16,7 @@
    -------------------------------------------- */
 #panelwidget-daytracks ul li span.taskItem {
 	display:block;
-	border-left-width:5px;
-	border-left-style:solid;
+	border-left:5px solid;
 }
 
 

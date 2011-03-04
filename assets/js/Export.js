@@ -17,6 +17,16 @@
  * This copyright notice MUST APPEAR in all copies of the script.
  *****************************************************************************/
 
+/**
+ * @module	Export
+ */
+
+/**
+ * Daytracks export
+ *
+ * @class		Export
+ * @namespace	Todoyu.Ext
+ */
 Todoyu.Ext.daytracks.Export = {
 
 	/**
@@ -28,6 +38,8 @@ Todoyu.Ext.daytracks.Export = {
 
 	/**
 	 * Opens the Export - Popup
+	 *
+	 * @method	openExportPopup
 	 */
 	openExportPopup: function() {
 		var url = Todoyu.getUrl('daytracks', 'export');
@@ -38,7 +50,6 @@ Todoyu.Ext.daytracks.Export = {
 		};
 
 		this.popup = Todoyu.Popup.openWindow('time-export', '[LLL:daytracks.ext.export.popup.title]', 460, url, parameters);
-
 		this.popup.show();
 	},
 
@@ -46,6 +57,8 @@ Todoyu.Ext.daytracks.Export = {
 
 	/**
 	 * Closes the export - popup
+	 *
+	 * @method	closePopup
 	 */
 	closePopup: function() {
 		this.popup.close();
@@ -56,6 +69,7 @@ Todoyu.Ext.daytracks.Export = {
 	/**
 	 * sends download request.
 	 *
+	 * @method	download
 	 * @param	{String}	form
 	 */
 	download: function(form) {
@@ -75,6 +89,7 @@ Todoyu.Ext.daytracks.Export = {
 	/**
 	 * Checks if minimal one form field is filled in
 	 *
+	 * @method	verifyForm
 	 * @return	{Boolean}
 	 */
 	verifyForm: function() {
@@ -90,12 +105,12 @@ Todoyu.Ext.daytracks.Export = {
 		if( $F('export-field-date-start') !== '' ) {
 			return true;
 		}
-		if( $F('export-field-date-end') !== '' ) {
-			return true;
-		}
 
-		return false;
+		return $F('export-field-date-end') !== '';
 	},
+
+
+
 
 
 	/**
@@ -106,6 +121,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Handles the person selection
 		 *
+		 * @method	onPersonSelected
 		 * @param	inputField
 		 * @param	idField
 		 * @param	selectedValue
@@ -128,6 +144,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Handles the Project Selection
 		 *
+		 * @method	onProjectSelected
 		 * @param	inputField
 		 * @param	idField
 		 * @param	selectedValue
@@ -150,6 +167,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Handles the Company selection from the auto-completer
 		 *
+		 * @method	onCompanySelected
 		 * @param	inputField
 		 * @param	idField
 		 * @param	selectedValue
@@ -172,6 +190,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Handles the employer selection from the auto-completer
 		 *
+		 * @method	onEmployerSelected
 		 * @param	inputField
 		 * @param	idField
 		 * @param	selectedValue
@@ -194,12 +213,13 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Handles the employer selection from the select-input
 		 *
+		 * @method	onEmployerSelectedSelect
 		 * @return	{Boolean}
 		 */
 		onEmployerSelectedSelect: function() {
 			var select = $('formElement-export-field-employer').down('select');
 
-			if(select.value > 0) {
+			if( select.value > 0 ) {
 				return this.onEmployerSelected(select,$('export-field-employers'), select.value, select.options[select.selectedIndex].text);
 			}
 		},
@@ -209,6 +229,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Saves the selection fo any auto-completer
 		 *
+		 * @method	saveSelection
 		 * @param 	container
 		 * @param	inputField
 		 * @param	idField
@@ -227,6 +248,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Returns the list of selected elements
 		 *
+		 * @method	getList
 		 * @param	container
 		 * @param	idField
 		 */
@@ -249,6 +271,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Handles the list click (removal of selected items)
 		 *
+		 * @method	onListClick
 		 * @param	event
 		 * @param	idField
 		 */
@@ -265,6 +288,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Adds an item to the selection list
 		 *
+		 * @method	addListItem
 		 * @param	container
 		 * @param	baseName
 		 * @param	idElement
@@ -285,8 +309,9 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Updates the (hidden) value field
 		 *
-		 * @param	field
-		 * @param	list
+		 * @method	updateValueField
+		 * @param	{Element}	field
+		 * @param	{Element}	list
 		 */
 		updateValueField: function(field, list) {
 			field.value = list.select('li').collect(function(item){
@@ -299,8 +324,9 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Removes the selection-element from the selection-list
 		 *
-		 * @param	idField
-		 * @param	listItem
+		 * @method	removeItem
+		 * @param	{String}	idField
+		 * @param	{Element}	listItem
 		 */
 		removeItem: function(idField, listItem) {
 			var list = listItem.up('ul');
@@ -313,4 +339,5 @@ Todoyu.Ext.daytracks.Export = {
 		}
 
 	}
+
 };

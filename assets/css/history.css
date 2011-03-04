@@ -90,9 +90,8 @@ button.daytrackscollapse .icon {
 	#daytracks-history-trackings .daytrack {
 		text-align:left;
 		padding:5px;
-		border-width:0 0 1px 0;
-		border-style:dotted;
-		border-color:#bababa;
+		border:0 dotted #bababa;
+		border-bottom-width:1px;
 		background-color:#fff;
 	}
 	#daytracks-history-trackings .details a:hover div {
