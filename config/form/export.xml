@@ -13,10 +13,10 @@
 				<field type="textAC" name="employee">
 					<label>contact.ext.person</label>
 					<config>
-						<acName>person</acName>
 						<acLabel>TodoyuContactPersonManager::getLabel</acLabel>
 						<options>
-							<onSelectCustom>Todoyu.Ext.daytracks.Export.MultiAc.onPersonSelected</onSelectCustom>
+							<acName>person</acName>
+							<onSelected>Todoyu.Ext.daytracks.Export.MultiAc.onPersonSelected</onSelected>
 						</options>
 					</config>
 				</field>
@@ -27,10 +27,10 @@
 				<field type="textAC" name="employerAC">
 					<label>contact.ext.person.attr.company</label>
 					<config>
-						<acName>company</acName>
 						<acLabel>TodoyuContactCompanyManager::getLabel</acLabel>
 						<options>
-							<onSelectCustom>Todoyu.Ext.daytracks.Export.MultiAc.onEmployerSelected</onSelectCustom>
+							<acName>company</acName>
+							<onSelected>Todoyu.Ext.daytracks.Export.MultiAc.onEmployerSelected</onSelected>
 						</options>
 					</config>
 				</field>
@@ -52,10 +52,10 @@
 				<field type="textAC" name="project">
 					<label>project.ext.project</label>
 					<config>
-						<acName>project</acName>
 						<acLabel>TodoyuProjectProjectManager::getLabel</acLabel>
 						<options>
-							<onSelectCustom>Todoyu.Ext.daytracks.Export.MultiAc.onProjectSelected</onSelectCustom>
+							<acName>project</acName>
+							<onSelected>Todoyu.Ext.daytracks.Export.MultiAc.onProjectSelected</onSelected>
 						</options>
 					</config>
 				</field>
@@ -66,10 +66,10 @@
 				<field type="textAC" name="company">
 					<label>contact.ext.company</label>
 					<config>
-						<acName>company</acName>
 						<acLabel>TodoyuContactCompanyManager::getLabel</acLabel>
 						<options>
-							<onSelectCustom>Todoyu.Ext.daytracks.Export.MultiAc.onCompanySelected</onSelectCustom>
+							<acName>company</acName>
+							<onSelected>Todoyu.Ext.daytracks.Export.MultiAc.onCompanySelected</onSelected>
 						</options>
 					</config>
 				</field>
@@ -85,11 +85,11 @@
 			<elements>
 
 				<field type="date" name="date_start">
-					<label>project.ext.task.date_start</label>
+					<label>project.ext.attr.date_start</label>
 				</field>
 
 				<field type="date" name="date_end">
-					<label>daytracks.ext.export.popup.date_end</label>
+					<label>project.ext.attr.date_end</label>
 				</field>
 
 			</elements>
@@ -107,7 +107,7 @@
 
 				<field type="saveButton" name="save">
 					<onclick>Todoyu.Ext.daytracks.Export.download(this.form)</onclick>
-					<text>file.download</text>
+					<text>core.file.download</text>
 				</field>
 
 			</elements>
