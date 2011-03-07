@@ -49,7 +49,7 @@ Todoyu.Ext.daytracks.Export = {
 			}
 		};
 
-		this.popup = Todoyu.Popup.openWindow('time-export', '[LLL:daytracks.ext.export.popup.title]', 460, url, parameters);
+		this.popup = Todoyu.Popups.open('time-export', '[LLL:daytracks.ext.export.popup.title]', 460, url, parameters);
 		this.popup.show();
 	},
 

@@ -46,7 +46,7 @@ Todoyu.Ext.daytracks.History = {
 	 * @return	Object
 	 */
 	getPopup: function() {
-		return Todoyu.Popup.getPopup(this.popupID);
+		return Todoyu.Popups.getPopup(this.popupID);
 	},
 
 
@@ -66,7 +66,7 @@ Todoyu.Ext.daytracks.History = {
 		var idPopup	= 'popup-daytracks-history';
 		var title	= '[LLL:daytracks.ext.history.title]';
 
-		this.popup	= Todoyu.Popup.openWindow(this.popupID, title, 540, url, options);
+		this.popup	= Todoyu.Popups.open(this.popupID, title, 540, url, options);
 	},
 
 
@@ -89,7 +89,7 @@ Todoyu.Ext.daytracks.History = {
 			}
 		};
 
-		Todoyu.Popup.updateContent(this.popupID, url, options);
+		Todoyu.Popups.updateContent(this.popupID, url, options);
 	},
 
 
