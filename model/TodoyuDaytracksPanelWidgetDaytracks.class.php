@@ -25,7 +25,7 @@
  * @package		Todoyu
  * @subpackage	Daytracks
  */
-class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
+class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 
 	/**
 	 * Constructor (initialize widget)
@@ -88,25 +88,11 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget implements T
 
 
 	/**
-	 * Render widget content (get evoked)
-	 *
-	 * @return	String
-	 */
-	public function render() {
-		$this->setContent( $this->renderContent() );
-
-		return parent::render();
-	}
-
-
-
-	/**
 	 * Get widget content
 	 *
 	 * @return	String
 	 */
 	public function getContent() {
-
 		return $this->renderContent();
 	}
 
