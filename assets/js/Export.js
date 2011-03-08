@@ -230,11 +230,11 @@ Todoyu.Ext.daytracks.Export = {
 		 * Saves the selection fo any auto-completer
 		 *
 		 * @method	saveSelection
-		 * @param 	container
-		 * @param	inputField
-		 * @param	idField
-		 * @param	selectedValue
-		 * @param	selectedText
+		 * @param	{Element}	container
+		 * @param	{Element}	inputField
+		 * @param	{Element}	idField
+		 * @param	{String}	selectedValue
+		 * @param	{String}	selectedText
 		 */
 		saveSelection: function(container, inputField, idField, selectedValue, selectedText) {
 			var ul	= this.getList(container, idField);
