@@ -75,7 +75,6 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 			$tasks[$index]['seeTask']		= TodoyuProjectTaskRights::isSeeAllowed($task['id']); // TodoyuTimetracking::isTrackable($track['type'], $track['status']);
 		}
 
-
 		$data	= array(
 			'tasks'		=> $tasks,
 			'current'	=> TodoyuTimetracking::getTaskID(),
