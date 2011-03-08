@@ -55,11 +55,11 @@ class TodoyuDaytracksExportActionController extends TodoyuActionController {
 	 */
 	public function downloadAction(array $params) {
 		$form	= TodoyuDaytracksExportManager::getExportForm();
-		
+
 		$values	= TodoyuArray::assure($params['export']);
 
 		$data	= $form->getStorageData($values);
-		
+
 		TodoyuDaytracksExportManager::exportCSV($data);
 	}
 }
