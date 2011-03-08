@@ -181,26 +181,25 @@ class TodoyuDaytracksExportManager {
 
 
 	/**
-	 * @static
-	 * @param array $dataArray
-	 * @return void
+	 * Prepare data for export - substitute locale labels by their parsed values
+	 *
+	 * @param	Array	$dataArray
+	 * @return	Array
 	 */
 	protected static function prepareDataForExport(array $dataArray) {
 		$parsedArray	= array();
 
 		foreach( $dataArray as $index => $report ) {
-
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.task.taskno')]							= $report['tasknumber'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.task.attr.title')]						= $report['task'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.task.taskno')]					= $report['tasknumber'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.task.attr.title')]				= $report['task'];
 			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.date_track')]			= $report['date_tracked'];
 			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.workload_tracked')]	= $report['workload_tracked'];
 			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.workload_chargeable')]	= $report['workload_chargeable'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:contact.ext.company')]						= $report['company'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.ext.project')]						= $report['project'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:contact.ext.person')]						= $report['name'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:contact.ext.company')]					= $report['company'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.ext.project')]					= $report['project'];
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:contact.ext.person')]					= $report['name'];
 			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.comment')]				= $report['comment'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.ext.records.activity')]				= $report['activity'];
-
+			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.ext.records.activity')]			= $report['activity'];
 		}
 
 		return $parsedArray;

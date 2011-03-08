@@ -27,8 +27,9 @@
 class TodoyuDaytracksHistoryActionController extends TodoyuActionController {
 
 	/**
-	 * @param array $params
-	 * @return void
+	 * Init controller: restrict to rights
+	 *
+	 * @param	Array	$params
 	 */
 	public function init(array $params) {
 		restrict('daytracks', 'general:use');

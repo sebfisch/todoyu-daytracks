@@ -20,13 +20,14 @@
 
 
 /**
- * controller for the export functionality
+ * Controller for the export functionality
  */
 class TodoyuDaytracksExportActionController extends TodoyuActionController {
 
 	/**
-	 * @param array $params
-	 * @return void
+	 * Init controller: restrict to rights
+	 *
+	 * @param	Array	$params
 	 */
 	public function init(array $params) {
 		restrict('daytracks', 'general:use');
