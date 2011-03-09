@@ -24,16 +24,21 @@
 Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 
 	/**
-	 * Ext shortcut
+	 * Reference to extension
 	 *
-	 * @var	{Object}	ext
+	 * @property	ext
+	 * @type		Object
 	 */
 	ext:	Todoyu.Ext.daytracks,
 
 	/**
 	 * Backreference to widget
+	 *
+	 * @property	widget
+	 * @type		Object
 	 */
 	widget:	Todoyu.Ext.daytracks.PanelWidget.Daytracks,
+
 
 
 	/**

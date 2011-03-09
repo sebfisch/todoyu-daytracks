@@ -24,18 +24,35 @@
 Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 	/**
-	 * Ext namespace shortcut
+	 * Reference to extension
 	 *
-	 * @var	{Object}	ext
+	 * @property	ext
+	 * @type		Object
 	 */
 	ext:		Todoyu.Ext.daytracks,
 
+	/**
+	 * @property	timeTask
+	 * @type		Number
+	 */
 	timeTask:	0,
 
+	/**
+	 * @property	timeTotal
+	 * @type		Number
+	 */
 	timeTotal:	0,
 
+	/**
+	 * @property	spanTimeTask
+	 * @type		Number
+	 */
 	spanTimeTask:	null,
 
+	/**
+	 * @property	spanTimeTotal
+	 * @type		Number
+	 */
 	spanTimeTotal:	null,
 
 
