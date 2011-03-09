@@ -33,7 +33,7 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 	 * @param	Array	$config
 	 * @param	Array	$params
 	 */
-	public function __construct(array $config, array $params = array(), $idArea = 0) {
+	public function __construct(array $config, array $params = array()) {
 
 		// Construct PanelWidget (init basic configuration)
 		parent::__construct(
@@ -41,8 +41,7 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 			'daytracks',							// panel widget ID
 			'LLL:daytracks.panelwidget-daytracks.title',		// widget title text
 			$config,								// widget config array
-			$params,								// widget parameters
-			$idArea
+			$params								// widget parameters
 		);
 
 		$this->addClass('daytracks');
