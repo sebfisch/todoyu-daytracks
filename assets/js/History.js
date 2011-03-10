@@ -17,6 +17,10 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
+/**
+ * @module	Daytracks
+ */
+
 Todoyu.Ext.daytracks.History = {
 
 	/**

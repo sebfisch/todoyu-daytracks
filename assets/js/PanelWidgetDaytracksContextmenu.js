@@ -18,8 +18,11 @@
 *****************************************************************************/
 
 /**
+ * @module	Daytracks
+ */
+
+/**
  * Context menu for task entries of daytracks panel widget
- *
 */
 Todoyu.Ext.daytracks.PanelWidget.Daytracks.ContextMenu = {
 

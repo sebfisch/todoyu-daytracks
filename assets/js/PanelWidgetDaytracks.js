@@ -18,8 +18,11 @@
  *****************************************************************************/
 
 /**
+ * @module	Daytracks
+ */
+
+/**
  * Panel widget: daytracks
- *
  */
 Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
