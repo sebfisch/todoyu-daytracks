@@ -28,37 +28,37 @@
 Todoyu::$CONFIG['EXT']['daytracks']['assets'] = array(
 	'js' => array(
 		array(
-			'file'		=> 'ext/daytracks/assets/js/Ext.js',
+			'file'		=> 'ext/daytracks/asset/js/Ext.js',
 			'position'	=> 100
 		),
 		array(
-			'file'		=> 'ext/daytracks/assets/js/History.js',
+			'file'		=> 'ext/daytracks/asset/js/History.js',
 			'position'	=> 101
 		),
 		array(
-			'file'		=> 'ext/daytracks/assets/js/PanelWidgetDaytracks.js',
+			'file'		=> 'ext/daytracks/asset/js/PanelWidgetDaytracks.js',
 			'position'	=> 110
 		),
 		array(
-			'file'		=> 'ext/daytracks/assets/js/PanelWidgetDaytracksContextmenu.js',
+			'file'		=> 'ext/daytracks/asset/js/PanelWidgetDaytracksContextmenu.js',
 			'position'	=> 111
 		),
 		array(
-			'file'		=> 'ext/daytracks/assets/js/Export.js',
+			'file'		=> 'ext/daytracks/asset/js/Export.js',
 			'position'	=> 112
 		)
 	),
 	'css' => array(
 		array(
-			'file'		=> 'ext/daytracks/assets/css/ext.css',
+			'file'		=> 'ext/daytracks/asset/css/ext.css',
 			'position'	=> 100
 		),
 		array(
-			'file'		=> 'ext/daytracks/assets/css/history.css',
+			'file'		=> 'ext/daytracks/asset/css/history.css',
 			'position'	=> 101
 		),
 		array(
-			'file'		=> 'ext/daytracks/assets/css/panelwidget-daytracks.css',
+			'file'		=> 'ext/daytracks/asset/css/panelwidget-daytracks.css',
 			'position'	=> 110
 		)
 	)
