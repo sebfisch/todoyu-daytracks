@@ -190,16 +190,16 @@ class TodoyuDaytracksExportManager {
 		$parsedArray	= array();
 
 		foreach( $dataArray as $index => $report ) {
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.task.taskno')]					= $report['tasknumber'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.task.attr.title')]				= $report['task'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.date_track')]			= $report['date_tracked'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.workload_tracked')]	= $report['workload_tracked'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.workload_chargeable')]	= $report['workload_chargeable'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:contact.ext.company')]					= $report['company'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.ext.project')]					= $report['project'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:contact.ext.person')]					= $report['name'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:timetracking.attr.comment')]				= $report['comment'];
-			$parsedArray[$index][TodoyuLabelManager::getLabel('LLL:project.ext.records.activity')]			= $report['activity'];
+			$parsedArray[$index][Label('project.task.taskno')]					= $report['tasknumber'];
+			$parsedArray[$index][Label('project.task.attr.title')]				= $report['task'];
+			$parsedArray[$index][Label('timetracking.attr.date_track')]			= $report['date_tracked'];
+			$parsedArray[$index][Label('timetracking.attr.workload_tracked')]	= $report['workload_tracked'];
+			$parsedArray[$index][Label('timetracking.attr.workload_chargeable')]	= $report['workload_chargeable'];
+			$parsedArray[$index][Label('contact.ext.company')]					= $report['company'];
+			$parsedArray[$index][Label('project.ext.project')]					= $report['project'];
+			$parsedArray[$index][Label('contact.ext.person')]					= $report['name'];
+			$parsedArray[$index][Label('timetracking.attr.comment')]				= $report['comment'];
+			$parsedArray[$index][Label('project.ext.records.activity')]			= $report['activity'];
 		}
 
 		return $parsedArray;
