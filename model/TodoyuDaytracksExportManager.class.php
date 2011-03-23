@@ -64,12 +64,21 @@ class TodoyuDaytracksExportManager {
 	 * @param	Array	$exportData
 	 */
 	public static function exportCSV(array $exportData) {
-		$employee	= allowed('daytracks', 'daytracks:timeExportAllPerson' ) ? TodoyuArray::intExplode(',' , $exportData['employee']) : array(personid());
+		if( allowed('daytracks', 'daytracks:timeExportAllPerson') ) {
+			$employeeIDs	= TodoyuArray::intExplode(',' , $exportData['employee'], true, true);
+		} else {
+			$employeeIDs	= array(personid());
+		}
+
+
+
 		$employer	= TodoyuArray::intExplode(',', $exportData['employers']);
 		$project	= TodoyuArray::intExplode(',', $exportData['project']);
 		$company	= TodoyuArray::intExplode(',', $exportData['company']);
 
-		$reports	= self::getTrackingReport($employee, $employer, $project, $company, $exportData['date_start'], $exportData['date_end']);
+		$reports	= self::getTrackingReport($employeeIDs, $employer, $project, $company, $exportData['date_start'], $exportData['date_end']);
+
+
 
 		$reports	= self::prepareDataForExport($reports);
 
@@ -190,16 +199,16 @@ class TodoyuDaytracksExportManager {
 		$parsedArray	= array();
 
 		foreach( $dataArray as $index => $report ) {
-			$parsedArray[$index][Label('project.task.taskno')]					= $report['tasknumber'];
-			$parsedArray[$index][Label('project.task.attr.title')]				= $report['task'];
-			$parsedArray[$index][Label('timetracking.attr.date_track')]			= $report['date_tracked'];
-			$parsedArray[$index][Label('timetracking.attr.workload_tracked')]	= $report['workload_tracked'];
-			$parsedArray[$index][Label('timetracking.attr.workload_chargeable')]	= $report['workload_chargeable'];
-			$parsedArray[$index][Label('contact.ext.company')]					= $report['company'];
-			$parsedArray[$index][Label('project.ext.project')]					= $report['project'];
-			$parsedArray[$index][Label('contact.ext.person')]					= $report['name'];
-			$parsedArray[$index][Label('timetracking.attr.comment')]				= $report['comment'];
-			$parsedArray[$index][Label('project.ext.records.activity')]			= $report['activity'];
+			$parsedArray[$index][Label('project.task.taskno')]						= $report['tasknumber'];
+			$parsedArray[$index][Label('project.task.attr.title')]					= $report['task'];
+			$parsedArray[$index][Label('timetracking.ext.attr.date_track')]			= $report['date_tracked'];
+			$parsedArray[$index][Label('timetracking.ext.attr.workload_tracked')]	= $report['workload_tracked'];
+			$parsedArray[$index][Label('timetracking.ext.attr.workload_chargeable')]= $report['workload_chargeable'];
+			$parsedArray[$index][Label('contact.ext.company')]						= $report['company'];
+			$parsedArray[$index][Label('project.ext.project')]						= $report['project'];
+			$parsedArray[$index][Label('contact.ext.person')]						= $report['name'];
+			$parsedArray[$index][Label('timetracking.ext.attr.comment')]			= $report['comment'];
+			$parsedArray[$index][Label('project.ext.records.activity')]				= $report['activity'];
 		}
 
 		return $parsedArray;

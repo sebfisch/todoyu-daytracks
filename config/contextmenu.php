@@ -26,8 +26,7 @@
 
 Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'] = array(
 	'showinproject' => Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['showinproject'],
-	'status'		=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['status'],
-	'bookmark'		=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['bookmark']
+	'status'		=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['status']
 );
 
 Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['showinproject']['jsAction'] 	= 'Todoyu.Ext.project.goToTaskInProject(#ID#)';
@@ -39,6 +38,10 @@ Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['sub
 Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['done']['jsAction'] 		= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_DONE . ')';
 Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['accepted']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_ACCEPTED . ')';
 Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['rejected']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_REJECTED . ')';
-Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['cleared']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_CLEARED . ')';
+
+	// Only update status if available
+if( Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['cleared'] ) {
+	Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget']['status']['submenu']['cleared']['jsAction'] 	= 'Todoyu.Ext.daytracks.PanelWidget.Daytracks.updateTaskStatus(#ID#, ' . STATUS_CLEARED . ')';
+}
 
 ?>

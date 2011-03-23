@@ -44,8 +44,8 @@ Todoyu.Ext.daytracks.Export = {
 	openExportPopup: function() {
 		var url = Todoyu.getUrl('daytracks', 'export');
 		var parameters = {
-			'parameters': {
-				'action': 'renderpopup'
+			parameters: {
+				action: 'renderpopup'
 			}
 		};
 

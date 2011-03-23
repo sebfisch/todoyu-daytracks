@@ -128,19 +128,19 @@ button.daytrackscollapse .icon {
 		text-align:left;
 	}
 	#daytracks-history-trackings .daytrackdetail span.task span.tasknumber {
-		width:110px;
+		width:80px;
 		display:inline-block;
 		vertical-align:top;
 	}
 	#daytracks-history-trackings .daytrackdetail span.task span.tasktitle {
-		width:280px;
+		width:310px;
 		padding-right:10px;
 		display:inline-block;
 		vertical-align:top;
 	}
 
 	#daytracks-history-trackings .daytrackdetail span.time {
-		width:10px;
+		width:80px;
 		display:inline-block;
 		text-align:right;
 	}

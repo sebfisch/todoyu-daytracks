@@ -63,8 +63,8 @@ Todoyu.Ext.daytracks.History = {
 	show: function() {
 		var url		= Todoyu.getUrl('daytracks', 'history');
 		var options	= {
-			'parameters': {
-				'action':	'history'
+			parameters: {
+				action:	'history'
 			}
 		};
 		var idPopup	= 'popup-daytracks-history';
@@ -85,11 +85,11 @@ Todoyu.Ext.daytracks.History = {
 
 		var url		= Todoyu.getUrl('daytracks', 'history');
 		var options = {
-			'parameters': {
-				'action':	'history',
-				'year':		range[0],
-				'month':	range[1],
-				'details':	( this.showDetails ) ? 1 : 0
+			parameters: {
+				action:		'history',
+				year:		range[0],
+				month:		range[1],
+				details:	this.showDetails ? 1 : 0
 			}
 		};
 

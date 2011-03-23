@@ -134,10 +134,10 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 		var target = 'panelwidget-daytracks-content';
 		var url = Todoyu.getUrl('daytracks', 'panelwidget');
 		var options = {
-			'parameters': {
-				'action':	'update'
+			parameters: {
+				action:	'update'
 			},
-			'onComplete': this.onRefreshed.bind(this)
+			onComplete: this.onRefreshed.bind(this)
 		};
 
 		// Update dayTracks list
