@@ -38,7 +38,6 @@ class TodoyuDaytracksHistoryRenderer {
 		$year		= intval($year);
 		$month		= intval($month);
 
-
 			// Use current date if none set
 		$year	= $year === 0 ? date('Y') : $year ;
 		$month	= $month === 0 ? date('n') : $month ;
