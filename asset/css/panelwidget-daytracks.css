@@ -74,7 +74,8 @@
 		background-position:0 4px !important;
 	}
 
-#panelwidget-daytracks .history {
+#panelwidget-daytracks .history,
+#panelwidget-daytracks .timeexport {
 	margin-top:5px;
 }
 
