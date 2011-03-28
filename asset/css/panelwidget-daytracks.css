@@ -16,14 +16,14 @@
    -------------------------------------------- */
 #panelwidget-daytracks ul li span.taskItem {
 	display:block;
-	border-left-width:5px;
+	border-left-width:4px;
 	border-left-style:solid;
 }
 
 
 #panelwidget-daytracks  ul li a.info {
 	display:block;
-	padding:5px 25px 5px 5px; /* icon space */
+	padding:5px 25px 5px 9px; /* icon space */
 }
 
 #panelwidget-daytracks  ul li .info .time {
