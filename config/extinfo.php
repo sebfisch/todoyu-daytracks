@@ -34,8 +34,8 @@ Todoyu::$CONFIG['EXT']['daytracks']['info'] = array(
 	'version' 		=> '1.1.0',
 	'constraints' 	=> array(
 		'depends' 	=> array(
-			'project'		=> '1.0.4',
-			'timetracking'	=> '1.0.4'
+			'project'		=> '1.1.0',
+			'timetracking'	=> '1.1.0'
 		),
 		'conflicts' => array(
 		)
