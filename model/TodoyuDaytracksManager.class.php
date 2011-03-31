@@ -71,7 +71,7 @@ class TodoyuDaytracksManager {
 					p.id as id_project,
 					p.title as project,
 					c.shortname as company,
-					tr.workload_tracked as `time`';
+					SUM(tr.workload_tracked) as `time`';
 
 		$tables	= '	ext_project_task t,
 					ext_timetracking_track tr,
