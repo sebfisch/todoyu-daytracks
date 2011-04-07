@@ -1,1 +1,6 @@
 todoyu daytracks extension changelog
+
+daytracks 1.1.0 - beta release
+	* Changed: Requires core 2.1
+	* Changed: Structure for 2.1
+	* Changed: All classes are prefixed with extension name
