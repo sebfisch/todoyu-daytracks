@@ -8,7 +8,7 @@
 	<label index="history.noTracks">No time tracking available for this period</label>
 	<label index="totalToday">Total tracked time today</label>
 	<label index="daysinmonth">Days in month</label>
-	<label index="export.popup.title">Daytrack Export</label>
+	<label index="export.popup.title">Time Sheet Export</label>
 	<label index="export.popup.date_end">End Date</label>
 	<label index="export.popup.error.allFieldsEmpty">All fields are empty</label>
 </labels>
