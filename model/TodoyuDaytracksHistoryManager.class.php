@@ -166,7 +166,6 @@ class TodoyuDaytracksHistoryManager {
 		$dateStart	= mktime(0, 0, 0, $month, 1, $year);
 		$dateEnd	= mktime(0, 0, 0, $month + 1, 1, $year) - 1;
 
-
 		$tracks		= TodoyuTimetracking::getPersonTracks($dateStart, $dateEnd, $idPerson);
 
 		$workloads	= TodoyuArray::getColumn($tracks, 'workload_tracked');
@@ -179,8 +178,6 @@ class TodoyuDaytracksHistoryManager {
 			$tracksByDay[$timestamp]['tracks'][] 	= $track;
 			$tracksByDay[$timestamp]['total'] 		+= $track['workload_tracked'];
 		}
-
-
 
 		if( $details ) {
 			foreach($tracksByDay as $timestamp => $dayTracks) {
