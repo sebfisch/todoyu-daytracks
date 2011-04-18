@@ -49,7 +49,7 @@ class TodoyuDaytracksExportActionController extends TodoyuActionController {
 
 
 	/**
-	 * Download Action for the csv-file
+	 * Download Action for the CSV file
 	 *
 	 * @param	Array	$params
 	 */
