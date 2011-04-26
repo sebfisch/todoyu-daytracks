@@ -14,9 +14,9 @@ h1.extIconDaytracks .title {
    ----------------------------- */
 
 #time-export .itemlist li {
-	background: url("../../../../core/asset/img/icons.png") no-repeat scroll 10px -357px transparent;
-	border-bottom: 1px dashed #ccc;
-	cursor: pointer;
-	padding: 3px 3px 3px 30px;
-	text-align: left;
+	background:url("../../../../core/asset/img/icons.png") no-repeat scroll 10px -357px transparent;
+	border-bottom:1px dashed #ccc;
+	cursor:pointer;
+	padding:3px 3px 3px 30px;
+	text-align:left;
 }
