@@ -27,7 +27,6 @@ class TodoyuDaytracksExportManager {
 	/**
 	 * Returns the configured export-filter-form
 	 *
-	 * @static
 	 * @return	TodoyuForm	$form
 	 */
 	public static function getExportForm() {
@@ -60,26 +59,20 @@ class TodoyuDaytracksExportManager {
 	 * Exports the CSV file
 	 *
 	 * @todo add check for allowed projects / employers / companies
-	 * @static
 	 * @param	Array	$exportData
 	 */
 	public static function exportCSV(array $exportData) {
 		if( allowed('daytracks', 'daytracks:timeExportAllPerson') ) {
-			$employeeIDs	= TodoyuArray::intExplode(',' , $exportData['employee'], true, true);
+			$employeeIDs	= TodoyuArray::intExplode(',', $exportData['employee'], true, true);
 		} else {
 			$employeeIDs	= array(personid());
 		}
-
-
 
 		$employer	= TodoyuArray::intExplode(',', $exportData['employers']);
 		$project	= TodoyuArray::intExplode(',', $exportData['project']);
 		$company	= TodoyuArray::intExplode(',', $exportData['company']);
 
 		$reports	= self::getTrackingReport($employeeIDs, $employer, $project, $company, $exportData['date_start'], $exportData['date_end']);
-
-
-
 		$reports	= self::prepareDataForExport($reports);
 
 		$export		= new TodoyuExportCSV($reports);
@@ -92,13 +85,12 @@ class TodoyuDaytracksExportManager {
 	/**
 	 * Gets and prepares the data for the daytracks export
 	 *
-	 * @static
-	 * @param	Array	$personIDs
-	 * @param	Array	$employerIDs
-	 * @param	Array	$projectIDs
-	 * @param	Array	$companyIDs
-	 * @param	Integer	$dateStart
-	 * @param	Integer	$dateEnd
+	 * @param	Array		$personIDs
+	 * @param	Array		$employerIDs
+	 * @param	Array		$projectIDs
+	 * @param	Array		$companyIDs
+	 * @param	Integer		$dateStart
+	 * @param	Integer		$dateEnd
 	 * @return	Array
 	 */
 	public static function getTrackingReport(array $personIDs = array(), array $employerIDs = array(), array $projectIDs = array(), array $companyIDs = array(), $dateStart = 0, $dateEnd = 0) {
@@ -170,9 +162,8 @@ class TodoyuDaytracksExportManager {
 
 
 	/**
-	 * Returns the Options for Users Employers
+	 * Returns the options for employers of current person
 	 *
-	 * @static
 	 * @param	TodoyuFormElement	$field
 	 * @return	Array
 	 */
