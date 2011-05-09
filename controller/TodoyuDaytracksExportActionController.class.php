@@ -30,8 +30,8 @@ class TodoyuDaytracksExportActionController extends TodoyuActionController {
 	 * @param	Array	$params
 	 */
 	public function init(array $params) {
-		restrict('daytracks', 'general:use');
-		restrict('daytracks', 'daytracks:timeExport');
+		Todoyu::restrict('daytracks', 'general:use');
+		Todoyu::restrict('daytracks', 'daytracks:timeExport');
 	}
 
 

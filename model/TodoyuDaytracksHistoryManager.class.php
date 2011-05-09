@@ -90,7 +90,7 @@ class TodoyuDaytracksHistoryManager {
 	 * @return	Array		[min,max]
 	 */
 	public static function getTrackingRanges($idPerson = 0) {
-		$idPerson	= personid($idPerson);
+		$idPerson	= Todoyu::personid($idPerson);
 		$fields	= '	MIN(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('min') . ',
 					MAX(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('max');
 		$table	= self::TABLE;
@@ -115,7 +115,7 @@ class TodoyuDaytracksHistoryManager {
 	 * @return	Array
 	 */
 	public static function getMonthSelectorOptions($idPerson = 0) {
-		$idPerson	= personid($idPerson);
+		$idPerson	= Todoyu::personid($idPerson);
 		$range		= self::getTrackingRanges($idPerson);
 		$options	= array();
 
@@ -129,7 +129,7 @@ class TodoyuDaytracksHistoryManager {
 
 
 			$options[$year][$month]	= array(
-				'label'		=> Label('core.date.month.' . strtolower(date('F', $current))),
+				'label'		=> Todoyu::Label('core.date.month.' . strtolower(date('F', $current))),
 				'hasTracks'	=> in_array($year.'-'.$month, $trackMap)
 			);
 
@@ -162,7 +162,7 @@ class TodoyuDaytracksHistoryManager {
 	public static function getRangeTracks($year, $month, $details = false, $idPerson = 0) {
 		$year		= intval($year);
 		$month		= intval($month);
-		$idPerson	= personid($idPerson);
+		$idPerson	= Todoyu::personid($idPerson);
 		$dateStart	= mktime(0, 0, 0, $month, 1, $year);
 		$dateEnd	= mktime(0, 0, 0, $month + 1, 1, $year) - 1;
 

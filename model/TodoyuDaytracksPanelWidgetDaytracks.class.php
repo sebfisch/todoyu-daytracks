@@ -80,7 +80,7 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 			'total'		=> TodoyuTimetracking::getTodayTrackedTime()
 		);
 
-		return render($tmpl, $data);
+		return Todoyu::render($tmpl, $data);
 	}
 
 
@@ -102,7 +102,7 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 	 * @return	Boolean
 	 */
 	public static function isAllowed() {
-		return allowed('daytracks', 'general:use');
+		return Todoyu::allowed('daytracks', 'general:use');
 	}
 
 }

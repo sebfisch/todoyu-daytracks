@@ -32,7 +32,7 @@ class TodoyuDaytracksPanelwidgetActionController extends TodoyuActionController 
 	 * @param	Array		$params
 	 */
 	public function init(array $params) {
-		restrict('daytracks', 'general:use');
+		Todoyu::restrict('daytracks', 'general:use');
 	}
 
 

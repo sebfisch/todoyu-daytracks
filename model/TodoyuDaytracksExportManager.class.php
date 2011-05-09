@@ -36,13 +36,13 @@ class TodoyuDaytracksExportManager {
 
 		$form->setUseRecordID(false);
 
-		if( !allowed('daytracks', 'daytracks:timeExportAllPerson') ) {
+		if( !Todoyu::allowed('daytracks', 'daytracks:timeExportAllPerson') ) {
 			$form->removeField('employee', true);
-			$form->addHiddenField('employee', personid());
-			$form->getField('employees')->setAttribute('comment', TodoyuContactPersonManager::getPerson(personid())->getFullName());
+			$form->addHiddenField('employee', Todoyu::personid());
+			$form->getField('employees')->setAttribute('comment', TodoyuContactPersonManager::getPerson(Todoyu::personid())->getFullName());
 		}
 
-		if( allowed('daytracks', 'daytracks:timeExportAllEmployer') ) {
+		if( Todoyu::allowed('daytracks', 'daytracks:timeExportAllEmployer') ) {
 			$form->removeField('employerSelect', true);
 			$form->getField('employerAC')->setName('employer');
 		} else {
@@ -62,10 +62,10 @@ class TodoyuDaytracksExportManager {
 	 * @param	Array	$exportData
 	 */
 	public static function exportCSV(array $exportData) {
-		if( allowed('daytracks', 'daytracks:timeExportAllPerson') ) {
+		if( Todoyu::allowed('daytracks', 'daytracks:timeExportAllPerson') ) {
 			$employeeIDs	= TodoyuArray::intExplode(',', $exportData['employee'], true, true);
 		} else {
-			$employeeIDs	= array(personid());
+			$employeeIDs	= array(Todoyu::personid());
 		}
 
 		$employer	= TodoyuArray::intExplode(',', $exportData['employers']);
@@ -168,7 +168,7 @@ class TodoyuDaytracksExportManager {
 	 * @return	Array
 	 */
 	public static function getEmployersOptions(TodoyuFormElement $field) {
-		$companies	= TodoyuContactPersonManager::getPersonCompanyRecords(personid());
+		$companies	= TodoyuContactPersonManager::getPersonCompanyRecords(Todoyu::personid());
 
 		$reform	= array(
 			'id'	=> 'value',
@@ -190,16 +190,16 @@ class TodoyuDaytracksExportManager {
 		$parsedArray	= array();
 
 		foreach( $dataArray as $index => $report ) {
-			$parsedArray[$index][Label('project.task.taskno')]						= $report['tasknumber'];
-			$parsedArray[$index][Label('project.task.attr.title')]					= $report['task'];
-			$parsedArray[$index][Label('timetracking.ext.attr.date_track')]			= $report['date_tracked'];
-			$parsedArray[$index][Label('timetracking.ext.attr.workload_tracked')]	= $report['workload_tracked'];
-			$parsedArray[$index][Label('timetracking.ext.attr.workload_chargeable')]= $report['workload_chargeable'];
-			$parsedArray[$index][Label('contact.ext.company')]						= $report['company'];
-			$parsedArray[$index][Label('project.ext.project')]						= $report['project'];
-			$parsedArray[$index][Label('contact.ext.person')]						= $report['name'];
-			$parsedArray[$index][Label('timetracking.ext.attr.comment')]			= $report['comment'];
-			$parsedArray[$index][Label('project.ext.records.activity')]				= $report['activity'];
+			$parsedArray[$index][Todoyu::Label('project.task.taskno')]						= $report['tasknumber'];
+			$parsedArray[$index][Todoyu::Label('project.task.attr.title')]					= $report['task'];
+			$parsedArray[$index][Todoyu::Label('timetracking.ext.attr.date_track')]			= $report['date_tracked'];
+			$parsedArray[$index][Todoyu::Label('timetracking.ext.attr.workload_tracked')]	= $report['workload_tracked'];
+			$parsedArray[$index][Todoyu::Label('timetracking.ext.attr.workload_chargeable')]= $report['workload_chargeable'];
+			$parsedArray[$index][Todoyu::Label('contact.ext.company')]						= $report['company'];
+			$parsedArray[$index][Todoyu::Label('project.ext.project')]						= $report['project'];
+			$parsedArray[$index][Todoyu::Label('contact.ext.person')]						= $report['name'];
+			$parsedArray[$index][Todoyu::Label('timetracking.ext.attr.comment')]			= $report['comment'];
+			$parsedArray[$index][Todoyu::Label('project.ext.records.activity')]				= $report['activity'];
 		}
 
 		return $parsedArray;

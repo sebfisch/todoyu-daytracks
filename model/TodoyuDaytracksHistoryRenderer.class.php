@@ -62,8 +62,8 @@ class TodoyuDaytracksHistoryRenderer {
 //					'position'	=> 10
 //				),
 				array(
-					'label'		=> label('daytracks.ext.history.total'),
-					'value' 	=> TodoyuTime::sec2hour($tracks['total']) . ' ' . Label('core.date.time.hours'),
+					'label'		=> Todoyu::Label('daytracks.ext.history.total'),
+					'value' 	=> TodoyuTime::sec2hour($tracks['total']) . ' ' . Todoyu::Label('core.date.time.hours'),
 					'position'	=> 20
 				)
 			)
@@ -71,7 +71,7 @@ class TodoyuDaytracksHistoryRenderer {
 
 		TodoyuHookManager::callHookDataModifier('daytracks', 'tracksHistory', $data);
 
-		return render($tmpl, $data);
+		return Todoyu::render($tmpl, $data);
 	}
 
 }
