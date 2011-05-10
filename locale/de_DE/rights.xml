@@ -7,5 +7,5 @@
 	<label index="daytracks">Stundenblatt Widget</label>
 	<label index="daytracks.timeExport">Stundenblatt exportieren</label>
 	<label index="daytracks.timeExportAllPerson">Stundenblatt von allen Personen exportieren</label>
-	<label index="daytracks.timeExportAllEmployer">Stundenblatt von allen Arbeitgeber exportieren</label>
+	<label index="daytracks.timeExportAllEmployer">Stundenblatt von allen Arbeitgebern exportieren</label>
 </labels>
