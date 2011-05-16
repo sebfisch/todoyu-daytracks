@@ -6,7 +6,7 @@
 	<fieldsets>
 
 		<fieldset name="main">
-			<legend>export filter</legend>
+			<legend>daytracks.form.legend.export.filter</legend>
 			<class>left noneFloatingInput</class>
 			<elements>
 
@@ -81,7 +81,7 @@
 		</fieldset>
 
 		<fieldset name="date">
-			<legend>dates</legend>
+			<legend>daytracks.form.legend.export.filter</legend>
 			<elements>
 
 				<field type="date" name="date_start">

@@ -3,7 +3,6 @@
 	<label index="general">Общие</label>
 	<label index="general.use">Использовать табель</label>
 	<label index="panelwidgets">Элементы панели</label>
-	<label index="panelwidgets.daytracks">Показать элемент табеля</label>
 	<label index="daytracks">Табель</label>
 	<label index="daytracks.showHistory">Показать табель</label>
 </labels>

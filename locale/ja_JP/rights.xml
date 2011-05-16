@@ -3,7 +3,6 @@
 	<label index="general">一般</label>
 	<label index="general.use">タイムシートの使用</label>
 	<label index="panelwidgets">パネル部分</label>
-	<label index="panelwidgets.daytracks">タイムシートの表示</label>
 	<label index="daytracks">パネル部分のタイムシート</label>
 	<label index="daytracks.showHistory">タイムシートの表示</label>
 </labels>

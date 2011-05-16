@@ -3,7 +3,6 @@
 	<label index="general">Allgemeine Einstellungen</label>
 	<label index="general.use">Stundenblatt benutzen</label>
 	<label index="panelwidgets">Steuerelemente</label>
-	<label index="panelwidgets.daytracks">Stundenblatt Widget benutzen</label>
 	<label index="daytracks">Stundenblatt Widget</label>
 	<label index="daytracks.timeExport">Stundenblatt exportieren</label>
 	<label index="daytracks.timeExportAllPerson">Stundenblatt von allen Personen exportieren</label>

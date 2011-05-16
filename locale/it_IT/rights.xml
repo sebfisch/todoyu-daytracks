@@ -3,7 +3,6 @@
 	<label index="general">Generale</label>
 	<label index="general.use">Usa le scale temporali</label>
 	<label index="panelwidgets">Widget del pannello</label>
-	<label index="panelwidgets.daytracks">Mostra il widget della scala temporale</label>
 	<label index="daytracks">Widget scala temporale del pannello</label>
 	<label index="daytracks.showHistory">Vedi la scala temporale</label>
 </labels>
