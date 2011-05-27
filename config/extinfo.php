@@ -39,7 +39,8 @@ Todoyu::$CONFIG['EXT']['daytracks']['info'] = array(
 		),
 		'conflicts' => array(
 		)
-	)
+	),
+	'urlDocumentation'	=> 'http://doc.todoyu.com/?daytracks'
 );
 
 ?>
