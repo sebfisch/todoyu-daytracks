@@ -169,13 +169,12 @@ class TodoyuDaytracksExportManager {
 	 */
 	public static function getEmployersOptions(TodoyuFormElement $field) {
 		$companies	= TodoyuContactPersonManager::getPersonCompanyRecords(Todoyu::personid());
-
-		$reform	= array(
+		$reformConfig	= array(
 			'id'	=> 'value',
 			'title'	=> 'label'
 		);
 
-		return TodoyuArray::reform($companies, $reform, true);
+		return TodoyuArray::reform($companies, $reformConfig, true);
 	}
 
 
