@@ -39,7 +39,7 @@
 					<label>contact.ext.person.attr.company</label>
 					<source type="function">
 						<function>TodoyuDaytracksExportManager::getEmployersOptions</function>
-						<lazyInit/>
+						<lazyInit />
 					</source>
 					<extraAttributes>
 						onchange="Todoyu.Ext.daytracks.Export.MultiAc.onEmployerSelectedSelect();"
