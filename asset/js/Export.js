@@ -258,7 +258,7 @@ Todoyu.Ext.daytracks.Export = {
 					'class': 'itemlist'
 				});
 
-				list.observe('click', this.onListClick.bindAsEventListener(this, idField));
+				list.on('click', 'li', this.onListClick.bind(this, idField));
 
 				container.insert(list);
 			}
@@ -272,15 +272,12 @@ Todoyu.Ext.daytracks.Export = {
 		 * Handles the list click (removal of selected items)
 		 *
 		 * @method	onListClick
-		 * @param	event
-		 * @param	idField
+		 * @param	{String}	idField
+		 * @param	{Event}		event
+		 * @param	{Element}	element
 		 */
-		onListClick: function(event, idField) {
-			var li	= event.findElement('li');
-
-			if( li !== document ) {
-				this.removeItem(idField, li);
-			}
+		onListClick: function(idField, event, element) {
+			this.removeItem(idField, element);
 		},
 
 
