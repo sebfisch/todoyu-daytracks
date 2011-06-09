@@ -4,5 +4,7 @@
 	<label index="general.use">Использовать табель</label>
 	<label index="panelwidgets">Элементы панели</label>
 	<label index="daytracks">Табель</label>
-	<label index="daytracks.showHistory">Показать табель</label>
+	<label index="daytracks.timeExport">Экспортировать табель</label>
+	<label index="daytracks.timeExportAllPerson">Экспортировать все табели</label>
+	<label index="daytracks.timeExportAllEmployer">Экспортировать табели всех сотрудников</label>
 </labels>
