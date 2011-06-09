@@ -42,14 +42,14 @@ Todoyu.Ext.daytracks.Export = {
 	 * @method	openExportPopup
 	 */
 	openExportPopup: function() {
-		var url = Todoyu.getUrl('daytracks', 'export');
-		var parameters = {
+		var url 	= Todoyu.getUrl('daytracks', 'export');
+		var options = {
 			parameters: {
 				action: 'renderpopup'
 			}
 		};
 
-		this.popup = Todoyu.Popups.open('time-export', '[LLL:daytracks.ext.export.popup.title]', 460, url, parameters);
+		this.popup = Todoyu.Popups.open('time-export', '[LLL:daytracks.ext.export.popup.title]', 460, url, options);
 		this.popup.show();
 	},
 
@@ -93,23 +93,12 @@ Todoyu.Ext.daytracks.Export = {
 	 * @return	{Boolean}
 	 */
 	verifyForm: function() {
-		if( $F('export-field-employee') !== '' ) {
-			return true;
-		}
-		if( $F('export-field-project') !== '' ) {
-			return true;
-		}
-		if( $F('export-field-company') !== '' ) {
-			return true;
-		}
-		if( $F('export-field-date-start') !== '' ) {
-			return true;
-		}
+		var fields	= ['employee', 'project', 'company', 'date-start', 'date-end'];
 
-		return $F('export-field-date-end') !== '';
+		return $A(fields).any(function(field){
+			return $F('export-field-' + field) !== '';
+		});
 	},
-
-
 
 
 
@@ -313,7 +302,7 @@ Todoyu.Ext.daytracks.Export = {
 		updateValueField: function(field, list) {
 			field.value = list.select('li').collect(function(item){
 				return item.id.split('-').last();
-			});
+			}).join(',');
 		},
 
 
