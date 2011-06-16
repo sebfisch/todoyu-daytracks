@@ -1,10 +1,12 @@
 /* ---------------------
-	container
+	Container
 ------------------------ */
 #daytracks-history {
 	margin:5px;
 	text-align:left;
 }
+
+
 
 /* ---------------------
 	Selectors
@@ -44,6 +46,7 @@ button.daytracksexpand .icon {
 button.daytrackscollapse .icon {
   background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
 }
+
 
 
 /* ----------------------
