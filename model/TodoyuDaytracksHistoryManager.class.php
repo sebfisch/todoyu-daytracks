@@ -163,6 +163,7 @@ class TodoyuDaytracksHistoryManager {
 		$year		= intval($year);
 		$month		= intval($month);
 		$idPerson	= Todoyu::personid($idPerson);
+
 		$dateStart	= mktime(0, 0, 0, $month, 1, $year);
 		$dateEnd	= mktime(0, 0, 0, $month + 1, 1, $year) - 1;
 

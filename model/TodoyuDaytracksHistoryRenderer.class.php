@@ -39,8 +39,8 @@ class TodoyuDaytracksHistoryRenderer {
 		$month		= intval($month);
 
 			// Use current date if none set
-		$year	= $year === 0 ? date('Y') : $year ;
-		$month	= $month === 0 ? date('n') : $month ;
+		$year	= $year === 0 ? date('Y') : $year;
+		$month	= $month === 0 ? date('n') : $month;
 
 		$timestamp	= mktime(0, 0, 0, $month, 1, $year);
 
@@ -56,11 +56,6 @@ class TodoyuDaytracksHistoryRenderer {
 			'tracking'			=> $tracks,
 			'ranges'			=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions(),
 			'monthInfos'		=> array(
-//				array(
-//					'label'		=> label('daytracks.daysinmonth'),
-//					'value' 	=> TodoyuTime::getDaysInMonth($timestamp),
-//					'position'	=> 10
-//				),
 				array(
 					'label'		=> Todoyu::Label('daytracks.ext.history.total'),
 					'value' 	=> TodoyuTime::sec2hour($tracks['total']) . ' ' . Todoyu::Label('core.date.time.hours'),
