@@ -78,7 +78,7 @@
 
 #panelwidget-daytracks .history,
 #panelwidget-daytracks .timeexport {
-	display: inline;
+	display:inline;
 }
 
 #panelwidget-daytracks button.trackHistory .icon {
