@@ -113,6 +113,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	},
 
 
+
 	/**
 	 * Check whether task element exists within current view
 	 *
@@ -208,6 +209,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	},
 
 
+
 	/**
 	 * Handler when tracking timesheet toggeling updated
 	 *
@@ -219,6 +221,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	onTrackingToggleUpdate: function(idTask, data, response) {
 		this.setContent(data);
 	},
+
 
 
 	/**
