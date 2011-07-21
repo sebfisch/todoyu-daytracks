@@ -1,6 +1,9 @@
 todoyu daytracks extension changelog
 
-daytracks 1.1.0 - beta release
+daytracks 1.1.1 - not released yet
+
+
+daytracks 1.1.0
 	* Feature: Rights cleanup, restricted accessing timetracking history
 	* Bugfix: Calculate correct total time even if there are multiple tracks on a task for a single day
  	* Changed: Requires core 2.1

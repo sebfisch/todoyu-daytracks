@@ -202,6 +202,7 @@ Todoyu.Ext.daytracks.Export = {
 		/**
 		 * Handles the employer selection from the select-input
 		 *
+		 * @todo	cleanup function (fix inconsistent return point) + comment for readability
 		 * @method	onEmployerSelectedSelect
 		 * @return	{Boolean}
 		 */
