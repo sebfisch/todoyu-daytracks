@@ -30,7 +30,8 @@
 Todoyu.Ext.daytracks.Export = {
 
 	/**
-	 *
+	 * @property	popup
+	 * @type		Object
 	 */
 	popup: {},
 
