@@ -212,6 +212,8 @@ Todoyu.Ext.daytracks.Export = {
 			if( select.value > 0 ) {
 				return this.onEmployerSelected(select,$('export-field-employers'), select.value, select.options[select.selectedIndex].text);
 			}
+
+			return false;
 		},
 
 
