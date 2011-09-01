@@ -19,8 +19,7 @@
 *****************************************************************************/
 
 /**
- * Hours sheet which lists all task the person tracked today and
- * cumulate todays worktime
+ * Hours sheet which lists all task the person tracked today and cumulates today's working time
  *
  * @package		Todoyu
  * @subpackage	Daytracks

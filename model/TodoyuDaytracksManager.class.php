@@ -27,7 +27,7 @@
 class TodoyuDaytracksManager {
 
 	/**
-	 * Get context menu items for daytrack list panel widget
+	 * Get context menu items for daytracks list panel widget
 	 *
 	 * @param	Integer		$idTask			Task ID
 	 * @param	Array		$items			Current items

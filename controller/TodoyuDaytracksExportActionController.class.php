@@ -18,9 +18,11 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-
 /**
- * Controller for the export functionality
+ * Controller for daytracks export
+ *
+ * @package		Todoyu
+ * @subpackage	Daytracks
  */
 class TodoyuDaytracksExportActionController extends TodoyuActionController {
 

@@ -18,15 +18,26 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-
-
+/**
+ * Daytracks export renderer
+ *
+ * @package 	Todoyu
+ * @subpackage	Daytracks
+ */
 class TodoyuDaytracksExportRenderer {
 
+	/**
+	 * Render export form
+	 *
+	 * @param	Array	$params
+	 * @return	String
+	 */
 	public static function renderDaytracksExportForm(array $params) {
 		$form	= TodoyuDaytracksExportManager::getExportForm();
 
 		return $form->render();
 	}
+
 }
 
 ?>
