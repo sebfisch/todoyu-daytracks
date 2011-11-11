@@ -24,11 +24,9 @@
 		<span class="totalTasks">({$.foreach.daytracks.total} {Label project.task.tasks})</span>
 	</div>
 
-	{restrict 'daytracks' 'daytracks:showHistory'}
-		<div class="history">
-			{Button label="daytracks.panelwidget-daytracks.showHistory" class="trackHistory" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.showHistory()"}
-		</div>
-	{/restrict}
+	<div class="history">
+		{Button label="daytracks.panelwidget-daytracks.showHistory" class="trackHistory" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.showHistory()"}
+	</div>
 
 	{restrict 'daytracks' 'daytracks:timeExport'}
 		<div class="timeexport">
