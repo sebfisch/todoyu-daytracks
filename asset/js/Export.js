@@ -112,11 +112,11 @@ Todoyu.Ext.daytracks.Export = {
 		 * Handles the person selection
 		 *
 		 * @method	onPersonSelected
-		 * @param	inputField
-		 * @param	idField
-		 * @param	selectedValue
-		 * @param	selectedText
-		 * @param	autocompleter
+		 * @param	{Element}		inputField
+		 * @param	{String}		idField
+		 * @param	{String}		selectedValue
+		 * @param	{String}		selectedText
+		 * @param	{String}		autocompleter
 		 * @return	{Boolean}
 		 */
 		onPersonSelected: function(inputField, idField, selectedValue, selectedText, autocompleter) {
@@ -135,11 +135,11 @@ Todoyu.Ext.daytracks.Export = {
 		 * Handles the Project Selection
 		 *
 		 * @method	onProjectSelected
-		 * @param	inputField
-		 * @param	idField
-		 * @param	selectedValue
-		 * @param	selectedText
-		 * @param	autocompleter
+		 * @param	{Element}	inputField
+		 * @param	{String}	idField
+		 * @param	{String}	selectedValue
+		 * @param	{String}	selectedText
+		 * @param	{String}	autocompleter
 		 * @return	{Boolean}
 		 */
 		onProjectSelected: function(inputField, idField, selectedValue, selectedText, autocompleter) {
@@ -158,11 +158,11 @@ Todoyu.Ext.daytracks.Export = {
 		 * Handles the Company selection from the auto-completer
 		 *
 		 * @method	onCompanySelected
-		 * @param	inputField
-		 * @param	idField
-		 * @param	selectedValue
-		 * @param	selectedText
-		 * @param	autocompleter
+		 * @param	{Element}			inputField
+		 * @param	{String}			idField
+		 * @param	{String}			selectedValue
+		 * @param	{String}			selectedText
+		 * @param	{String}			autocompleter
 		 * @return	{Boolean}
 		 */
 		onCompanySelected: function(inputField, idField, selectedValue, selectedText, autocompleter) {
@@ -181,11 +181,11 @@ Todoyu.Ext.daytracks.Export = {
 		 * Handles the employer selection from the auto-completer
 		 *
 		 * @method	onEmployerSelected
-		 * @param	inputField
-		 * @param	idField
-		 * @param	selectedValue
-		 * @param	selectedText
-		 * @param	autocompleter
+		 * @param	{Element}			inputField
+		 * @param	{String}			idField
+		 * @param	{String}			selectedValue
+		 * @param	{String}			selectedText
+		 * @param	{String}			autocompleter
 		 * @return	{Boolean}
 		 */
 		onEmployerSelected: function(inputField, idField, selectedValue, selectedText, autocompleter) {
@@ -242,8 +242,8 @@ Todoyu.Ext.daytracks.Export = {
 		 * Returns the list of selected elements
 		 *
 		 * @method	getList
-		 * @param	container
-		 * @param	idField
+		 * @param	{Element}	container
+		 * @param	{String}	idField
 		 */
 		getList: function(container, idField) {
 			if( ! container.down('ul') ) {
@@ -279,10 +279,10 @@ Todoyu.Ext.daytracks.Export = {
 		 * Adds an item to the selection list
 		 *
 		 * @method	addListItem
-		 * @param	container
-		 * @param	baseName
-		 * @param	idElement
-		 * @param	textElement
+		 * @param	{Element}	container
+		 * @param	{String}	baseName
+		 * @param	{String}	idElement
+		 * @param	{Element}	textElement
 		 */
 		addListItem: function(container, baseName, idElement, textElement) {
 			var item = (new Element('li', {
