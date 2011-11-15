@@ -21,6 +21,11 @@
 /* ----------------------------
 	Context Menu Callbacks
    ---------------------------- */
-TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuDaytracksManager::getPanelWidgetContextMenuItems');
+TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuDaytracksPanelWidgetDaytracks::getContextMenuItems');
+
+	// Add timetracking update callbacks
+if( TodoyuExtensions::isInstalled('timetracking') ) {
+	TodoyuTimetrackingCallbackManager::add('daytracks', 'TodoyuDaytracksManager::callbackTrackingToggle');
+}
 
 ?>

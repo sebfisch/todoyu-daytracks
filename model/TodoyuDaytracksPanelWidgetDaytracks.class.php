@@ -27,18 +27,16 @@
 class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 
 	/**
-	 * Constructor (initialize widget)
+	 * Construct PanelWidget (init basic configuration)
 	 *
 	 * @param	Array	$config
 	 * @param	Array	$params
 	 */
 	public function __construct(array $config, array $params = array()) {
-
-		// Construct PanelWidget (init basic configuration)
 		parent::__construct(
 			'daytracks',								// ext key
-			'daytracks',								// panel widget ID
-			'daytracks.panelwidget-daytracks.title',// widget title text
+			'daytracks',								// panelwidget ID
+			'daytracks.panelwidget-daytracks.title',	// widget title text
 			$config,									// widget config array
 			$params										// widget parameters
 		);
@@ -62,15 +60,16 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 
 		$tasks	= TodoyuDaytracksManager::getTodayTrackedTasks();
 
+			// Add unsaved currently running task
 		$current= TodoyuDaytracksManager::getCurrentTrackedUnsavedTask();
 		if( $current !== false ) {
 			$tasks[] = $current;
 		}
 
-			// Add 'isTrackable' flag to each tracking
+			// Add 'isTrackable' and 'seeTask' flags to listed tasks
 		foreach($tasks as $index => $task) {
 			$tasks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status'], $task['id']);
-			$tasks[$index]['seeTask']		= TodoyuProjectTaskRights::isSeeAllowed($task['id']); // TodoyuTimetracking::isTrackable($track['type'], $track['status']);
+			$tasks[$index]['seeTask']		= TodoyuProjectTaskRights::isSeeAllowed($task['id']);
 		}
 
 		$data	= array(
@@ -91,6 +90,28 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 	 */
 	public function getContent() {
 		return $this->renderContent();
+	}
+
+
+
+	/**
+	 * Get context menu items for daytracks list panel widget
+	 *
+	 * @param	Integer		$idTask			Task ID
+	 * @param	Array		$items			Current items
+	 * @return	Array
+	 */
+	public static function getContextMenuItems($idTask, array $items) {
+		$idTask	= intval($idTask);
+
+			// Add timetracking options (if extension installed)
+		if( TodoyuExtensions::isInstalled('timetracking') ) {
+			$items = array_merge_recursive($items, TodoyuTimetrackingManager::getContextMenuItemStartStop($idTask));
+		}
+
+		$ownItems	= Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'];
+
+		return array_merge_recursive($items, $ownItems);
 	}
 
 

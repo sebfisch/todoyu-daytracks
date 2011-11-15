@@ -23,7 +23,7 @@
  */
 
 
-
+	// Copy context menu items from project/task
 Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'] = array(
 	'showinproject' => Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['showinproject'],
 	'status'		=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['status']

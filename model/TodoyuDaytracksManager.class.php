@@ -27,21 +27,6 @@
 class TodoyuDaytracksManager {
 
 	/**
-	 * Get context menu items for daytracks list panel widget
-	 *
-	 * @param	Integer		$idTask			Task ID
-	 * @param	Array		$items			Current items
-	 * @return	Array
-	 */
-	public static function getPanelWidgetContextMenuItems($idTask, array $items) {
-		$ownItems	= Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'];
-
-		return array_merge_recursive($items, $ownItems);
-	}
-
-
-
-	/**
 	 * Get information about all tasks which have been tracked today
 	 * The following information is provided in the array keys:
 	 * 	[id]			Task ID
@@ -155,10 +140,12 @@ class TodoyuDaytracksManager {
 	 * @return	String		Content of panelwidget
 	 */
 	public static function callbackTrackingToggle($idTask, $info) {
+		/** @var	TodoyuDaytracksPanelWidgetDaytracks $panelWidget */
 		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('daytracks', 'Daytracks');
 
 		return $panelWidget->getContent();
 	}
+
 }
 
 ?>
