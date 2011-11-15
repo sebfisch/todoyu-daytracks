@@ -39,10 +39,12 @@ class TodoyuDaytracksExportManager {
 
 		$form->setUseRecordID(false);
 
+			// User is only allowed to export his own trackings
 		if( !Todoyu::allowed('daytracks', 'daytracks:timeExportAllPerson') ) {
 			$form->removeField('employee', true);
 			$form->addHiddenField('employee', Todoyu::personid());
 			$form->getField('employees')->setAttribute('comment', TodoyuContactPersonManager::getPerson(Todoyu::personid())->getFullName());
+			$form->removeField('employerSelect', true);
 		}
 
 		if( Todoyu::allowed('daytracks', 'daytracks:timeExportAllEmployer') ) {

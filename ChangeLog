@@ -1,6 +1,7 @@
 todoyu daytracks extension changelog
 
 daytrack 1.1.2 - not released yet
+	* Changed: Removed employer option from export form for users who can only export their own trackings
 	* Bugfix: Timetracking option in task contextmenu of daytracks was missing
 	* Bugfix: History was not available for not-admins
 	* Translation: Polish
