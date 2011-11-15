@@ -70,6 +70,7 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 		foreach($tasks as $index => $task) {
 			$tasks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status'], $task['id']);
 			$tasks[$index]['seeTask']		= TodoyuProjectTaskRights::isSeeAllowed($task['id']);
+			$tasks[$index]['isDeleted']		= TodoyuProjectTaskManager::isDeleted($task['id']) ? 1:0;
 		}
 
 		$data	= array(
@@ -104,14 +105,17 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 	public static function getContextMenuItems($idTask, array $items) {
 		$idTask	= intval($idTask);
 
-			// Add timetracking options (if extension installed)
-		if( TodoyuExtensions::isInstalled('timetracking') ) {
-			$items = array_merge_recursive($items, TodoyuTimetrackingManager::getContextMenuItemStartStop($idTask));
+		if( ! TodoyuProjectTaskManager::isDeleted($idTask) ) {
+				// Add timetracking options (if extension installed)
+			if( TodoyuExtensions::isInstalled('timetracking') ) {
+				$items = array_merge_recursive($items, TodoyuTimetrackingManager::getContextMenuItemStartStop($idTask));
+			}
+
+			$ownItems	= Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'];
+			$items		= array_merge_recursive($items, $ownItems);
 		}
 
-		$ownItems	= Todoyu::$CONFIG['EXT']['daytracks']['ContextMenu']['PanelWidget'];
-
-		return array_merge_recursive($items, $ownItems);
+		return $items;
 	}
 
 

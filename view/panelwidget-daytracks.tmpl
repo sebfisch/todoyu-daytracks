@@ -1,14 +1,14 @@
 <div class="contentdaytrackspwidget">
 	<ul class="contextmenudaytrackspwidget ulListDotted withMouseHover">
 		{foreach $tasks key task daytracks}
-			<li id="daytracks-track-{$task.id}" class="{cycle values="odd,even"} listItem status-{taskStatusKey $task.status} bcStatus{$task.status}{if $task.id == $current} running{/if}" title="{taskStatusLabel $task.status}">
+			<li id="daytracks-track-{$task.id}" class="{cycle values="odd,even"} listItem status-{taskStatusKey $task.status} bcStatus{$task.status}{if $task.id == $current} running{/if}{if $task.isDeleted} deleted{/if}" title="{taskStatusLabel $task.status}">
 				<span class="taskItem bcStatus{$task.status}">
 
 				{if $task.isTrackable || $task.id == $current}
 					<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id});this.onclick=''" title="{if $task.id == $current}{Label timetracking.ext.stop}{else}{Label timetracking.ext.start}{/if}"><!-- button --></a>
 				{/if}
 
-				<a id="daytracks-track-{$task.id}-info" class="info" title="{Label daytracks.panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber})" href="javascript:void(0)" {if $task.seeTask}onclick="Todoyu.Ext.project.goToTaskInProject({$task.id}, {$task.id_project})"{/if}>
+				<a id="daytracks-track-{$task.id}-info" class="info" title="{if $task.isDeleted}({Label project.task.deletedTasks}){else}{Label daytracks.panelwidget-daytracks.goToTask}. ({$task.id_project}.{$task.tasknumber}){/if}" href="javascript:void(0)" {if $task.seeTask && ! $task.isDeleted}onclick="Todoyu.Ext.project.goToTaskInProject({$task.id}, {$task.id_project})"{/if}>
 					<span class="time" id="daytracks-track-{$task.id}-time">{HourMinSec $task.time}</span>
 					<span class="task">{$task.id_project}.{$task.tasknumber} - {htmlencode(truncate($task.title,41))}</span>
 					<span class="company-project"><span class="overflow">{htmlencode $task.company} - {htmlencode $task.project}</span></span>
