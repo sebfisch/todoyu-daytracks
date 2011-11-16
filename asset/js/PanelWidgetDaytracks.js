@@ -93,6 +93,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	registerHooks: function() {
 		Todoyu.Hook.add('project.task.statusUpdated', this.onTaskStatusUpdated.bind(this));
 		Todoyu.Hook.add('project.quickTask.saved', this.onQuickTaskAdded.bind(this));
+		Todoyu.Hook.add('project.task.removed', this.onTaskDeleted.bind(this));
 	},
 
 
@@ -278,6 +279,17 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	},
 
 
+
+	/**
+	 * Handler after task was deleted
+	 *
+	 * @param	{Number}	idTask
+	 */
+	onTaskDeleted: function(idTask) {
+		this.refresh();
+	},
+
+	
 
 	/**
 	 * Evoke showing of timetracking history
