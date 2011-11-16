@@ -81,7 +81,7 @@ Todoyu.Ext.daytracks.Export = {
 
 			Todoyu.goTo('daytracks', 'export', formValues);
 		} else {
-			Todoyu.notifyError('[LLL:daytracks.ext.export.popup.error.allFieldsEmpty]');
+			Todoyu.notifyError('[LLL:daytracks.ext.export.popup.error.allFieldsEmpty]', 'daytracks.export');
 		}
 	},
 
