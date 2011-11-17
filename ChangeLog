@@ -1,19 +1,19 @@
 todoyu daytracks extension changelog
 
 daytrack 1.1.2 - not released yet
+	* Bugfix: Timetracking option in task contextmenu of daytracks was missing
+	* Bugfix: History was not available for not-admins
 	* Changed: Refresh panelwidget when task was deleted
 	* Changed: Deleted tasks are greyed out
 	* Changed: Removed employer option from export form for users who can only export their own trackings
-	* Bugfix: Timetracking option in task contextmenu of daytracks was missing
-	* Bugfix: History was not available for not-admins
 	* Translation: Polish
 
 daytracks 1.1.1 - 2011-09-15
 	* Minor cleanups, styling and layout
 
 daytracks 1.1.0 - 2011-06-17
-	* Feature: Rights cleanup, restricted accessing timetracking history
 	* Bugfix: Calculate correct total time even if there are multiple tracks on a task for a single day
+	* Feature: Rights cleanup, restricted accessing timetracking history
  	* Changed: Requires core 2.1
 	* Changed: Structure for 2.1
 	* Changed: All classes are prefixed with extension name
