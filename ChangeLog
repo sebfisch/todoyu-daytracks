@@ -1,6 +1,6 @@
 todoyu daytracks extension changelog
 
-daytrack 1.1.2 - 2011-11-17
+daytracks 1.1.2 - 2011-11-17
 	* Bugfix: Timetracking option in task contextmenu of daytracks was missing
 	* Bugfix: History was not available for not-admins
 	* Changed: Refresh panelwidget when task was deleted
