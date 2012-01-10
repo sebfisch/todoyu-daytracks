@@ -24,16 +24,16 @@
 
 Todoyu::$CONFIG['EXT']['daytracks']['info'] = array(
 	'title'			=> 'Journal of tracked hours',
-	'description' 	=> 'Journal of tracked hours',
-	'author' 		=> array(
+	'description'	=> 'Journal of tracked hours',
+	'author'		=> array(
 		'name'		=> 'todoyu Core Developer Team',
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
-	'state' 		=> 'stable',
-	'version' 		=> '1.1.2',
-	'constraints' 	=> array(
-		'depends' 	=> array(
+	'state'			=> 'stable',
+	'version'		=> '1.1.2',
+	'constraints'	=> array(
+		'depends'	=> array(
 			'project'		=> '1.1.0',
 			'timetracking'	=> '1.1.0'
 		),

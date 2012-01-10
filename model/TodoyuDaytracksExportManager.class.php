@@ -22,7 +22,7 @@
 /**
  * Manages the daytracks export
  *
- * @package 	Todoyu
+ * @package		Todoyu
  * @subpackage	Daytracks
  */
 class TodoyuDaytracksExportManager {

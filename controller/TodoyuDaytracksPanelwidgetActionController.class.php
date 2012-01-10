@@ -21,7 +21,7 @@
 /**
  * Action controller for daytracks panelwidget
  *
- * @package 	Todoyu
+ * @package		Todoyu
  * @subpackage	Daytracks
  */
 class TodoyuDaytracksPanelwidgetActionController extends TodoyuActionController {

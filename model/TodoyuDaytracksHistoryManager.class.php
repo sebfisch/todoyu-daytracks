@@ -21,7 +21,7 @@
 /**
  * Manager for daytracks history
  *
- * @package 	Todoyu
+ * @package		Todoyu
  * @subpackage	Daytracks
  */
 class TodoyuDaytracksHistoryManager {
@@ -178,15 +178,15 @@ class TodoyuDaytracksHistoryManager {
 		foreach($tracks as $track) {
 			$timestamp	= TodoyuTime::getStartOfDay($track['date_track']);
 
-			$tracksByDay[$timestamp]['tracks'][] 	= $track;
-			$tracksByDay[$timestamp]['total'] 		+= $track['workload_tracked'];
+			$tracksByDay[$timestamp]['tracks'][]	= $track;
+			$tracksByDay[$timestamp]['total']		+= $track['workload_tracked'];
 		}
 
 		if( $details ) {
 			foreach($tracksByDay as $timestamp => $dayTracks) {
 				foreach($dayTracks['tracks'] as $index => $track) {
-					$tracksByDay[$timestamp]['tracks'][$index]['task'] 		= TodoyuProjectTaskManager::getTaskData($track['id_task']);
-					$tracksByDay[$timestamp]['tracks'][$index]['seeTask'] 	= TodoyuProjectTaskRights::isSeeAllowed($track['id_task']);
+					$tracksByDay[$timestamp]['tracks'][$index]['task']		= TodoyuProjectTaskManager::getTaskData($track['id_task']);
+					$tracksByDay[$timestamp]['tracks'][$index]['seeTask']	= TodoyuProjectTaskRights::isSeeAllowed($track['id_task']);
 				}
 			}
 		}

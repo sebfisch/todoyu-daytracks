@@ -29,14 +29,14 @@ class TodoyuDaytracksManager {
 	/**
 	 * Get information about all tasks which have been tracked today
 	 * The following information is provided in the array keys:
-	 * 	[id]			Task ID
-	 * 	[title]			Task title
-	 * 	[tasknumber]	Task number
-	 * 	[status]		Task status key (integer)
-	 * 	[id_project]	Project ID
-	 * 	[project]		Project title
-	 * 	[company]		Company shortname
-	 * 	[time]			Tracked time today
+	 *	[id]			Task ID
+	 *	[title]			Task title
+	 *	[tasknumber]	Task number
+	 *	[status]		Task status key (integer)
+	 *	[id_project]	Project ID
+	 *	[project]		Project title
+	 *	[company]		Company shortname
+	 *	[time]			Tracked time today
 	 *
 	 * @return	Array
 	 */

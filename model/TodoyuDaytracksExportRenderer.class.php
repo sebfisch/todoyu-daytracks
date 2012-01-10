@@ -21,7 +21,7 @@
 /**
  * Daytracks export renderer
  *
- * @package 	Todoyu
+ * @package		Todoyu
  * @subpackage	Daytracks
  */
 class TodoyuDaytracksExportRenderer {

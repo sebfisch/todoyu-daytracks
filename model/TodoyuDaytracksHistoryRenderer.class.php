@@ -21,7 +21,7 @@
 /**
  * Workload history renderer
  *
- * @package 	Todoyu
+ * @package		Todoyu
  * @subpackage	Daytracks
  */
 class TodoyuDaytracksHistoryRenderer {
@@ -58,7 +58,7 @@ class TodoyuDaytracksHistoryRenderer {
 			'monthInfos'		=> array(
 				array(
 					'label'		=> Todoyu::Label('daytracks.ext.history.total'),
-					'value' 	=> TodoyuTime::sec2hour($tracks['total']) . ' ' . Todoyu::Label('core.date.time.hours'),
+					'value'		=> TodoyuTime::sec2hour($tracks['total']) . ' ' . Todoyu::Label('core.date.time.hours'),
 					'position'	=> 20
 				)
 			)

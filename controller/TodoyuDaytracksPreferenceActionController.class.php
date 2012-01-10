@@ -21,7 +21,7 @@
 /**
  * Action controller for daytracks preferences
  *
- * @package 	Todoyu
+ * @package		Todoyu
  * @subpackage	Daytracks
  */
 class TodoyuDaytracksPreferenceActionController extends TodoyuActionController {
