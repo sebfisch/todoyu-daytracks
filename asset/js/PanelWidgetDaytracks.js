@@ -212,7 +212,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 
 	/**
-	 * Handler when tracking timesheet toggeling updated
+	 * Handler when tracking timesheet toggling updated
 	 *
 	 * @method	onTrackingToggleUpdate
 	 * @param	{Number}			idTask
