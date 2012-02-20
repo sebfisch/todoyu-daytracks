@@ -4,5 +4,7 @@
 	<label index="general.use">Употреби распоред сати</label>
 	<label index="panelwidgets">Елементи панела</label>
 	<label index="daytracks">Елемент распореда сати</label>
-	<label index="daytracks.showHistory">Види историју распореда сати</label>
+	<label index="daytracks.timeExport">Експортирај временски распоред</label>
+	<label index="daytracks.timeExportAllPerson">Експортирај временски распоред свих особа</label>
+	<label index="daytracks.timeExportAllEmployer">Експортирај временски распоред целог особља</label>
 </labels>

@@ -7,4 +7,9 @@
 	<label index="history.showdetails">Покажи детаље</label>
 	<label index="history.noTracks">У овом временском периоду нема проведеног времена</label>
 	<label index="totalToday">Укупно проведено време данас</label>
+	<label index="daysinmonth">Дана у месецу</label>
+	<label index="export.title">Експорт</label>
+	<label index="export.popup.title">Експортирај временски распоред</label>
+	<label index="export.popup.date_end">Датум завршавања</label>
+	<label index="export.popup.error.allFieldsEmpty">Сва поља су празна</label>
 </labels>
