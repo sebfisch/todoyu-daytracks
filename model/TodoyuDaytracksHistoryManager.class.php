@@ -176,7 +176,7 @@ class TodoyuDaytracksHistoryManager {
 		$tracksByDay= array();
 
 		foreach($tracks as $track) {
-			$timestamp	= TodoyuTime::getStartOfDay($track['date_track']);
+			$timestamp	= TodoyuTime::getDayStart($track['date_track']);
 
 			$tracksByDay[$timestamp]['tracks'][]	= $track;
 			$tracksByDay[$timestamp]['total']		+= $track['workload_tracked'];

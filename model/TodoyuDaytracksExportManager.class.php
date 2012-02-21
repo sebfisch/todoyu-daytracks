@@ -151,12 +151,12 @@ class TodoyuDaytracksExportManager {
 		}
 
 		if( $dateStart > 0 ) {
-			$dateStart	= TodoyuTime::getStartOfDay($dateStart);
+			$dateStart	= TodoyuTime::getDayStart($dateStart);
 			$where .= ' AND tr.date_track >= ' . $dateStart;
 		}
 
 		if( $dateEnd > 0 ) {
-			$dateEnd	= TodoyuTime::getEndOfDay($dateEnd);
+			$dateEnd	= TodoyuTime::getDayEnd($dateEnd);
 			$where .= ' AND tr.date_track < ' . $dateEnd;
 		}
 
