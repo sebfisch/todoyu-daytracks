@@ -128,6 +128,20 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 
 	/**
+	 * Toggle total label (if no time was tracked before)
+	 *
+	 */
+	toggleTotal: function() {
+		$('daytracks-daytotal').show();
+
+		if( $('daytracks-daytotal-notracks') ) {
+			$('daytracks-daytotal-notracks').hide();
+		}
+	},
+
+
+
+	/**
 	 * Refresh widget
 	 *
 	 * @method	refresh
@@ -204,8 +218,13 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * @method	onTrackingToggle
 	 * @param	{Number}		idTask
 	 * @param	{Boolean}		start
+	 * @return	{Boolean}		Do not send any data in the tracking request
 	 */
 	onTrackingToggle: function(idTask, start) {
+		if( start ) {
+			this.toggleTotal();
+		}
+
 		return false;
 	},
 

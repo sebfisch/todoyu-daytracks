@@ -76,7 +76,8 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 		$data	= array(
 			'tasks'		=> $tasks,
 			'current'	=> TodoyuTimetracking::getTaskID(),
-			'total'		=> TodoyuTimetracking::getTodayTrackedTime()
+			'total'		=> TodoyuTimetracking::getTodayTrackedTime(),
+			'tracking'	=> TodoyuTimetracking::isTrackingActive()
 		);
 
 		return Todoyu::render($tmpl, $data);
