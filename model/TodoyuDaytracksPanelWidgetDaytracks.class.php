@@ -62,7 +62,7 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 
 			// Add unsaved currently running task
 		$current= TodoyuDaytracksManager::getCurrentTrackedUnsavedTask();
-		if( $current !== false ) {
+		if( $current ) {
 			$tasks[] = $current;
 		}
 
