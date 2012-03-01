@@ -76,11 +76,13 @@ class TodoyuDaytracksExportManager {
 		$employer	= TodoyuArray::intExplode(',', $exportData['employers']);
 		$project	= TodoyuArray::intExplode(',', $exportData['project']);
 		$company	= TodoyuArray::intExplode(',', $exportData['company']);
+		$dateStart	= intval($exportData['date_start']);
+		$dateEnd	= intval($exportData['date_end']);
 
-		$reports	= self::getTrackingReport($employeeIDs, $employer, $project, $company, $exportData['date_start'], $exportData['date_end']);
-		$reports	= self::prepareDataForExport($reports);
+		$trackingData	= self::getTrackingReport($employeeIDs, $employer, $project, $company, $dateStart, $dateEnd);
+		$trackingData	= self::prepareDataForExport($trackingData);
 
-		$export		= new TodoyuExportCSV($reports);
+		$export		= new TodoyuExportCSV($trackingData);
 
 		$export->download('daytracks_export_' . date('YmdHis') . '.csv');
 	}
@@ -110,54 +112,55 @@ class TodoyuDaytracksExportManager {
 			$companyIDs = array();
 		}
 
-		$fields	= '	CONCAT_WS(\'.\', ta.id_project, ta.tasknumber) as tasknumber,
-					ta.title as task,
-					DATE_FORMAT(FROM_UNIXTIME(tr.date_track), \'%Y-%m-%d\') as date_tracked,
-					SEC_TO_TIME(tr.workload_tracked) as workload_tracked,
-					SEC_TO_TIME(tr.workload_chargeable) as workload_chargeable,
-					co.title as company,
-					pr.title as project,
-					CONCAT_WS(\', \', pe.lastname, pe.firstname) as name,
-					tr.comment,
-					a.title as activity';
-		$tables	= '	ext_project_task ta,
-					ext_project_project pr,
-					ext_project_activity a,
-					ext_contact_company co,
-					ext_contact_person pe,
-					ext_timetracking_track tr';
-		$where	= '		ta.id_project		= pr.id'
-				. ' AND ta.id_activity		= a.id'
-				. '	AND pr.id_company		= co.id'
-				. ' AND tr.id_task			= ta.id'
-				. ' AND tr.id_person_create	= pe.id';
-		$order	= '	tr.date_track ASC';
+		$fields	= '	CONCAT_WS(\'.\', task.id_project, task.tasknumber) as tasknumber,
+					task.title as task,
+					DATE_FORMAT(FROM_UNIXTIME(track.date_track), \'%Y-%m-%d\') as date_tracked,
+					SEC_TO_TIME(track.workload_tracked) as workload_tracked,
+					SEC_TO_TIME(track.workload_chargeable) as workload_chargeable,
+					company.title as company,
+					project.title as project,
+					CONCAT_WS(\', \', person.lastname, person.firstname) as name,
+					track.comment,
+					activity.title as activity';
+		$tables	= '	ext_project_task 		task,
+					ext_project_project 	project,
+					ext_project_activity 	activity,
+					ext_contact_company 	company,
+					ext_contact_person 		person,
+					ext_timetracking_track 	track';
+		$where	= '		task.id_project			= project.id'
+				. ' AND task.id_activity		= activity.id'
+				. '	AND project.id_company		= company.id'
+				. ' AND track.id_task			= task.id'
+				. ' AND track.id_person_create	= person.id';
+		$order	= '	track.date_track ASC';
 
 		if( sizeof($personIDs) > 0 ) {
-			$where .= ' AND pe.id IN(' . implode(',', $personIDs) . ')';
+			$where .= ' AND person.id IN(' . implode(',', $personIDs) . ')';
 		}
 
 		if( sizeof($employerIDs) > 0 ) {
 			$tables	.= ',ext_contact_mm_company_person pcmm';
-			$where .= ' AND pe.id = pcmm.id_person AND pcmm.id_company IN(' . implode(',', $employerIDs) . ')';
+			$where .= ' AND person.id = pcmm.id_person
+						AND pcmm.id_company IN(' . implode(',', $employerIDs) . ')';
 		}
 
 		if( sizeof($companyIDs) > 0 ) {
-			$where .= ' AND co.id IN(' . implode(',', $companyIDs) . ')';
+			$where .= ' AND company.id IN(' . implode(',', $companyIDs) . ')';
 		}
 
 		if( sizeof($projectIDs) > 0 ) {
-			$where .= ' AND pr.id IN(' . implode(',', $projectIDs) . ')';
+			$where .= ' AND project.id IN(' . implode(',', $projectIDs) . ')';
 		}
 
 		if( $dateStart > 0 ) {
 			$dateStart	= TodoyuTime::getDayStart($dateStart);
-			$where .= ' AND tr.date_track >= ' . $dateStart;
+			$where .= ' AND track.date_track >= ' . $dateStart;
 		}
 
 		if( $dateEnd > 0 ) {
 			$dateEnd	= TodoyuTime::getDayEnd($dateEnd);
-			$where .= ' AND tr.date_track < ' . $dateEnd;
+			$where .= ' AND track.date_track < ' . $dateEnd;
 		}
 
 		return Todoyu::db()->getArray($fields, $tables, $where, '', $order);
@@ -191,22 +194,20 @@ class TodoyuDaytracksExportManager {
 	 * @return	Array
 	 */
 	protected static function prepareDataForExport(array $dataArray) {
-		$parsedArray	= array();
+		$reform			= array(
+			'tasknumber'			=> Todoyu::Label('project.task.taskno'),
+			'task'					=> Todoyu::Label('project.task.attr.title'),
+			'date_tracked'			=> Todoyu::Label('timetracking.ext.attr.date_track'),
+			'workload_tracked'		=> Todoyu::Label('timetracking.ext.attr.workload_tracked'),
+			'workload_chargeable'	=> Todoyu::Label('timetracking.ext.attr.workload_chargeable'),
+			'company'				=> Todoyu::Label('contact.ext.company'),
+			'project'				=> Todoyu::Label('project.ext.project'),
+			'name'					=> Todoyu::Label('contact.ext.person'),
+			'comment'				=> Todoyu::Label('timetracking.ext.attr.comment'),
+			'activity'				=> Todoyu::Label('project.ext.records.activity'),
+		);
 
-		foreach( $dataArray as $index => $report ) {
-			$parsedArray[$index][Todoyu::Label('project.task.taskno')]						= $report['tasknumber'];
-			$parsedArray[$index][Todoyu::Label('project.task.attr.title')]					= $report['task'];
-			$parsedArray[$index][Todoyu::Label('timetracking.ext.attr.date_track')]			= $report['date_tracked'];
-			$parsedArray[$index][Todoyu::Label('timetracking.ext.attr.workload_tracked')]	= $report['workload_tracked'];
-			$parsedArray[$index][Todoyu::Label('timetracking.ext.attr.workload_chargeable')]= $report['workload_chargeable'];
-			$parsedArray[$index][Todoyu::Label('contact.ext.company')]						= $report['company'];
-			$parsedArray[$index][Todoyu::Label('project.ext.project')]						= $report['project'];
-			$parsedArray[$index][Todoyu::Label('contact.ext.person')]						= $report['name'];
-			$parsedArray[$index][Todoyu::Label('timetracking.ext.attr.comment')]			= $report['comment'];
-			$parsedArray[$index][Todoyu::Label('project.ext.records.activity')]				= $report['activity'];
-		}
-
-		return $parsedArray;
+		return TodoyuArray::reform($dataArray, $reform);
 	}
 }
 ?>
