@@ -8,7 +8,7 @@
 					<span class="tasknumber">{$track.task.id_project}.{$track.task.tasknumber}</span><span class="tasktitle">{htmlencode $track.task.title}</span>
 				</span>
 				<span class="time">
-					{Workload $track.workload_tracked}&nbsp;{Label core.date.time.hours}
+					{formatHours $track.workload_tracked}&nbsp;{Label core.date.time.hours}
 				</span>
 			</div>
 		{if $track.is_task_deleted == 0}

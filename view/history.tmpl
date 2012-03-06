@@ -26,7 +26,7 @@
 	</div>
 	{* ------------------- Month info ------------------------ *}
 	<div id="{$id}-trackings" class="bordercolor">
-		<h1 class="totaltime">{$labelCurrentPeriod} / {Workload $tracking.total} {Label core.date.time.hours}</h1>
+		<h1 class="totaltime">{$labelCurrentPeriod} / {formatHours $tracking.total} {Label core.date.time.hours}</h1>
 		{if $showDetails}
 			<div class="monthInfo content overflow">
 				{foreach $monthInfos infoItem}
@@ -38,7 +38,7 @@
 		{foreach $tracking.dayTracks timestamp daytracks}
 			<div class="daytrack bordercolor {if $showDetails}toggled{else}{cycle values="odd,even"}{/if}">
 				<span class="daytrackDate">{dateFormat $timestamp DshortD2MlongY4}</span>
-				<span>{Workload $daytracks.total} {Label core.date.time.hours}</span>
+				<span>{formatHours $daytracks.total} {Label core.date.time.hours}</span>
 			</div>
 	{* ------------------- Track details ------------------- *}
 			{if $showDetails}
