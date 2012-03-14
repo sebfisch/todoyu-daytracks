@@ -92,24 +92,24 @@ class TodoyuDaytracksExportManager {
 	/**
 	 * Gets and prepares the data for the daytracks export
 	 *
-	 * @param	Array		$personIDs
-	 * @param	Array		$employerIDs
-	 * @param	Array		$projectIDs
-	 * @param	Array		$companyIDs
+	 * @param	Array		$personIDs			Persons
+	 * @param	Array		$employerIDs		Employeer companies
+	 * @param	Array		$projectIDs			Projects
+	 * @param	Array		$customerIDs		Customers
 	 * @param	Integer		$dateStart
 	 * @param	Integer		$dateEnd
 	 * @return	Array
 	 */
-	public static function getTrackingReport(array $personIDs = array(), array $employerIDs = array(), array $projectIDs = array(), array $companyIDs = array(), $dateStart = 0, $dateEnd = 0) {
+	public static function getTrackingReport(array $personIDs = array(), array $employerIDs = array(), array $projectIDs = array(), array $customerIDs = array(), $dateStart = 0, $dateEnd = 0) {
 		$personIDs		= TodoyuArray::intval($personIDs, true, true);
 		$employerIDs	= TodoyuArray::intval($employerIDs, true, true);
 		$projectIDs		= TodoyuArray::intval($projectIDs, true, true);
-		$companyIDs		= TodoyuArray::intval($companyIDs, true, true);
+		$customerIDs	= TodoyuArray::intval($customerIDs, true, true);
 		$dateStart		= intval($dateStart);
 		$dateEnd		= intval($dateEnd);
 
 		if( sizeof($projectIDs) > 0 ) {
-			$companyIDs = array();
+			$customerIDs = array();
 		}
 
 		$fields	= '	CONCAT_WS(\'.\', task.id_project, task.tasknumber) as tasknumber,
@@ -145,8 +145,8 @@ class TodoyuDaytracksExportManager {
 						AND pcmm.id_company IN(' . implode(',', $employerIDs) . ')';
 		}
 
-		if( sizeof($companyIDs) > 0 ) {
-			$where .= ' AND company.id IN(' . implode(',', $companyIDs) . ')';
+		if( sizeof($customerIDs) > 0 ) {
+			$where .= ' AND company.id IN(' . implode(',', $customerIDs) . ')';
 		}
 
 		if( sizeof($projectIDs) > 0 ) {

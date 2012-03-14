@@ -64,7 +64,7 @@
 				</field>
 
 				<field type="textAC" name="company">
-					<label>contact.ext.company</label>
+					<label>daytracks.ext.export.company</label>
 					<config>
 						<acLabel>TodoyuContactCompanyManager::getLabel</acLabel>
 						<options>
