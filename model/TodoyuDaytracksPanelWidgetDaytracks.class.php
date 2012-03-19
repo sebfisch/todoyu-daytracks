@@ -45,7 +45,7 @@ class TodoyuDaytracksPanelWidgetDaytracks extends TodoyuPanelWidget {
 		$this->addHasIconClass();
 
 			// Add onload init function
-		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.daytracks.PanelWidget.Daytracks.init', 100, true);
+		TodoyuPage::addJsInit('Todoyu.Ext.daytracks.PanelWidget.Daytracks.init()', 100);
 	}
 
 
