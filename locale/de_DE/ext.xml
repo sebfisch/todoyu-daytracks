@@ -5,7 +5,7 @@
 	<label index="history.title">Arbeitszeit-Historie</label>
 	<label index="history.total">Total erfasste Zeit</label>
 	<label index="history.showdetails">Zeige Details</label>
-	<label index="history.noTracks">In diesem Zeitabschnitt wurde keine Zeit erfasst</label>
+	<label index="history.noTracks">In diesem Zeitabschnitt wurde keine Zeit erfasst.</label>
 	<label index="totalToday">Total heute erfasste Zeit</label>
 	<label index="daysinmonth">Tage im Monat</label>
 	<label index="export.title">Export</label>
