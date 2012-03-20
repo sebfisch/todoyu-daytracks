@@ -55,7 +55,6 @@ button.daytrackscollapse .icon {
 .monthInfo {
 	padding:5px;
 	margin:0 0 8px 0;
-	border-bottom:1px solid #bababa;
 	background-color:#fff;
 }
 	.monthInfo dt {
@@ -98,6 +97,11 @@ button.daytrackscollapse .icon {
 		border-color:#ddd;
 		background-color:#fff;
 	}
+	#daytracks-history-trackings .details div .daytrackdetail.last,
+	#daytracks-history-trackings .daytrack.last {
+		border-bottom:none;
+	}
+
 	#daytracks-history-trackings .details a:hover div {
 		background-color:#f2f2d2;
 	}
@@ -123,6 +127,12 @@ button.daytrackscollapse .icon {
 		}
 		.toggled span.daytrackDate {
 			width:auto;
+		}
+		span.daytrackHours,
+		.daytrackdetail .tasktitle,
+		.daytrackdetail .time {
+			border-left:1px solid #ddd;
+			padding-left:5px;
 		}
 
 	#daytracks-history-trackings .total {
