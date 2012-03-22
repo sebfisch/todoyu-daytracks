@@ -122,8 +122,9 @@ button.daytrackscollapse .icon {
 
 		span.daytrackDate {
 			display:inline-block;
-			width:150px;
-			padding:0 10px 0 0;
+			width:130px;
+			padding:0 20px 0 0;
+			text-align: right;
 		}
 		.toggled span.daytrackDate {
 			width:auto;

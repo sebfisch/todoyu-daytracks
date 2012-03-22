@@ -129,11 +129,11 @@ class TodoyuDaytracksHistoryManager {
 			$year	= date('Y', $current);
 			$month	= date('m', $current);
 
-
-			$options[$year][$month]	= array(
-				'label'		=> Todoyu::Label('core.date.month.' . strtolower(date('F', $current))),
-				'hasTracks'	=> in_array($year.'-'.$month, $trackMap)
-			);
+			if( in_array($year.'-'.$month, $trackMap) ) {
+				$options[$year][$month]	= array(
+					'label'		=> Todoyu::Label('core.date.month.' . strtolower(date('F', $current)))
+				);
+			}
 
 				// Advance to next month / year
 			if( $month === 1 ) {
