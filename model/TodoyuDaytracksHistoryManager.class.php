@@ -93,8 +93,8 @@ class TodoyuDaytracksHistoryManager {
 	 */
 	public static function getTrackingRanges($idPerson = 0) {
 		$idPerson	= Todoyu::personid($idPerson);
-		$fields	= '	MIN(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('min') . ',
-					MAX(' . Todoyu::db()->backtick('date_track') . ') as ' . Todoyu::db()->backtick('max');
+		$fields	= '	MIN(' . TodoyuSql::backtick('date_track') . ') as ' . TodoyuSql::backtick('min') . ',
+					MAX(' . TodoyuSql::backtick('date_track') . ') as ' . TodoyuSql::backtick('max');
 		$table	= self::TABLE;
 		$where	= 'id_person_create = ' . $idPerson;
 
