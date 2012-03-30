@@ -116,7 +116,7 @@ class TodoyuDaytracksExportManager {
 					task.title as task,
 					DATE_FORMAT(FROM_UNIXTIME(track.date_track), \'%Y-%m-%d\') as date_tracked,
 					SEC_TO_TIME(track.workload_tracked) as workload_tracked,
-					SEC_TO_TIME(track.workload_chargeable) as workload_chargeable,
+					SEC_TO_TIME(IF(track.workload_chargeable, track.workload_chargeable, track.workload_tracked)) as workload_chargeable,
 					company.title as company,
 					project.title as project,
 					CONCAT_WS(\', \', person.lastname, person.firstname) as name,
