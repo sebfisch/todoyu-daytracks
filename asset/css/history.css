@@ -12,6 +12,7 @@
 	Selectors
 ------------------------ */
 #daytracks-history .selectors {
+
 }
 
 	#daytracks-history .selectors .toggleDetails {
@@ -34,6 +35,11 @@
 	#daytracks-history .selectors .toggleDetails a.close {
 		background:transparent url(../img/icons.png) no-repeat 0 -30px;
 	}
+
+#daytracks-history .detailsToggle,
+#daytracks-history .detailsToggle * {
+	cursor: pointer;
+}
 
 
 
