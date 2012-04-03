@@ -302,6 +302,7 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	/**
 	 * Handler after task was deleted
 	 *
+	 * @method	onTaskDeleted
 	 * @param	{Number}	idTask
 	 */
 	onTaskDeleted: function(idTask) {
