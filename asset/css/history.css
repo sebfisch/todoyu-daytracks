@@ -47,10 +47,10 @@
 	Button icons
 ------------------------ */
 button.daytracksexpand .icon {
-  background:transparent url(../img/icons.png) no-repeat 0 -60px !important;
+	background:transparent url(../img/icons.png) no-repeat 0 -60px !important;
 }
 button.daytrackscollapse .icon {
-  background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
+	background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
 }
 
 
