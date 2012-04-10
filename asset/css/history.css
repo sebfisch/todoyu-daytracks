@@ -128,7 +128,7 @@ button.daytrackscollapse .icon {
 
 		span.daytrackDate {
 			display:inline-block;
-			width:130px;
+			width:150px;
 			padding:0 20px 0 0;
 			text-align:right;
 		}
@@ -137,9 +137,15 @@ button.daytrackscollapse .icon {
 		}
 		span.daytrackHours,
 		.daytrackdetail .tasktitle,
-		.daytrackdetail .time {
+		.daytrackdetail .time,
+		.daytrackdetail .cw,
+		span.daytrackCW {
 			border-left:1px solid #ddd;
 			padding-left:5px;
+		}
+
+		span.daytrackHours {
+			padding-left:20px;
 		}
 
 	#daytracks-history-trackings .total {

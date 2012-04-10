@@ -1,6 +1,7 @@
 todoyu daytracks extension changelog
 
 daytracks 1.2.0 - not released yet
+	* Added: Date of track now states also calendar week
 	* Changed: Show label "no tracked time" instead of time 00:00:00
 	* Changed: Modified export. use tracked time as chargeable time if no chargeable defined
 
@@ -18,6 +19,6 @@ daytracks 1.1.1 - 2011-09-15
 daytracks 1.1.0 - 2011-06-17
 	* Bugfix: Calculate correct total time even if there are multiple tracks on a task for a single day
 	* Feature: Rights cleanup, restricted accessing timetracking history
- 	* Changed: Requires core 2.1
+	* Changed: Requires core 2.1
 	* Changed: Structure for 2.1
 	* Changed: All classes are prefixed with extension name
