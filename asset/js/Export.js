@@ -38,7 +38,7 @@ Todoyu.Ext.daytracks.Export = {
 
 
 	/**
-	 * Opens the Export - Popup
+	 * Open the export popup
 	 *
 	 * @method	openExportPopup
 	 */
@@ -57,7 +57,7 @@ Todoyu.Ext.daytracks.Export = {
 
 
 	/**
-	 * Closes the export - popup
+	 * Close the export popup
 	 *
 	 * @method	closePopup
 	 */
@@ -68,15 +68,14 @@ Todoyu.Ext.daytracks.Export = {
 
 
 	/**
-	 * sends download request.
+	 * Send download request
 	 *
 	 * @method	download
-	 * @param	{String}	form
+	 * @param	{String}	formID
 	 */
-	download: function(form) {
-		if( this.verifyForm() ) {
-			var formValues	= $(form).serialize(true);
-
+	download: function(formID) {
+		if( this.isAnyFieldFilledOut() ) {
+			var formValues	= $(formID).serialize(true);
 			formValues.action = 'download';
 
 			Todoyu.goTo('daytracks', 'export', formValues);
@@ -88,12 +87,12 @@ Todoyu.Ext.daytracks.Export = {
 
 
 	/**
-	 * Checks if minimal one form field is filled in
+	 * Check whether any field of the export form is filled-out
 	 *
-	 * @method	verifyForm
+	 * @method	isAnyFieldFilledOut
 	 * @return	{Boolean}
 	 */
-	verifyForm: function() {
+	isAnyFieldFilledOut: function() {
 		var fields	= ['employee', 'project', 'company', 'date-start', 'date-end'];
 
 		return $A(fields).any(function(field){
