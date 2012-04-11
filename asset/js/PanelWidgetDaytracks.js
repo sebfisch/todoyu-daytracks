@@ -106,7 +106,9 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * @param	{Number}	idTask
 	 */
 	goToTask: function(idProject, idTask) {
-		if( this.isTaskInCurrentView(idTask) ) {
+		if( 	(Todoyu.getArea() !== 'project' && Todoyu.Ext.project.Task.isTaskInCurrentView(idTask))
+			||	(Todoyu.getArea() === 'project' && Todoyu.Ext.project.Task.isProjectOfTaskVisible(idTask))
+		) {
 			$('task-' + idTask).scrollToElement();
 		} else {
 			Todoyu.Ext.project.goToTaskInProject(idTask, idProject);
@@ -116,20 +118,9 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 
 
 	/**
-	 * Check whether task element exists within current view
-	 *
-	 * @method	isTaskInCurrentView
-	 * @return	{Boolean}
-	 */
-	isTaskInCurrentView: function(idTask) {
-		return Todoyu.exists('task-' + idTask);
-	},
-
-
-
-	/**
 	 * Toggle total label (if no time was tracked before)
 	 *
+	 * @method	toggleTotal
 	 */
 	toggleTotal: function() {
 		$('daytracks-daytotal').show();
@@ -318,6 +309,20 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 */
 	showHistory: function() {
 		this.ext.History.show();
+	},
+
+
+
+	/**
+	 * Check whether task element exists within current view
+	 * Wrapper for backwards compatibility
+	 *
+	 * @deprecated
+	 * @method	isTaskInCurrentView
+	 * @return	{Boolean}
+	 */
+	isTaskInCurrentView: function(idTask) {
+		return Todoyu.Ext.project.Task.isTaskInCurrentView(idTask);
 	}
 
 };

@@ -46,6 +46,10 @@ Todoyu::$CONFIG['EXT']['daytracks']['assets'] = array(
 		array(
 			'file'		=> 'ext/daytracks/asset/js/Export.js',
 			'position'	=> 112
+		),
+		array(
+			'file'		=> 'ext/daytracks/asset/js/ExportMultiAc.js',
+			'position'	=> 113
 		)
 	),
 	'css' => array(
