@@ -9,6 +9,7 @@
 	<label index="totalToday">Celkový zaznamenaný čas dnes</label>
 	<label index="daysinmonth">Dny v měsíci</label>
 	<label index="export.title">Export</label>
+	<label index="export.company">Zákazník</label>
 	<label index="export.popup.title">Export časového výkazu</label>
 	<label index="export.popup.date_end">Konečné datum</label>
 	<label index="export.popup.error.allFieldsEmpty">Všechna pole jsou prázdná</label>
