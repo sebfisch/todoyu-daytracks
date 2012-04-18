@@ -185,7 +185,9 @@ class TodoyuDaytracksHistoryManager {
 		if( $details ) {
 			foreach($tracksByDay as $timestamp => $dayTracks) {
 				foreach($dayTracks['tracks'] as $index => $track) {
-					$tracksByDay[$timestamp]['tracks'][$index]['task']		= TodoyuProjectTaskManager::getTaskData($track['id_task']);
+					$task	= TodoyuProjectTaskManager::getTask($track['id_task']);
+
+					$tracksByDay[$timestamp]['tracks'][$index]['task']		= $task->getTemplateData(0);
 					$tracksByDay[$timestamp]['tracks'][$index]['seeTask']	= TodoyuProjectTaskRights::isSeeAllowed($track['id_task']);
 				}
 			}
