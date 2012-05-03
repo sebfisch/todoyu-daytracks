@@ -2,6 +2,7 @@ todoyu daytracks extension changelog
 
 daytracks 1.2.0 - 2012-05-03
 	* Added: Date of track now states also calendar week
+	* Changed: When opening the daytracks popup w/o any trackings in the current month, the last month with trackings is shown
 	* Changed: Show label "no tracked time" instead of time 00:00:00
 	* Changed: Modified export. use tracked time as chargeable time if no chargeable defined
 

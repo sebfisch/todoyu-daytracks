@@ -59,14 +59,34 @@ class TodoyuDaytracksHistoryManager {
 
 
 	/**
-	 * Get year month combinations of months where the user has tracks
+	 * Get timestamp of last time tracking of given/current user
+	 *
+	 * @param	Integer		$idPerson
+	 * @return	Integer					UNIX timestamp
+	 */
+	public static function getDateLastTimeTracking($idPerson = 0) {
+		$idPerson	= Todoyu::personid($idPerson);
+
+		$field	= 'date_create';
+		$table	= TodoyuTimetrackingManager::TABLE;
+		$where	= 'id_person_create = ' . $idPerson;
+		$order	= 'date_create DESC';
+		$limit	= 1;
+
+		return intval(Todoyu::db()->getFieldValue($field, $table, $where, '', $order, $limit));
+	}
+
+
+
+	/**
+	 * Get year month combinations of months where the user has time trackings
 	 * Result: [2010-01, 2010-02, 2010-04, ...]
 	 *
 	 * @param	Integer		$idPerson
 	 * @return	Array
 	 */
-	public static function getMonthsWithTracks($idPerson) {
-		$idPerson	= intval($idPerson);
+	public static function getMonthsWithTracks($idPerson = 0) {
+		$idPerson	= Todoyu::personid($idPerson);
 
 		$q = '	SELECT
 					DATE_FORMAT(FROM_UNIXTIME(date_track), \'%Y-%m\') as `date`
@@ -93,6 +113,7 @@ class TodoyuDaytracksHistoryManager {
 	 */
 	public static function getTrackingRanges($idPerson = 0) {
 		$idPerson	= Todoyu::personid($idPerson);
+
 		$fields	= '	MIN(' . TodoyuSql::backtick('date_track') . ') as ' . TodoyuSql::backtick('min') . ',
 					MAX(' . TodoyuSql::backtick('date_track') . ') as ' . TodoyuSql::backtick('max');
 		$table	= self::TABLE;
@@ -118,6 +139,7 @@ class TodoyuDaytracksHistoryManager {
 	 */
 	public static function getMonthSelectorOptions($idPerson = 0) {
 		$idPerson	= Todoyu::personid($idPerson);
+
 		$range		= self::getTrackingRanges($idPerson);
 		$options	= array();
 
@@ -152,7 +174,7 @@ class TodoyuDaytracksHistoryManager {
 
 
 	/**
-	 * Get all tracks in a range for a person
+	 * Get all tracks in the given range (one month) for a person
 	 * The tracks are grouped by day and already summed up in the total key
 	 *
 	 * @param	Integer		$year

@@ -48,6 +48,12 @@ class TodoyuDaytracksHistoryActionController extends TodoyuActionController {
 		$month	= intval($params['month']);
 		$details= intval($params['details']) === 1;
 
+		if( $year === 0 ) {
+			$dateLastTracking	= TodoyuDaytracksHistoryManager::getDateLastTimetracking();
+			$year	= date('Y', $dateLastTracking);
+			$month	= date('n', $dateLastTracking);
+		}
+
 		return TodoyuDaytracksHistoryRenderer::renderHistory($year, $month, $details);
 	}
 
