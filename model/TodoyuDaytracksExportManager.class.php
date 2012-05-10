@@ -34,8 +34,7 @@ class TodoyuDaytracksExportManager {
 	 */
 	public static function getExportForm() {
 		$xmlPath	= 'ext/daytracks/config/form/export.xml';
-
-		$form		= new TodoyuForm($xmlPath);
+		$form		= TodoyuFormManager::getForm($xmlPath);
 
 		$form->setUseRecordID(false);
 
