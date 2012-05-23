@@ -7,7 +7,7 @@ daytracks 1.2.0 - 2012-05-03
 	* Changed: Modified export. use tracked time as chargeable time if no chargeable defined
 
 daytracks 1.1.2 - 2011-11-17
-	* Bugfix: Timetracking option in task contextmenu of daytracks was missing
+	* Bugfix: Timetracking option in task context menu of daytracks was missing
 	* Bugfix: History was not available for not-admins
 	* Changed: Refresh panelwidget when task was deleted
 	* Changed: Deleted tasks are greyed out
