@@ -1,3 +1,7 @@
+@import "../../../../core/config/theme.scss";
+
+
+
 /* ------------------------
 	Panelwidget icon
 	----------------------- */
@@ -23,7 +27,7 @@
 }
 
 #panelwidget-daytracks ul li.deleted span.taskItem * {
-	color:#999;
+	color:$grey06;
 }
 
 #panelwidget-daytracks ul li a.info {
@@ -48,7 +52,7 @@
 	width:100%;
 }
 #panelwidget-daytracks ul li .info .company-project span {
-	color:#999;
+	color:$grey06;
 	width:500px;
 	display:inline-block;
 }

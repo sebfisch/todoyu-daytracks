@@ -54,15 +54,15 @@ Todoyu::$CONFIG['EXT']['daytracks']['assets'] = array(
 	),
 	'css' => array(
 		array(
-			'file'		=> 'ext/daytracks/asset/css/ext.css',
+			'file'		=> 'ext/daytracks/asset/css/ext.scss',
 			'position'	=> 100
 		),
 		array(
-			'file'		=> 'ext/daytracks/asset/css/history.css',
+			'file'		=> 'ext/daytracks/asset/css/history.scss',
 			'position'	=> 101
 		),
 		array(
-			'file'		=> 'ext/daytracks/asset/css/panelwidget-daytracks.css',
+			'file'		=> 'ext/daytracks/asset/css/panelwidget-daytracks.scss',
 			'position'	=> 110
 		)
 	)
