@@ -88,7 +88,7 @@ button.daytrackscollapse .icon {
 }
 
 	#daytracks-history-trackings h1 {
-		background-color:#e7e7e7;
+		background-color:$colorNeutral01;
 		border:1px solid $colorNeutral02;
 		border-left:none;
 		border-right:none;
@@ -96,7 +96,7 @@ button.daytrackscollapse .icon {
 		#daytracks-history-trackings h1.totaltime {
 			padding:5px 0 5px 50px;
 			font-weight:bold;
-			background:#e7e7e7 url(../img/icons.png) no-repeat 5px -104px;
+			background:$colorNeutral01 url(../img/icons.png) no-repeat 5px -104px;
 		}
 	#daytracks-history-trackings .details div,
 	#daytracks-history-trackings .daytrack {
@@ -117,7 +117,7 @@ button.daytrackscollapse .icon {
 	}
 
 	#daytracks-history-trackings .details div.daytrackdetail.deleted {
-		background-color:#f8f8f8;
+		background-color:$colorNeutral00;
 	}
 
 	#daytracks-history-trackings .details div.daytrackdetail.deleted * {
