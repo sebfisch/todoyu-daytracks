@@ -8,7 +8,7 @@
 					<a id="daytracks-track-{$task.id}-button" class="icon start {if $task.id == $current}running{/if}" href="javascript:void(0)" onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.toggleTimetracking({$task.id});this.onclick=''" title="{if $task.id == $current}{Label timetracking.ext.stop}{else}{Label timetracking.ext.start}{/if}"><!-- button --></a>
 				{/if}
 
-				<a id="daytracks-track-{$task.id}-info" class="info" title="{if $task.isDeleted}{Label project.task.deletedTasks}{else}{$task.id_project}.{$task.tasknumber} - {$task.title}{/if}" href="javascript:void(0)" {if $task.seeTask && ! $task.isDeleted}onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.goToTask({$task.id_project}, {$task.id})"{/if}>
+				<a id="daytracks-track-{$task.id}-info" class="info" title="{if $task.isDeleted}{Label project.task.deletedTasks}{else}{$task.id_project}.{$task.tasknumber} - {htmlencode $task.title}{/if}" href="javascript:void(0)" {if $task.seeTask && ! $task.isDeleted}onclick="Todoyu.Ext.daytracks.PanelWidget.Daytracks.goToTask({$task.id_project}, {$task.id})"{/if}>
 					<span class="time" id="daytracks-track-{$task.id}-time">{HourMinSec $task.time}</span>
 					<span class="task">{$task.id_project}.{$task.tasknumber} - {htmlencode(truncate($task.title,30,''))}</span>
 					<span class="company-project"><span class="overflow">{htmlencode $task.company} - {htmlencode $task.project}</span></span>
