@@ -18,13 +18,38 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-	// Declare ext ID, path
-define('EXTID_DAYTRACKS', 107);
-define('PATH_EXT_DAYTRACKS', PATH_EXT . '/daytracks');
+/**
+ * Daytracks specific Dwoo plugins
+ *
+ * @package		Todoyu
+ * @subpackage	Template
+ *
+ */
 
-require_once( PATH_EXT_DAYTRACKS . '/dwoo/plugins.php' );
 
-	// Add timetracking update callbacks
-TodoyuTimetrackingCallbackManager::add('daytracks', 'TodoyuDaytracksManager::callbackTrackingToggle');
+
+/**
+ * Extract sum of hours of calendar week from given daytracks data
+ *
+ * @param	Dwoo			$dwoo
+ * @param	Array			$tracks
+ * @param	Integer			$timestamp		Date within the calendar week
+ * @return	String
+ */
+function Dwoo_Plugin_sumTrackedCW(Dwoo $dwoo, $tracks, $timestamp) {
+	$sum	= 0;
+	$cw		= date('W', $timestamp);
+	foreach($tracks as $timestamp => $daytracks) {
+		if( date('W', $timestamp) === $cw ) {
+			foreach($daytracks as $tracks) {
+				if( is_array($tracks) > 0 ) foreach($tracks as $track) {
+					$sum	+= $track['workload_tracked'];
+				}
+			}
+		}
+	}
+
+	return TodoyuTime::formatHours($sum);
+}
 
 ?>

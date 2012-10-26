@@ -55,13 +55,6 @@ class TodoyuDaytracksHistoryRenderer {
 			'showDetails'		=> $details,
 			'tracking'			=> $tracks,
 			'ranges'			=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions(),
-			'monthInfos'		=> array(
-				array(
-					'label'		=> Todoyu::Label('daytracks.ext.history.total'),
-					'value'		=> TodoyuTime::formatHours($tracks['total']) . ' ' . Todoyu::Label('core.date.time.hours'),
-					'position'	=> 20
-				)
-			)
 		);
 
 		TodoyuHookManager::callHookDataModifier('daytracks', 'tracksHistory', $data);

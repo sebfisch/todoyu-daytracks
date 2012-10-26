@@ -9,6 +9,12 @@
 	margin:5px;
 	text-align:left;
 
+	form {
+		select {
+			width:140px;
+		}
+	}
+
 	.selectors {
 		.floatLeft label {
 			line-height:18px;
@@ -91,10 +97,15 @@ button.daytrackscollapse .icon {
 		border-left:none;
 		border-right:none;
 
-		&.totaltime {
-			padding:5px 0 5px 50px;
+		&.monthTotal,
+		&.cwTotal {
+			padding:5px 0 5px 10px;
 			font-weight:bold;
-			background:$colorNeutral01 url(../img/icons.png) no-repeat 5px -104px;
+		}
+
+		&.cwTotal {
+			border:none;
+			text-align:right;
 		}
 	}
 
@@ -132,8 +143,9 @@ button.daytrackscollapse .icon {
 }
 
 #daytracks-history-trackings .details div .daytrackdetail.last,
-#daytracks-history-trackings .daytrack.last {
-	border-bottom:none;
+#daytracks-history-trackings .daytrack.last,
+.daytrackdetail.last {
+	border-bottom:none!important;
 }
 
 
@@ -141,7 +153,7 @@ button.daytrackscollapse .icon {
 span.daytrackDate {
 	display:inline-block;
 	width:150px;
-	padding:0 20px 0 0;
+	padding:0 20px 0 20px;
 	text-align:right;
 }
 
@@ -154,8 +166,7 @@ span.daytrackHours,
 .daytrackdetail .time,
 .daytrackdetail .cw,
 span.daytrackCW {
-	border-left:1px solid $colorNeutral02;
-	padding-left:5px;
+	padding-left:15px;
 }
 
 span.daytrackHours {
@@ -169,13 +180,14 @@ span.daytrackHours {
 
 			span{
 				&.tasknumber {
-					width:80px;
+					width:60px;
 					display:inline-block;
+					text-align:right;
 					vertical-align:top;
 				}
 
 				&.tasktitle {
-					width:310px;
+					width:330px;
 					padding-right:10px;
 					display:inline-block;
 					vertical-align:top;
@@ -191,7 +203,7 @@ span.daytrackHours {
 	}
 
 	.toggled {
-		margin-top:5px;
+		//margin-top:5px;
 		border-width:1px 0;
 	}
 

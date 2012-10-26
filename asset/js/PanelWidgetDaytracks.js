@@ -254,6 +254,8 @@ Todoyu.Ext.daytracks.PanelWidget.Daytracks = {
 	 * @method	OnTrackingClockUpdate
 	 * @param	{Number}	idTask
 	 * @param	{Number}	trackedTotal
+	 * @param	{Number}	trackedToday
+	 * @param	{Number}	trackedCurrent
 	 */
 	onTrackingClockUpdate: function(idTask, trackedTotal, trackedToday, trackedCurrent) {
 		var taskTimeToday	= Todoyu.Time.timeFormatSeconds(trackedToday + trackedCurrent);

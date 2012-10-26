@@ -1,45 +1,21 @@
 <div id="{$id}">
-	<div class="selectors overflow bordercolor"
-	{* ------------------- Month selector ------------------- *}
-		<form id="{$id}-form" class="floatLeft">
-			<div class="floatLeft fontWeightBold">
-				<label for="{$id}-selector">{label core.date.month}</label>
-			</div>
-			<div style="margin:0 24px 0 4px" class="floatLeft">
-				<select class="select selector" id="{$id}-selector" onchange="Todoyu.Ext.daytracks.History.update()">
-					{foreach $ranges year months}
-						<optgroup label="{$year}">
-							{foreach $months number monthData}
-								<option class="{cycle values="odd,even"}" value="{$year}-{$number}" {if $currentYear==$year && $currentMonth==$number}selected="selected"{/if}>{$monthData.label} {$year}</option>
-							{/foreach}
-						</optgroup>
-					{/foreach}
-				</select>
-			</div>
-			<div class="floatLeft detailsToggle">
-				<input id="showtracksdetails" type="checkbox"{if $showDetails} checked="checked"{/if} onclick="Todoyu.Ext.daytracks.History.toggleDetails()" style="width:20px">
-				<label for="showtracksdetails">{Label daytracks.ext.history.showdetails}</label>
-			</div>
-		</form>
-	</div>
+	{include file="history-options.tmpl"}
 	{* ------------------- Month info ------------------------ *}
 	<div id="{$id}-trackings" class="bordercolor">
-		<h1 class="totaltime">{$labelCurrentPeriod} / {formatHours $tracking.total} {Label core.date.time.hours}</h1>
-		{if $showDetails}
-			<div class="monthInfo content overflow">
-				{foreach $monthInfos infoItem}
-					<dt>{$infoItem.label}</dt><dd>{$infoItem.value}</dd>
-				{/foreach}
-			</div>
-		{/if}
-	{* -------------------- Tracks list ---------------------- *}
+		<h1 class="monthTotal">{$labelCurrentPeriod} / {formatHours $tracking.total} {Label core.date.time.hours}</h1>
+		{* -------------------- Tracks list ---------------------- *}
+		{$cw=0}
 		{foreach $tracking.dayTracks timestamp daytracks name=track}
+			{if date('W', $timestamp) != $cw}
+				<h1 class="cwTotal">{dateFormat $timestamp calendarweek} / {sumTrackedCW $tracking.dayTracks $timestamp} {Label core.date.time.hours}</h1>
+				{$cw = date('W', $timestamp)}
+			{/if}
+
 			<div class="daytrack {if $showDetails}toggled{else}{cycle values="odd,even"}{/if} {if $dwoo.foreach.track.last}last{/if}">
 				<span class="daytrackDate">{dateFormat $timestamp DshortD2MlongY4}</span>
-				<span class="daytrackCW">{dateFormat $timestamp calendarweek}</span>
 				<span class="daytrackHours">{formatHours $daytracks.total} {Label core.date.time.hours}</span>
 			</div>
-	{* ------------------- Track details ------------------- *}
+			{* ------------------- Track details ------------------- *}
 			{if $showDetails}
 				{include file="history-track-details.tmpl"}
 			{/if}

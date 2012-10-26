@@ -1,11 +1,11 @@
 <div class="details">
-	{foreach $daytracks.tracks index track}
+	{foreach $daytracks.tracks index track name=daytrack}
 		{if $track.is_task_deleted == 0}
 			<a href="javascript:void(0)" {if $track.seeTask}onclick="Todoyu.Ext.project.goToTaskInProject({$track.task.id})"{/if}>
 		{/if}
-			<div class="daytrackdetail bordercolor bcStatus{$track.task.status} {cycle values="odd,even"}{if $track.is_task_deleted == 1} deleted{/if}">
+			<div class="daytrackdetail bordercolor bcStatus{$track.task.status} {if $dwoo.foreach.daytrack.last}last {/if}{cycle values="odd,even"}{if $track.is_task_deleted == 1} deleted{/if}">
 				<span class="task">
-					<span class="tasknumber">{$track.task.id_project}.{$track.task.tasknumber}</span>
+					<span class="tasknumber right">{$track.task.id_project}.{$track.task.tasknumber}</span>
 					<span class="tasktitle">{htmlencode $track.task.title}</span>
 				</span>
 				<span class="time">
