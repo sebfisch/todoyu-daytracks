@@ -23,8 +23,4 @@ define('EXTID_DAYTRACKS', 107);
 define('PATH_EXT_DAYTRACKS', PATH_EXT . '/daytracks');
 
 require_once( PATH_EXT_DAYTRACKS . '/dwoo/plugins.php' );
-
-	// Add timetracking update callbacks
-TodoyuTimetrackingCallbackManager::add('daytracks', 'TodoyuDaytracksManager::callbackTrackingToggle');
-
 ?>
