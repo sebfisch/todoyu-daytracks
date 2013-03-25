@@ -1,8 +1,7 @@
 todoyu daytracks extension changelog
 
-daytracks 1.3.0 - not released yet
+daytracks 1.3.0 - 2013-03-27
 	* Added: TodoyuDaytracksExportManager::getDateLastTimeTracking()
-	* Minor cleanups, styling and layout
 
 daytracks 1.2.0 - 2012-05-03
 	* Added: Date of track now states also calendar week
