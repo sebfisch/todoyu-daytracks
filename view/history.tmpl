@@ -11,13 +11,16 @@
 				{$cw = date('W', $timestamp)}
 			{/if}
 
-			<div class="daytrack {if $showDetails}toggled{else}{cycle values="odd,even"}{/if} {if $dwoo.foreach.track.last}last{/if}">
+			<div class="daytrack daytracksum {if $showDetails}toggled{else}{cycle values="odd,even"}{/if} {if $dwoo.foreach.track.last}last{/if}">
 				<span class="daytrackDate">{dateFormat $timestamp DshortD2MlongY4}</span>
 				<span class="daytrackHours">{formatHours $daytracks.total} {Label core.date.time.hours}</span>
 			</div>
 			{* ------------------- Track details ------------------- *}
 			{if $showDetails}
 				{include file="history-track-details.tmpl"}
+			{/if}
+			{if $dwoo.foreach.track.last}{else}
+				<div class="divider"></div>
 			{/if}
 		{else}
 			<p>{Label daytracks.ext.history.noTracks}</p>

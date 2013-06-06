@@ -1,4 +1,5 @@
 @import "../../../../core/config/theme.scss";
+@import "../../../project/config/theme.scss";
 
 
 
@@ -16,6 +17,13 @@
 	}
 
 	.selectors {
+		padding:8px;
+		background-color:$colorNeutral01;
+
+		select {
+			background-color:$white;
+		}
+
 		.floatLeft label {
 			line-height:18px;
 		}
@@ -47,17 +55,25 @@
 	cursor:pointer;
 }
 
-
+#daytracks-history-trackings div.divider,
+#daytracks-history-trackings .details div.divider {
+	height:1px;
+	background-color:$colorNeutral02;
+	padding:0;
+	border:none;
+	margin:-1px 0 1px 0;
+}
 
 /* ---------------------
 	Button icons
 ------------------------ */
-button.daytracksexpand .icon {
-	background:transparent url(../img/icons.png) no-repeat 0 -60px !important;
-}
-
-button.daytrackscollapse .icon {
-	background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
+button {
+	&.daytracksexpand .icon {
+		background:transparent url(../img/icons.png) no-repeat 0 -60px !important;
+	}
+	&.daytrackscollapse .icon {
+		background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
+	}
 }
 
 
@@ -92,15 +108,13 @@ button.daytrackscollapse .icon {
 	border:0 solid #bababa;
 
 	h1 {
-		background-color:$colorNeutral01;
-		border:1px solid $colorNeutral02;
-		border-left:none;
-		border-right:none;
+		@include gradient-header;
+		margin-bottom:6px;
 
 		&.monthTotal,
 		&.cwTotal {
-			padding:5px 0 5px 10px;
-			font-weight:bold;
+			padding:5px 5px 5px 10px;
+			//font-weight:bold;
 		}
 
 		&.cwTotal {
@@ -110,15 +124,23 @@ button.daytrackscollapse .icon {
 	}
 
 	.details {
-		a:hover div {
-			background-color:$colorHighlight04;
-		}
+		a {
+			&:hover div {
+				background-color:$colorHighlight04;
+			}
 
-		div.daytrackdetail.deleted {
-			background-color:$colorNeutral00;
+			div {
+				&.daytrackdetail {
+					margin-bottom:1px;
 
-			* {
-				color:$colorNeutral07;
+					&.deleted {
+						background-color:$colorNeutral00;
+
+						* {
+							color:$colorNeutral07;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -132,14 +154,54 @@ button.daytrackscollapse .icon {
 
 #daytracks-history-trackings .details div,
 #daytracks-history-trackings .daytrack {
+	border-left:4px solid;
 	background-color:$white;
-	border: {
-		color:$colorNeutral02;
-		style:solid;
-		width:0 0 1px 0;
-	}
 	padding:5px;
 	text-align:left;
+
+	&.daytracksum {
+		border-color:$white;
+	}
+		/* planning */
+	&.bcStatus1 {
+		border-color:$colorStatusPlanning;
+	}
+		/* open */
+	&.bcStatus2 {
+		border-color:$colorStatusOpen;
+	}
+		/* progress */
+	&.bcStatus3 {
+		border-color:$colorStatusProgress;
+	}
+		/* confirm */
+	&.bcStatus4 {
+		border-color:$colorStatusConfirm;
+	}
+		/* done */
+	&.bcStatus5 {
+		border-color:$colorStatusDone;
+	}
+		/* accepted */
+	&.bcStatus6 {
+		border-color:$colorStatusAccepted;
+	}
+		/* rejected */
+	&.bcStatus7 {
+		border-color:$colorStatusRejected;
+	}
+		/* cleared */
+	&.bcStatus8 {
+		border-color:$colorStatusCleared;
+	}
+		/* warranty */
+	&.bcStatus9 {
+		border-color:$colorStatusWarranty;
+	}
+		/* customer */
+	&.bcStatus10 {
+		border-color:$colorStatusWaiting;
+	}
 }
 
 #daytracks-history-trackings .details div .daytrackdetail.last,
