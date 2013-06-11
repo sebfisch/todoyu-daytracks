@@ -87,6 +87,40 @@ Todoyu.Ext.daytracks.Export = {
 
 
 	/**
+	 * Open timetracks (export) view in popup
+	 *
+	 * @method	download
+	 * @param	{Element}	form
+	 */
+	view: function(form) {
+		if( this.isAnyFieldFilledOut() ) {
+			var url		= Todoyu.getUrl('daytracks', 'export');
+
+			var dateStart	= $('export-field-date-start').value === '' ? 0 : Todoyu.DateField.getDate('export-field-date-start').getTime() / 1000;
+			var dateEnd		= $('export-field-date-end').value === '' ? 0 : Todoyu.DateField.getDate('export-field-date-end').getTime() / 10000;
+
+			var options	= {
+				parameters: {
+					action:		'view',
+					employee:	$('export-field-employee').value,
+					employer:	$('export-field-employer').value,
+					project:	$('export-field-project').value,
+					company:	$('export-field-company').value,
+					date_start:	dateStart,
+					date_end:	dateEnd
+				}
+			};
+
+			this.popup = Todoyu.Popups.open('time-export-view', '[LLL:daytracks.ext.export.popup.title]', 1030, url, options);
+			this.popup.show();
+		} else {
+			Todoyu.notifyError('[LLL:daytracks.ext.export.popup.error.allFieldsEmpty]', 'daytracks.export');
+		}
+	},
+
+
+
+	/**
 	 * Check whether any field of the export form is filled-out
 	 *
 	 * @method	isAnyFieldFilledOut

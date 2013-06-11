@@ -52,4 +52,23 @@ function Dwoo_Plugin_sumTrackedCW(Dwoo $dwoo, $tracks, $timestamp) {
 	return TodoyuTime::formatHours($sum);
 }
 
+
+
+/**
+ * Remove enclosing wrap from given string
+ *
+ * @param	Dwoo		$dwoo
+ * @param	String		$str
+ * @param	String		$wrap
+ * @return	String
+ */
+function Dwoo_Plugin_unwrap(Dwoo $dwoo, $str, $wrap = '"') {
+	if(TodoyuString::startsWith($str, $wrap) && TodoyuString::endsWith($str, $wrap)) {
+		$wrapLen	= strlen($wrap);
+		$str = substr($str, $wrapLen, strlen($str) - $wrapLen * 2);
+	}
+
+	return $str;
+}
+
 ?>

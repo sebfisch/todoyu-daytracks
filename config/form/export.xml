@@ -112,6 +112,12 @@
 					<text>core.file.download</text>
 				</field>
 
+				<field type="button" name="view">
+					<class>view</class>
+					<onclick>Todoyu.Ext.daytracks.Export.view(this.form)</onclick>
+					<text>daytracks.ext.export.view</text>
+				</field>
+
 			</elements>
 		</fieldset>
 

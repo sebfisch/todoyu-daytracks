@@ -60,12 +60,57 @@ class TodoyuDaytracksExportManager {
 
 
 	/**
-	 * Exports the CSV file
+	 * Exports timetracks as CSV file
 	 *
-	 * @todo add check for allowed projects / employers / companies
 	 * @param	Array	$exportData
 	 */
 	public static function exportCSV(array $exportData) {
+		$export	= self::getExportCsvFromExportData($exportData);
+
+		$export->download('daytracks_export_' . date('YmdHis') . '.csv');
+	}
+
+
+
+	/**
+	 * @param	Array	$exportData
+	 * @return	String
+	 */
+	public static function renderView(array $exportData) {
+		$export	= self::getExportCsvFromExportData($exportData);
+		$csv	= $export->getContent();
+
+		$csv		= explode("\n", $csv);
+		$csvArray	= array();
+		$columns	= array();
+
+		foreach($csv as $index => $line) {
+			$line	= explode(';', $line);
+
+			if( $index === 0 ) {
+				$columns	= $line;
+			} else {
+				$csvArray[]	= $line;
+			}
+		}
+
+		$tmpl	= 'ext/daytracks/view/export-view.tmpl';
+		$data	= array(
+			'columnHeaders'	=> $columns,
+			'dataRows'		=> $csvArray,
+			'noData'		=> count($csvArray) === 1
+		);
+
+		return Todoyu::render($tmpl, $data);
+	}
+
+
+
+	/**
+	 * @param	Array				$exportData
+	 * @return	TodoyuExportCsv
+	 */
+	public static function getExportCsvFromExportData(array $exportData) {
 		if( Todoyu::allowed('daytracks', 'daytracks:timeExportAllPerson') ) {
 			$employeeIDs	= TodoyuArray::intExplode(',', $exportData['employee'], true, true);
 		} else {
@@ -81,9 +126,7 @@ class TodoyuDaytracksExportManager {
 		$trackingData	= self::getTrackingReport($employeeIDs, $employer, $project, $company, $dateStart, $dateEnd);
 		$trackingData	= self::prepareDataForExport($trackingData);
 
-		$export		= new TodoyuExportCSV($trackingData);
-
-		$export->download('daytracks_export_' . date('YmdHis') . '.csv');
+		return new TodoyuExportCSV($trackingData);
 	}
 
 
@@ -208,5 +251,6 @@ class TodoyuDaytracksExportManager {
 
 		return TodoyuArray::reform($dataArray, $reform);
 	}
+
 }
 ?>

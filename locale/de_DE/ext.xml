@@ -13,4 +13,6 @@
 	<label index="export.popup.title">Arbeitszeiten Export</label>
 	<label index="export.popup.date_end">End-Datum</label>
 	<label index="export.popup.error.allFieldsEmpty">Alle Felder sind leer</label>
+	<label index="export.view">Anzeigen</label>
+	<label index="export.noData">Zu den Filter-Kriterien wurden keine Daten gefunden.</label>
 </labels>

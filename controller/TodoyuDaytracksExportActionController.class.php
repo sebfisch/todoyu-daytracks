@@ -57,12 +57,29 @@ class TodoyuDaytracksExportActionController extends TodoyuActionController {
 	 */
 	public function downloadAction(array $params) {
 		$form	= TodoyuDaytracksExportManager::getExportForm();
-
 		$values	= TodoyuArray::assure($params['export']);
-
 		$data	= $form->getStorageData($values);
 
 		TodoyuDaytracksExportManager::exportCSV($data);
+	}
+
+
+
+	/**
+	 * @param	Array	$params
+	 * @return	String
+	 */
+	public function viewAction(array $params) {
+		$data	= array(
+			'employee'		=> $params['employee'],
+			'employer'		=> $params['employer'],
+			'project'		=> $params['project'],
+			'company'		=> $params['company'],
+			'date_start' 	=> $params['date_start'],
+			'date_end'		=> $params['date_end'],
+		);
+
+		return TodoyuDaytracksExportManager::renderView($data);
 	}
 }
 

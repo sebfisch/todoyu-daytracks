@@ -13,4 +13,6 @@
 	<label index="export.popup.title">Time Sheet Export</label>
 	<label index="export.popup.date_end">End Date</label>
 	<label index="export.popup.error.allFieldsEmpty">All fields are empty</label>
+	<label index="export.view">View</label>
+	<label index="export.noData">No data suiting the filter conditions was found.</label>
 </labels>
