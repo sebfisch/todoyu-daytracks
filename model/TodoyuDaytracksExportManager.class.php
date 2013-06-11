@@ -77,7 +77,9 @@ class TodoyuDaytracksExportManager {
 	 * @return	String
 	 */
 	public static function renderView(array $exportData) {
+		TodoyuCache::disable();
 		$export	= self::getExportCsvFromExportData($exportData);
+		TodoyuCache::enable();
 		$csv	= $export->getContent();
 
 		$csv		= explode("\n", $csv);
@@ -92,6 +94,8 @@ class TodoyuDaytracksExportManager {
 			} else {
 				$csvArray[]	= $line;
 			}
+
+			unset($csv[$index]);
 		}
 
 		$tmpl	= 'ext/daytracks/view/export-view.tmpl';
@@ -117,7 +121,7 @@ class TodoyuDaytracksExportManager {
 			$employeeIDs	= array(Todoyu::personid());
 		}
 
-		$employer	= TodoyuArray::intExplode(',', $exportData['employers']);
+		$employer	= TodoyuArray::intExplode(',', $exportData['employer']);
 		$project	= TodoyuArray::intExplode(',', $exportData['project']);
 		$company	= TodoyuArray::intExplode(',', $exportData['company']);
 		$dateStart	= intval($exportData['date_start']);

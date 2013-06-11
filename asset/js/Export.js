@@ -127,7 +127,7 @@ Todoyu.Ext.daytracks.Export = {
 	 * @return	{Boolean}
 	 */
 	isAnyFieldFilledOut: function() {
-		var fields	= ['employee', 'project', 'company', 'date-start', 'date-end'];
+		var fields	= ['employee', 'employer', 'project', 'company', 'date-start', 'date-end'];
 
 		return $A(fields).any(function(field){
 			return $F('export-field-' + field) !== '';
