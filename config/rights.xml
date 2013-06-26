@@ -11,6 +11,7 @@
 		<right name="timeExport" />
 		<right name="timeExportAllPerson" require="daytracks:timeExport" />
 		<right name="timeExportAllEmployer" require="daytracks:timeExportAllPerson" />
+		<right name="switchuser" require="daytracks:timeExportAllPerson" />
 	</section>
 
 </rights>

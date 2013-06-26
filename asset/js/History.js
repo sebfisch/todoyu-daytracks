@@ -80,7 +80,11 @@ Todoyu.Ext.daytracks.History = {
 	 * @method	update
 	 */
 	update: function() {
-		var range	= $F('daytracks-history-selector').split('-');
+		var range	= $F('daytracks-history-rangeselector').split('-');
+
+		if( $('daytracks-history-switchuserselector') ) {
+			var user	= $F('daytracks-history-switchuserselector');
+		}
 
 		var url		= Todoyu.getUrl('daytracks', 'history');
 		var options = {
@@ -88,7 +92,8 @@ Todoyu.Ext.daytracks.History = {
 				action:		'history',
 				year:		range[0],
 				month:		range[1],
-				details:	this.showDetails ? 1 : 0
+				details:	this.showDetails ? 1 : 0,
+				user: user
 			}
 		};
 

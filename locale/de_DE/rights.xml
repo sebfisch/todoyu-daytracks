@@ -7,4 +7,5 @@
 	<label index="daytracks.timeExport">Stundenblatt exportieren</label>
 	<label index="daytracks.timeExportAllPerson">Stundenblatt von allen Personen exportieren</label>
 	<label index="daytracks.timeExportAllEmployer">Stundenblatt von allen Arbeitgebern exportieren</label>
+	<label index="daytracks.switchuser">Stundenblatt anderer Personen anzeigen</label>
 </labels>

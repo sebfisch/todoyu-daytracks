@@ -48,13 +48,19 @@ class TodoyuDaytracksHistoryActionController extends TodoyuActionController {
 		$month	= intval($params['month']);
 		$details= intval($params['details']) === 1;
 
+		if( Todoyu::allowed('daytracks', 'daytracks:switchuser')) {
+			$idPerson = intval($params['user']);
+		} else {
+			$idPerson = Todoyu::personid();
+		}
+
 		if( $year === 0 ) {
 			$dateLastTracking	= TodoyuDaytracksHistoryManager::getDateLastTimetracking();
 			$year	= date('Y', $dateLastTracking);
 			$month	= date('n', $dateLastTracking);
 		}
 
-		return TodoyuDaytracksHistoryRenderer::renderHistory($year, $month, $details);
+		return TodoyuDaytracksHistoryRenderer::renderHistory($year, $month, $details, $idPerson);
 	}
 
 }

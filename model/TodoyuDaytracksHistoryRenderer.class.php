@@ -34,9 +34,10 @@ class TodoyuDaytracksHistoryRenderer {
 	 * @param	Boolean		$details
 	 * @return	String
 	 */
-	public static function renderHistory($year = 0, $month = 0, $details = false) {
+	public static function renderHistory($year = 0, $month = 0, $details = false, $idPerson = 0) {
 		$year		= intval($year);
 		$month		= intval($month);
+		$idPerson	= Todoyu::personid($idPerson);
 
 			// Use current date if none set
 		$year	= $year === 0 ? date('Y') : $year;
@@ -44,7 +45,7 @@ class TodoyuDaytracksHistoryRenderer {
 
 		$timestamp	= mktime(0, 0, 0, $month, 1, $year);
 
-		$tracks	= TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details);
+		$tracks	= TodoyuDaytracksHistoryManager::getRangeTracks($year, $month, $details, $idPerson);
 
 		$tmpl	= 'ext/daytracks/view/history.tmpl';
 		$data	= array(
@@ -55,6 +56,8 @@ class TodoyuDaytracksHistoryRenderer {
 			'showDetails'		=> $details,
 			'tracking'			=> $tracks,
 			'ranges'			=> TodoyuDaytracksHistoryManager::getMonthSelectorOptions(),
+			'users'				=> TodoyuDaytracksHistoryManager::getUserOptions(),
+			'currentUser'		=> $idPerson
 		);
 
 		TodoyuHookManager::callHookDataModifier('daytracks', 'tracksHistory', $data);

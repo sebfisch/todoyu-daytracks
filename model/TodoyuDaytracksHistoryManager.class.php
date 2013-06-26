@@ -228,6 +228,35 @@ class TodoyuDaytracksHistoryManager {
 			'dayTracks'	=> array_reverse($tracksByDay, true)
 		);
 	}
+
+
+
+	public static function getUserOptions(){
+		$options	= array();
+
+				// Internal persons
+		$groupLabel	= Todoyu::Label('dev.ext.persons.internal');
+		$options[$groupLabel]	= TodoyuContactPersonManager::getInternalPersonIDs();
+
+			// External persons
+		$groupLabel	= Todoyu::Label('dev.ext.persons.external');
+		$options[$groupLabel]	= self::getExternalPersonOptions();
+
+		return $options;
+	}
+
+
+
+	/**
+	 * @param $true
+	 * @return array
+	 */
+	private static function getExternalPersonOptions() {
+		$loginPersonIDs		= TodoyuArray::getColumn(TodoyuContactPersonManager::getAllActivePersons(array('id'), false), 'id');
+		$internalPersonIDs	= TodoyuContactPersonManager::getInternalPersonIDs();
+
+		return array_diff($loginPersonIDs, $internalPersonIDs);
+	}
 }
 
 ?>
