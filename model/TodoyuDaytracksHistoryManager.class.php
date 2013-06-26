@@ -191,6 +191,12 @@ class TodoyuDaytracksHistoryManager {
 		$dateStart	= mktime(0, 0, 0, $month, 1, $year);
 		$dateEnd	= mktime(0, 0, 0, $month + 1, 1, $year) - 1;
 
+		if(!TodoyuTime::isWeekendDate($dateStart)) {
+			$dateStart	= TodoyuTime::getWeekStart($dateStart, true);
+		}
+
+		$dateEnd	= TodoyuTime::getWeekEnd($dateEnd, true);
+
 		$tracks		= TodoyuTimetracking::getPersonTracks($dateStart, $dateEnd, $idPerson);
 
 		$workloads	= TodoyuArray::getColumn($tracks, 'workload_tracked');
