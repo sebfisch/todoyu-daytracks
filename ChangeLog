@@ -5,6 +5,7 @@ daytracks 1.3.1 - not released yet
 	* Added: Show start and end of week in history (complete calendar-week)
 	* Added: Daytracks export can be viewed in popup
 	* Added: Status colors on Tasks' left border in daytracks detail view
+	* Added: Catalan language. Credits to Carles Baiges Camprubí LaCol (www.lacol.org)
 	* Bugfix: Check for employer fields
 
 daytracks 1.3.0 - 2013-03-27
