@@ -15,4 +15,6 @@
 	<label index="export.popup.error.allFieldsEmpty">All fields are empty</label>
 	<label index="export.view">View</label>
 	<label index="export.noData">No data suiting the filter conditions was found.</label>
+	<label index="persons.external">External Users</label>
+	<label index="persons.internal">Users of the internal company</label>
 </labels>

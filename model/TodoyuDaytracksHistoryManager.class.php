@@ -235,11 +235,11 @@ class TodoyuDaytracksHistoryManager {
 		$options	= array();
 
 				// Internal persons
-		$groupLabel	= Todoyu::Label('dev.ext.persons.internal');
+		$groupLabel	= Todoyu::Label('daytracks.ext.persons.internal');
 		$options[$groupLabel]	= TodoyuContactPersonManager::getInternalPersonIDs();
 
 			// External persons
-		$groupLabel	= Todoyu::Label('dev.ext.persons.external');
+		$groupLabel	= Todoyu::Label('daytracks.ext.persons.external');
 		$options[$groupLabel]	= self::getExternalPersonOptions();
 
 		return $options;

@@ -15,4 +15,6 @@
 	<label index="export.popup.error.allFieldsEmpty">Alle Felder sind leer</label>
 	<label index="export.view">Anzeigen</label>
 	<label index="export.noData">Zu den Filter-Kriterien wurden keine Daten gefunden.</label>
+	<label index="persons.internal">Interne Personen</label>
+	<label index="persons.external">Externe Personen</label>
 </labels>
