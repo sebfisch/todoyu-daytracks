@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="title">Lembar Waktu</label>
+	<label index="pwidget.title">Waktu Dilacak Hari ini</label>
+	<label index="totalToday">Jumlah dilacak waktu hari ini</label>
+	<label index="totalToday.noTracks">Tidak ada waktu lagi dilacak</label>
+	<label index="showHistory">Lembar Waktu</label>
+	<label index="goToTask">Beralih ke Tugas</label>
+</labels>

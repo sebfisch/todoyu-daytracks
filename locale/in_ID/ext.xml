@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Jurnal waktu dilacak</label>
+	<label index="title">Jurnal waktu dilacak</label>
+	<label index="history.title">Jurnal Pelacakan Waktu</label>
+	<label index="history.total">Jumlah Waktu Dilacak</label>
+	<label index="history.showdetails">Tampilkan Detail</label>
+	<label index="history.noTracks">Tidak ada pelacakan waktu yang tersedia untuk periode ini</label>
+	<label index="totalToday">Jumlah waktu dilacak hari ini</label>
+	<label index="daysinmonth">Hari dalan bulan</label>
+	<label index="export.title">Export</label>
+	<label index="export.company">Kostemer</label>
+	<label index="export.popup.title">Lembar Waktu Export</label>
+	<label index="export.popup.date_end">Akhir Tanggal</label>
+	<label index="export.popup.error.allFieldsEmpty">Semua kolom kosong</label>
+</labels>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general">Umum</label>
+	<label index="general.use">Gunakan Fungsi Lembar Waktu</label>
+	<label index="panelwidgets">Kotak Widgets</label>
+	<label index="daytracks">Kotak widget Lembar Waktu</label>
+	<label index="daytracks.timeExport">Export Lembar Waktu</label>
+	<label index="daytracks.timeExportAllPerson">Export lembar waktu semua orang</label>
+	<label index="daytracks.timeExportAllEmployer">Export lembar waktu semua karyawan</label>
+</labels>
